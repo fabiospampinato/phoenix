@@ -1,0 +1,28 @@
+
+/* QUIT */
+
+const QUIT_BLACKLIST = ['Finder'];
+
+let lastQuitTimestamp = 0;
+
+setHandler ( 'q', ['cmd'], () => {
+
+  const timestamp = Date.now ();
+
+  if ( timestamp - lastQuitTimestamp <= DOUBLE_KEY_INTERVAL ) {
+
+    lastQuitTimestamp = 0;
+
+    const app = App.focused ();
+
+    if ( !app || _.includes ( QUIT_BLACKLIST, app.name () ) ) return;
+
+    app.terminate ();
+
+  } else {
+
+    lastQuitTimestamp = timestamp;
+
+  }
+
+});
