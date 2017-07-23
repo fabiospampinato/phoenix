@@ -3,7 +3,7 @@
 
 let hashes = [];
 
-handlers.push ( Event.on ( 'windowDidOpen', window => {
+setEventHandler ( 'windowDidOpen', window => {
 
   if ( !/chrome-devtools/.test ( window.title () ) ) return;
 
@@ -13,9 +13,9 @@ handlers.push ( Event.on ( 'windowDidOpen', window => {
 
   growVSCHeight ( -72 );
 
-}));
+});
 
-handlers.push ( Event.on ( 'windowDidClose', window => {
+setEventHandler ( 'windowDidClose', window => {
 
   const hash = window.hash ();
 
@@ -25,7 +25,7 @@ handlers.push ( Event.on ( 'windowDidClose', window => {
 
   growVSCHeight ( 72 );
 
-}));
+});
 
 /* HELPERS */
 
