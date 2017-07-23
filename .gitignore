@@ -34,3 +34,6 @@ Thumbs.db
 # Other paths to ignore
 bower_components
 node_modules
+
+# Project specific paths ignore
+/spaces/list.json
