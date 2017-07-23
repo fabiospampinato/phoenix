@@ -10,7 +10,7 @@ This configuration uses a remap of the Caps Lock key to something more useful: t
 1. Install [Node.js](https://nodejs.org)
 2. Install [Phoenix](https://github.com/kasper/phoenix#install)
 3. Install [Karabiner Elements](https://github.com/tekezo/Karabiner-Elements) via its [dmg](https://pqrs.org/latest/karabiner-elements-latest.dmg)
-4. Replace Caps Lock with Hyper/F18 using [this](karabiner://karabiner/assets/complex_modifications/import?url=https://cdn.rawgit.com/fabiospampinato/phoenix/master/config/karabiner.json) Karabiner Elements configuration
+4. Replace Caps Lock with Hyper/F18 using [this](http://tinyurl.com/ycle9kd6) Karabiner Elements configuration (if the link doesn't work copy and paste this in a browser: `karabiner://karabiner/assets/complex_modifications/import?url=https%3A%2F%2Fcdn.rawgit.com%2Ffabiospampinato%2Fphoenix%2Fmaster%2Fconfig%2Fkarabiner.json`)
 5. `$ mkdir ~/.config`
 6. `$ cd ~/.config`
 7. `$ git clone git@github.com:fabiospampinato/phoenix.git`
@@ -182,7 +182,7 @@ This is how it works:
 - Which reads the list of spaces compiled with Phoenix and displays it to you
 - Select a space to switch to
 
-In order to make this wizardry work you have to open `System Preferences -> Keyboard -> Shortcuts -> Mission Control` and bind all `Switch to Desktop X` actions to <kbd>ctrl + alt + cmd + shift + X</kbd>. There are actions up to the 9th desktop, but they may not be shown to you if you have less then 9 desktops currently open.
+In order to make this wizardry work you have to open `System Preferences -> Keyboard -> Shortcuts -> Mission Control` and bind all `Switch to Desktop [NUMBER]` actions to <kbd>ctrl + alt + cmd + shift + [NUMBER]</kbd>. There are actions up to the 9th desktop, but they may not be shown to you if you have less then 9 desktops currently open.
 
 Limitations:
 - There's no API available for retrieving windows from other spaces, therefor other spaces' guessed names won't be refreshed until you visit them. The very first time you load Phoenix you might want to switch the focus to all of them, one by one, to have their names updated.
