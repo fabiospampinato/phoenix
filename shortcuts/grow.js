@@ -8,4 +8,4 @@ const grow = [
   ['left', HYPER_SHIFT, [-50, 0, 50, 0]]
 ];
 
-setHandlers ( growFrame, grow );
+setHandlers ( growFrame, grow, false );
