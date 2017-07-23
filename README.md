@@ -7,15 +7,14 @@ My [Phoenix](https://github.com/kasper/phoenix) setup. Powerful, easy to customi
 
 This configuration uses a remap of the Caps Lock key to something more useful: the Hyper key <kbd>⇪</kbd> (basically just <kbd>ctrl + alt + cmd</kbd> combined into one key) if used in combination with other keys, otherwise it gets mapped to <kbd>F18</kbd>, which is used to trigger the space switcher. If you prefer you may skip these remap steps while you try the configuration, but if you usually have many spaces opened I highly recommend you not to miss out the awesome space switcher, for which this hack is a requirement.
 
-1. Install [Node.js](https://nodejs.org)
-2. Install [Phoenix](https://github.com/kasper/phoenix#install)
-3. Install [Karabiner Elements](https://github.com/tekezo/Karabiner-Elements) via its [dmg](https://pqrs.org/latest/karabiner-elements-latest.dmg)
-4. Replace Caps Lock with Hyper/F18 using [this](http://tinyurl.com/ycle9kd6) Karabiner Elements configuration (if the link doesn't work copy and paste this in a browser: `karabiner://karabiner/assets/complex_modifications/import?url=https%3A%2F%2Fcdn.rawgit.com%2Ffabiospampinato%2Fphoenix%2Fmaster%2Fconfig%2Fkarabiner.json`)
-5. `$ mkdir ~/.config`
-6. `$ cd ~/.config`
-7. `$ git clone git@github.com:fabiospampinato/phoenix.git`
-8. Restart Phoenix
-9. Enjoy!
+1. Install [Phoenix](https://github.com/kasper/phoenix#install)
+2. Install [Karabiner Elements](https://github.com/tekezo/Karabiner-Elements) via its [dmg](https://pqrs.org/latest/karabiner-elements-latest.dmg)
+3. Replace Caps Lock with Hyper/F18 using [this](http://tinyurl.com/ycle9kd6) Karabiner Elements configuration (if the link doesn't work copy and paste this in a browser: `karabiner://karabiner/assets/complex_modifications/import?url=https%3A%2F%2Fcdn.rawgit.com%2Ffabiospampinato%2Fphoenix%2Fmaster%2Fconfig%2Fkarabiner.json`)
+4. `$ mkdir ~/.config`
+5. `$ cd ~/.config`
+6. `$ git clone git@github.com:fabiospampinato/phoenix.git`
+7. Restart Phoenix
+8. Enjoy!
 
 ## Shortcuts
 
