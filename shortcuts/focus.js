@@ -16,8 +16,8 @@ function launchDevTools () {
 
   osascript (`
     tell application "Google Chrome" to activate
-    tell application "System Events"
-      keystroke "i" using {option down, command down}
+    tell application "System Events" to tell process "Google Chrome"
+      click menu item "Developer Tools" of menu 1 of menu item "Developer" of menu 1 of menu bar item "View" of menu bar 1
     end tell
   `);
 
