@@ -3,7 +3,12 @@
 
 setEventHandler ( 'windowDidOpen', window => {
 
-  if ( !( /Google Chrome/.test ( window.app ().name () ) && !/chrome-devtools/.test ( window.title () ) ) ) return;
+  const name = window.app ().name (),
+        title = window.title ();
+
+  if ( !/Google Chrome/.test ( name ) ) return;
+
+  if ( /(chrome-devtools)|(Developer Tools - )/.test ( title ) ) return;
 
   setFrame ( 0, 0, .4, 1, window ); // Left
 

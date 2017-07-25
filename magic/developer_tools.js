@@ -5,7 +5,12 @@ let hashes = [];
 
 setEventHandler ( 'windowDidOpen', window => {
 
-  if ( !/chrome-devtools/.test ( window.title () ) ) return;
+  const name = window.app ().name (),
+        title = window.title ();
+
+  if ( !/Google Chrome/.test ( name ) ) return;
+
+  if ( !/(chrome-devtools)|(Developer Tools - )/.test ( title ) ) return;
 
   hashes.push ( window.hash () );
 
