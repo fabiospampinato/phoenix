@@ -3,6 +3,8 @@
 
 setEventHandler ( 'windowDidOpen', window => {
 
+  if ( !window.isNormal () || !window.isMain () ) return;
+
   const name = window.app ().name (),
         title = window.title ();
 
