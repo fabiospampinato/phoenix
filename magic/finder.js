@@ -1,7 +1,11 @@
 
 /* FINDER */
 
-setEventHandler ( 'windowDidOpen', window => {
+setEventHandler ( 'windowDidOpen', magicFinderOpen );
+
+/* HELPERS */
+
+function magicFinderOpen ( window ) {
 
   if ( !window.isNormal () || !window.isMain () ) return;
 
@@ -14,4 +18,4 @@ setEventHandler ( 'windowDidOpen', window => {
 
   setFrame ( 0, .5, .4, .5, window ); // Bottom-Left
 
-});
+}

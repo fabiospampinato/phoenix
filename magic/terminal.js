@@ -1,7 +1,11 @@
 
-/* TERMINAL */ //FIXME: sometimes doesn't detect the terminal (no windowDidOpen event)
+/* TERMINAL */ //FIXME: sometimes doesn't detect the terminal (no `windowDidOpen` event)
 
-setEventHandler ( 'windowDidOpen', window => {
+setEventHandler ( 'windowDidOpen', magicTerminalOpen );
+
+/* HANDLER */
+
+function magicTerminalOpen ( window ) {
 
   if ( !window.isNormal () || !window.isMain () ) return;
 
@@ -12,4 +16,4 @@ setEventHandler ( 'windowDidOpen', window => {
 
   setFrame ( 0, .5, .4, .5, window ); // Bottom-Left
 
-});
+}

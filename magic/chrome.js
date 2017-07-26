@@ -1,7 +1,11 @@
 
 /* CHROME */
 
-setEventHandler ( 'windowDidOpen', window => {
+setEventHandler ( 'windowDidOpen', magicChromeOpen );
+
+/* HELPERS */
+
+function magicChromeOpen ( window ) {
 
   if ( !window.isNormal () || !window.isMain () ) return;
 
@@ -14,4 +18,4 @@ setEventHandler ( 'windowDidOpen', window => {
 
   setFrame ( 0, 0, .4, 1, window ); // Left
 
-});
+}

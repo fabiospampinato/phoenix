@@ -3,7 +3,12 @@
 
 let hashes = [];
 
-setEventHandler ( 'windowDidOpen', window => {
+setEventHandler ( 'windowDidOpen', magicDeveloperToolsOpen );
+setEventHandler ( 'windowDidClose', magicDeveloperToolsClose );
+
+/* HELPERS */
+
+function magicDeveloperToolsOpen ( window ) {
 
   if ( !window.isNormal () || !window.isMain () ) return;
 
@@ -20,9 +25,9 @@ setEventHandler ( 'windowDidOpen', window => {
 
   growVSCHeight ( -72 );
 
-});
+}
 
-setEventHandler ( 'windowDidClose', window => {
+function magicDeveloperToolsClose ( window ) {
 
   const hash = window.hash ();
 
@@ -32,9 +37,7 @@ setEventHandler ( 'windowDidClose', window => {
 
   growVSCHeight ( 72 );
 
-});
-
-/* HELPERS */
+}
 
 function growVSCHeight ( growth ) {
 

@@ -1,7 +1,7 @@
 
 /* FOCUS WINDOW */
 
-function focusWindow ( name = false, title = false, launch = true ) {
+function focusWindow ( name = false, title = false, launch = true, callback = _.noop ) {
 
   const space = Space.active (),
         window = findWindow ( space.windows (), name, title );
@@ -42,5 +42,7 @@ function focusWindow ( name = false, title = false, launch = true ) {
     }
 
   }
+
+  callback ();
 
 }

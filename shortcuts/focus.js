@@ -1,4 +1,8 @@
 
+/* IMPORT */
+
+require ( './magic/terminal.js' );
+
 /* LAUNCHERS */
 
 const launchChrome = `
@@ -39,13 +43,29 @@ const launchFinder = `
   end tell
 `;
 
+/* CALLBACKS */
+
+function callbackTerminal () {
+
+  setTimeout ( () => {
+
+    const focused = Window.focused ();
+
+    if ( !focused ) return;
+
+    magicTerminalOpen ( focused );
+
+  }, 600 );
+
+}
+
 /* FOCUS */
 
 const focus = [
   ['c', HYPER, ['Google Chrome', /^(?!Developer Tools)/, launchChrome]],
-  ['d', HYPER, ['Google Chrome', /(Developer Tools)|(chrome-devtools)/, launchDevTools]], //FIXME: If Hyper has been down for a while it will actually trigger Hyper+I
+  ['d', HYPER, ['Google Chrome', /(Developer Tools)|(chrome-devtools)/, launchDevTools]],
   ['v', HYPER, ['Code', false, launchVSC]],
-  ['t', HYPER, ['Terminal', false, launchTerminal]],
+  ['t', HYPER, ['Terminal', false, launchTerminal, callbackTerminal]], //FIXME: Ugly, but since `windowDidOpen` won't trigger, at least now it will behave as expected
   ['f', HYPER, ['Finder', false, launchFinder]]
 ];
 
