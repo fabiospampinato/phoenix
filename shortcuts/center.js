@@ -17,9 +17,11 @@ setHandler ( 'x', HYPER_SHIFT, () => {
 
   if ( !window ) return;
 
+  const frame = window.frame ();
+
   window.setFrame ({
-    x: 0,
-    y: 0,
+    x: frame.x,
+    y: frame.y,
     width: 900,
     height: 600
   });
