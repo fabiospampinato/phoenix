@@ -9,7 +9,7 @@ This configuration uses a remap of the Caps Lock key to something more useful: t
 
 1. Install [Phoenix](https://github.com/kasper/phoenix#install)
 2. Install [Karabiner Elements](https://github.com/tekezo/Karabiner-Elements) via its [dmg](https://pqrs.org/latest/karabiner-elements-latest.dmg)
-3. Replace Caps Lock with Hyper/F18 using [this](http://tinyurl.com/ycle9kd6) Karabiner Elements configuration (if the link doesn't work copy and paste this in a browser: `karabiner://karabiner/assets/complex_modifications/import?url=https%3A%2F%2Fcdn.rawgit.com%2Ffabiospampinato%2Fphoenix%2Fmaster%2Fconfig%2Fkarabiner.json`)
+3. Replace Caps Lock with Hyper/F18 using [this](http://tinyurl.com/yc8m5qe8) Karabiner Elements configuration (if the link doesn't work copy and paste this in a browser: `karabiner://karabiner/assets/complex_modifications/import?url=https%3A%2F%2Fraw.githubusercontent.com%2Ffabiospampinato%2Fphoenix%2Fmaster%2Fconfig%2Fkarabiner.json`)
 4. `$ mkdir ~/.config`
 5. `$ cd ~/.config`
 6. `$ git clone git@github.com:fabiospampinato/phoenix.git`
