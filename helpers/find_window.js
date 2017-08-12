@@ -1,7 +1,7 @@
 
 /* FIND WINDOW */
 
-function findWindow ( windows = Window.all (), name = false, title = false, open = true ) {
+function findWindow ( windows = Window.all (), name = false, title = false ) {
 
   return windows.find ( window => {
 
