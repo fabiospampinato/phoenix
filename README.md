@@ -100,6 +100,7 @@ This configuration uses a remap of the Caps Lock key to something more useful: t
 
 | Shortcut | Description |
 | -------- | ----------- |
+| <kbd>⇪ + `</kbd> | Focus to or open [Noty](https://github.com/fabiospampinato/noty)|
 | <kbd>⇪ + C</kbd> | Focus to or open Chrome|
 | <kbd>⇪ + D</kbd> | Focus to or open Chrome Developer Tools|
 | <kbd>⇪ + V</kbd> | Focus to or open Visual Studio Code|
