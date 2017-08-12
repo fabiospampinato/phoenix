@@ -7,7 +7,7 @@ function findWindow ( windows = Window.all (), name = false, title = false, open
 
     const app = window.app ();
 
-    if ( app.isHidden () || ( name && app.name () !== name ) ) return;
+    if ( name && app.name () !== name ) return;
 
     return !title || ( window.title () && title.test ( window.title () ) );
 
