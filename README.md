@@ -105,7 +105,7 @@ This configuration uses a remap of the Caps Lock key to something more useful: t
 | <kbd>⇪ + D</kbd> | Focus to or open Chrome Developer Tools|
 | <kbd>⇪ + V</kbd> | Focus to or open Visual Studio Code|
 | <kbd>⇪ + F</kbd> | Focus to or open Finder|
-| <kbd>⇪ + T</kbd> | Focus to or open Terminal|
+| <kbd>⇪ + T</kbd> | Focus to or open [Hyper](https://github.com/zeit/hyper)|
 
 ### Applications Icons
 
@@ -151,11 +151,11 @@ If it gets opened, positionate it to the left side.
 
 ### Chrome Developer Tools
 
-If it gets opened, positionate it to the bottom-right corner, and shink Visual Studio Code's height a bit, so that the console will be visible.
+If it gets opened, positionate it to the bottom-right corner, and shrink Visual Studio Code's height a bit, so that the console will be visible.
 
 If it gets closed, restore Visual Studio Code's height.
 
-### Terminal/Finder
+### Terminal/Hyper/Finder
 
 If one of these apps' windows gets opened, positionate it to bottom-left corner.
 
