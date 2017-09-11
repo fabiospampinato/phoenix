@@ -27,17 +27,32 @@ function focusWindow ( name = false, title = false, launch = true, callback = _.
 
       if ( !app ) return;
 
-      const newWindow = findWindow ( space.windows (), name, title );
+      /* CHECKING */
 
-      if ( newWindow ) {
+      let checksNr = 0,
+          maxChecksNr = 10;
 
-        newWindow.focus ();
+      const intervalId = setInterval ( () => {
 
-      } else {
+        const newWindow = findWindow ( space.windows (), name, title );
 
-        alert ( `Can't open new "${name}" window, provide some custom logic` );
+        if ( newWindow ) {
 
-      }
+          newWindow.focus ();
+
+          clearInterval ( intervalId );
+
+        } else if ( checksNr >= maxChecksNr ) {
+
+          alert ( `Can't open new "${name}" window, provide some custom logic` );
+
+          clearInterval ( intervalId );
+
+        }
+
+        checksNr++;
+
+      }, 250 );
 
     }
 
