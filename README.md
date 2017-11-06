@@ -47,7 +47,6 @@ Don't forget to make a PR if you fixed something or implemented something cool :
 	<img src="resources/corners.gif" alt="Corners" style="width:690px">
 </p>
 
-
 | Shortcut | Description |
 | -------- | ----------- |
 | <kbd>⇪ + Q</kbd> | Move window to the top-left corner |
