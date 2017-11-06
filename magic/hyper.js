@@ -14,6 +14,6 @@ function magicHyperOpen ( window ) {
 
   if ( !/Hyper/.test ( name ) || false ) return;
 
-  setFrame ( 0, .5, .4, .5, window ); // Bottom-Left
+  setFrame ( 'bottom-left', window );
 
 }

@@ -21,9 +21,9 @@ function magicDeveloperToolsOpen ( window ) {
 
   hashes.push ( window.hash () );
 
-  setFrame ( .4, .5, .6, .5, window ); // Bottom-Right
+  setFrame ( 'bottom-right', window );
 
-  growVSCHeight ( -72 );
+  growVSCHeight ( - DEVTOOLS_SHRINK_HEIGHT );
 
 }
 
@@ -35,7 +35,7 @@ function magicDeveloperToolsClose ( window ) {
 
   hashes = _.without ( hashes, hash );
 
-  growVSCHeight ( 72 );
+  growVSCHeight ( DEVTOOLS_SHRINK_HEIGHT );
 
 }
 

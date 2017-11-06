@@ -1,7 +1,7 @@
 
 /* ALERT */
 
-function alert ( text, icon, duration = 1 ) {
+function alert ( text, icon, duration = ALERT_DURATION ) {
 
   const frame = Screen.main ().flippedVisibleFrame ();
 
@@ -12,9 +12,9 @@ function alert ( text, icon, duration = 1 ) {
         y: ( frame.height / 2 ) - ( mFrame.height / 2 )
       };
     },
-    weight: 24,
+    weight: ALERT_WEIGHT,
     duration,
-    appearance: 'dark',
+    appearance: ALERT_APPEARANCE,
     text,
     icon
   }).show ();

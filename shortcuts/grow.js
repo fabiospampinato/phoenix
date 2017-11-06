@@ -2,10 +2,10 @@
 /* GROW */
 
 const grow = [
-  ['up', HYPER_SHIFT, [0, -50, 0, 50]],
-  ['right', HYPER_SHIFT, [0, 0, 50, 0]],
-  ['down', HYPER_SHIFT, [0, 0, 0, 50]],
-  ['left', HYPER_SHIFT, [-50, 0, 50, 0]]
+  ['up', HYPER_SHIFT, [0, - GROW_AMOUNT, 0, GROW_AMOUNT]],
+  ['right', HYPER_SHIFT, [0, 0, GROW_AMOUNT, 0]],
+  ['down', HYPER_SHIFT, [0, 0, 0, GROW_AMOUNT]],
+  ['left', HYPER_SHIFT, [- GROW_AMOUNT, 0, GROW_AMOUNT, 0]]
 ];
 
 setHandlers ( growFrame, grow, false );

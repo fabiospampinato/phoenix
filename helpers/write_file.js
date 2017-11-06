@@ -3,6 +3,6 @@
 
 function writeFile ( path, content, callback = _.noop ) {
 
-  Task.run ( '/bin/bash', ['-c', `echo '${content}' > ${path}`], callback );
+  Task.run ( SHELL_PATH, ['-c', `echo '${content}' > ${path}`], callback );
 
 }

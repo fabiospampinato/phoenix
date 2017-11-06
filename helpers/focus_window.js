@@ -30,7 +30,7 @@ function focusWindow ( name = false, title = false, launch = true, callback = _.
       /* CHECKING */
 
       let checksNr = 0,
-          maxChecksNr = 10;
+          maxChecksNr = FOCUS_WINDOW_CHECK_CYCLES;
 
       const intervalId = setInterval ( () => {
 
@@ -52,7 +52,7 @@ function focusWindow ( name = false, title = false, launch = true, callback = _.
 
         checksNr++;
 
-      }, 250 );
+      }, FOCUS_WINDOW_CHECK_INTERVAL );
 
     }
 

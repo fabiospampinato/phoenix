@@ -3,6 +3,6 @@
 
 function osascript ( script ) {
 
-  Task.run ( '/usr/bin/osascript', [ '-e', script ] );
+  Task.run ( OSASCRIPT_PATH, [ '-e', script ] );
 
 }

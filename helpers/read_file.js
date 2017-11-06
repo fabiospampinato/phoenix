@@ -3,6 +3,6 @@
 
 function readFile ( path, callback = _.noop ) {
 
-  Task.run ( '/bin/bash', ['-c', `cat ${path}`], ({ output }) => callback ( output ) );
+  Task.run ( SHELL_PATH, ['-c', `cat ${path}`], ({ output }) => callback ( output ) );
 
 }

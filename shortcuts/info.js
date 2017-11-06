@@ -20,9 +20,9 @@ setHandler ( 'i', HYPER, () => {
           y: sFrame.height - ( wFrame.y + ( wFrame.height / 2 ) )
         };
       },
-      weight: 24,
-      duration: 1,
-      appearance: 'dark',
+      weight: ALERT_WEIGHT,
+      duration: ALERT_DURATION,
+      appearance: ALERT_APPEARANCE,
       icon: app.icon ()
     }).show ();
 

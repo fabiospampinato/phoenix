@@ -16,6 +16,6 @@ function magicChromeOpen ( window ) {
 
   if ( /(chrome-devtools)|(Developer Tools - )/.test ( title ) ) return;
 
-  setFrame ( 0, 0, .4, 1, window ); // Left
+  setFrame ( 'left', window );
 
 }

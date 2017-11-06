@@ -22,8 +22,8 @@ setHandler ( 'x', HYPER_SHIFT, () => {
   window.setFrame ({
     x: frame.x,
     y: frame.y,
-    width: 900,
-    height: 600
+    width: CENTER_WIDTH,
+    height: CENTER_HEIGHT
   });
 
   center_window ( window );

@@ -3,6 +3,6 @@
 
 function setEventHandler ( event, handler ) {
 
-  handlers.push ( Event.on ( event, handler ) );
+  HANDLERS.push ( Event.on ( event, handler ) );
 
 }

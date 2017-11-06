@@ -16,6 +16,16 @@ This configuration uses a remap of the Caps Lock key to something more useful: t
 7. Restart Phoenix
 8. Enjoy!
 
+## Customization
+
+To disable specific features, just comment out their correspondent `require` call in [phoenix.js](https://github.com/fabiospampinato/phoenix/blob/master/phoenix.js).
+
+To tweak some numbers, simply edit [constants.js](https://github.com/fabiospampinato/phoenix/blob/master/config/constants.js).
+
+Changing the specific shortcut used to trigger an action is pretty trivial.
+
+Don't forget to make a PR if you fixed something or implemented something cool :)
+
 ## Shortcuts
 
 ### Sides

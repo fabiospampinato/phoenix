@@ -12,6 +12,6 @@ setEventHandler ( 'spaceDidChange', () => {
 
   if ( index === -1 ) return;
 
-  alert ( spacesList.items[index].title, undefined, .5 );
+  alert ( spacesList.items[index].title, undefined, SPACES_OVERLAY_DURATION );
 
 });

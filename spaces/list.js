@@ -34,7 +34,7 @@ function writeList ( callback = _.noop ) {
 
   if ( !spacesList ) return;
 
-  const str = JSON.stringify ( spacesList, undefined, 2 ) || '{}',
+  const str = JSON.stringify ( spacesList, undefined, JSON_INDENTATION ) || '{}',
         content = str.replace ( "'", "\\'" );
 
   writeFile ( '~/.config/phoenix/spaces/list.json', content, callback );
@@ -45,7 +45,7 @@ function writeList ( callback = _.noop ) {
 
 let cycleIteration = 0, cycleInterval;
 
-function updateSpaceCycle ( iteration = cycleIteration, interval = 500, limit = 5 ) {
+function updateSpaceCycle ( iteration = cycleIteration, interval = SPACES_UPDATE_INTERVAL, limit = SPACES_UPDATE_CYCLES ) {
 
   if ( iteration === 0 ) { // Iterations start
 

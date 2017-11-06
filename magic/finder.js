@@ -16,6 +16,6 @@ function magicFinderOpen ( window ) {
 
   if ( !title || /(Quick Look)|(About Finder)|(Finder Preferences)|( Info$)/.test ( title ) ) return;
 
-  setFrame ( 0, .5, .4, .5, window ); // Bottom-Left
+  setFrame ( 'bottom-left', window );
 
 }

@@ -8,6 +8,7 @@ require ( './helpers/alert.js' );
 require ( './helpers/center_window.js' );
 require ( './helpers/find_window.js' );
 require ( './helpers/focus_window.js' );
+require ( './helpers/get_named_frame.js' );
 require ( './helpers/grow_frame.js' );
 require ( './helpers/log.js' );
 require ( './helpers/osascript.js' );

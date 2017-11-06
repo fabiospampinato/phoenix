@@ -3,6 +3,8 @@
 
 function setFrame ( x, y, width, height, window = Window.focused () ) {
 
+  if ( _.isString ( x ) ) return setFrame ( ...getNamedFrame ( x ), y || window );
+
   if ( !window ) return;
 
   const screen = window.screen (),

@@ -1,8 +1,6 @@
 
 /* QUIT */
 
-const QUIT_BLACKLIST = ['Finder'];
-
 let lastQuitTimestamp = 0;
 
 setHandler ( 'q', ['cmd'], () => {
