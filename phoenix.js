@@ -27,6 +27,7 @@ require ( './shortcuts/fullscreen.js' );
 require ( './shortcuts/info.js' );
 require ( './shortcuts/grow.js' );
 //TODO: Add `shrinking` capabilities
+require ( './shortcuts/halves.js' );
 require ( './shortcuts/sides.js' );
 require ( './shortcuts/quit.js' );
 require ( './shortcuts/reload.js' );

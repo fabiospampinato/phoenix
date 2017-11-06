@@ -45,6 +45,17 @@ This configuration uses a remap of the Caps Lock key to something more useful: t
 | <kbd>⇪ + S</kbd> | Move window to the bottom-right corner |
 | <kbd>⇪ + A</kbd> | Move window to the bottom-left corner |
 
+### Halves
+
+<p align="center">
+	<img src="resources/halves.gif" alt="Halves" style="width:690px">
+</p>
+
+| Shortcut | Description |
+| -------- | ----------- |
+| <kbd>⇪ + [</kbd> | Move window to the 1st half |
+| <kbd>⇪ + ]</kbd> | Move window to the 2nd half |
+
 ### Thirds
 
 <p align="center">
