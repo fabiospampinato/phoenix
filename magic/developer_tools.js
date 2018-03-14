@@ -8,16 +8,32 @@ setEventHandler ( 'windowDidClose', magicDeveloperToolsClose );
 
 /* HELPERS */
 
+function isWindowDeveloperTools ( window, checkHash = false ) {
+
+  if ( checkHash ) {
+
+    return _.includes ( hashes, window.hash () );
+
+  } else {
+
+    if ( !window.isNormal () || !window.isMain () ) return false;
+
+    const name = window.app ().name (),
+          title = window.title ();
+
+    if ( !/Google Chrome/.test ( name ) ) return false;
+
+    if ( !/(chrome-devtools)|(Developer Tools - )/.test ( title ) ) return false;
+
+    return true;
+
+  }
+
+}
+
 function magicDeveloperToolsOpen ( window ) {
 
-  if ( !window.isNormal () || !window.isMain () ) return;
-
-  const name = window.app ().name (),
-        title = window.title ();
-
-  if ( !/Google Chrome/.test ( name ) ) return;
-
-  if ( !/(chrome-devtools)|(Developer Tools - )/.test ( title ) ) return;
+  if ( !isWindowDeveloperTools ( window ) ) return;
 
   hashes.push ( window.hash () );
 
@@ -29,11 +45,11 @@ function magicDeveloperToolsOpen ( window ) {
 
 function magicDeveloperToolsClose ( window ) {
 
-  const hash = window.hash ();
+  if ( !isWindowDeveloperTools ( window, true ) ) return;
 
-  if ( !_.includes ( hashes, hash ) ) return;
+  hashes = _.without ( hashes, window.hash () );
 
-  hashes = _.without ( hashes, hash );
+  if ( Space.active ().windows ().find ( isWindowDeveloperTools ) ) return; // Avoiding unnecessary growth
 
   growVSCHeight ( DEVTOOLS_SHRINK_HEIGHT );
 
@@ -45,11 +61,17 @@ function growVSCHeight ( growth ) {
 
   if ( !vscode ) return;
 
-  const frame = vscode.frame (),
-        newFrame = _.extend ( frame, {
-          height: frame.height + growth
-        });
+  const screen = vscode.screen (),
+        screenFrame = screen.flippedVisibleFrame (),
+        maxHeight = screenFrame.height,
+        minHeight = maxHeight - Math.abs ( growth ),
+        frame = vscode.frame (),
+        height = frame.height + growth;
 
-  vscode.setFrame ( newFrame );
+  if ( height > maxHeight || height < minHeight ) return; // Avoiding unnecessary growth/shrink
+
+  frame.height = height;
+
+  vscode.setFrame ( frame );
 
 }
