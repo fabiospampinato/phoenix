@@ -18,7 +18,7 @@ readList ( () => {
 
 function readList ( callback = _.noop ) {
 
-  readFile ( '~/.config/phoenix/spaces/list.json', content => {
+  readFile ( SPACES_LIST_PATH, content => {
 
     const parsed = _.attempt ( JSON.parse, content );
 
@@ -37,7 +37,7 @@ function writeList ( callback = _.noop ) {
   const str = JSON.stringify ( spacesList, undefined, JSON_INDENTATION ) || '{}',
         content = str.replace ( "'", "\\'" );
 
-  writeFile ( '~/.config/phoenix/spaces/list.json', content, callback );
+  writeFile ( SPACES_LIST_PATH, content, callback );
 
 }
 
