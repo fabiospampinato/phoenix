@@ -196,14 +196,14 @@ It combines [Phoenix](https://github.com/kasper/phoenix), [Alfred](https://www.a
 
 This is how it works:
 - It uses Phoenix to compile a list of your spaces
-- It tries to guess a name for those spaces, by default that would be the name of the folder opened in the Visual Studio Code instance present in that space
+- It tries to guess a name for those spaces, by default that would be the name of the folder opened in the Visual Studio Code instance present in that space ([get_space_name.js](https://github.com/fabiospampinato/phoenix/blob/master/helpers/get_space_name.js))
 - Refreshes the list and those guessed names when necessary
 - Listens for the double Hyper (<kbd>⇪</kbd> <kbd>⇪</kbd>) shortcut
-- Opens Alfred and triggers alfred-spaces-workflow
+- Opens [Alfred](https://www.alfredapp.com) and triggers [alfred-spaces-workflow](https://github.com/fabiospampinato/alfred-spaces-workflow)
 - Which reads the list of spaces compiled with Phoenix and displays it to you
-- Select a space to switch to
+- Now just select a space to switch to
 
-In order to make this wizardry work you have to open `System Preferences -> Keyboard -> Shortcuts -> Mission Control` and bind all `Switch to Desktop [NUMBER]` actions to <kbd>ctrl + alt + cmd + shift + [NUMBER]</kbd>. There are actions up to the 9th desktop, but they may not be shown to you if you have less then 9 desktops currently open.
+In order to make this work you have to open `System Preferences -> Keyboard -> Shortcuts -> Mission Control` and bind all `Switch to Desktop [NUMBER]` actions to <kbd>ctrl + alt + cmd + shift + [NUMBER]</kbd>. There are actions up to the 9th desktop, but they may not be shown to you if you have less then 9 desktops currently open.
 
 Limitations:
 - There's no API available for retrieving windows from other spaces, therefor other spaces' guessed names won't be refreshed until you visit them. The very first time you load Phoenix you might want to switch the focus to all of them, one by one, to have their names updated.
