@@ -29,6 +29,8 @@ function launchDevTools () {
 
 const launchVSC = () => Task.run ( '/usr/local/bin/code', ['-n'] );
 
+const launchHyper = () => Task.run ( '/usr/local/bin/hyper' );
+
 const launchTerminal = `
   tell application "Terminal"
     do script ""
@@ -59,6 +61,20 @@ function callbackTerminal () {
 
 }
 
+function callbackHyper () {
+
+  setTimeout ( () => {
+
+    const focused = Window.focused ();
+
+    if ( !focused ) return;
+
+    magicHyperOpen ( focused );
+
+  }, 1200 );
+
+}
+
 /* FOCUS */
 
 const focus = [
@@ -67,7 +83,7 @@ const focus = [
   ['d', HYPER, ['Google Chrome', /(Developer Tools)|(chrome-devtools)/, launchDevTools]],
   ['v', HYPER, ['Code', false, launchVSC]],
   // ['t', HYPER, ['Terminal', false, launchTerminal, callbackTerminal]], //FIXME: Ugly, but since `windowDidOpen` won't trigger, at least now it will behave as expected
-  ['t', HYPER, ['Hyper']],
+  ['t', HYPER, ['Hyper', false, launchHyper, callbackHyper]], //FIXME: Ugly, but since `windowDidOpen` won't trigger, at least now it will behave as expected
   ['f', HYPER, ['Finder', false, launchFinder]],
   ['g', HYPER, ['Tower']]
 ];

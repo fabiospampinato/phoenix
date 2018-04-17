@@ -1,7 +1,7 @@
 
-/* TERMINAL */ //FIXME: sometimes doesn't detect the terminal (no `windowDidOpen` event)
+/* TERMINAL */
 
-setEventHandler ( 'windowDidOpen', magicTerminalOpen );
+setEventHandler ( 'windowDidOpen', magicTerminalOpen ); //FIXME: Doesn't seem to be working
 
 /* HANDLER */
 
