@@ -187,7 +187,7 @@ If it gets opened, positionate it to the right side.
 ## Space Switcher
 
 <p align="center">
-	<img src="resources/spaces.gif" alt="Space Switcher" style="width:690px">
+	<img src="resources/spaces_switcher.gif" alt="Space Switcher" style="width:690px">
 </p>
 
 This is the truly great addition to what was already available on the internet.
