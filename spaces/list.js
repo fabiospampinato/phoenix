@@ -98,7 +98,7 @@ function updateSpace ( space, index, force = false, write = true ) {
   if ( _.isUndefined ( index ) ) index = Space.all ().findIndex ( s => s.isEqual ( space ) );
 
   const item = {
-    title: guessSpaceName ( space, index ),
+    title: getSpaceName ( space, index ),
     arg: index2keycode ( index )
   };
 
@@ -115,34 +115,5 @@ function updateSpace ( space, index, force = false, write = true ) {
 function updateWindow ( window ) {
 
   updateSpaceCycle ( 0 ); // It may take a bit for the window's title to get updated
-
-}
-
-/* HELPERS */
-
-function index2keycode ( index ) {
-
-  const keycodes = [18, 19, 20, 21, 23, 22, 26, 28, 25], // Corresponding to numbers from 1 to 9
-        keycode = keycodes[index];
-
-  return keycode ? `${keycode}` : ''; // Alfred wants a string, not a number
-
-}
-
-function guessSpaceName ( space, index ) {
-
-  // if ( !index ) return 'Home';
-
-  const vscode = space.windows ().find ( window => /Code/.test ( window.app ().name () ) );
-
-  if ( vscode ) {
-
-    const title = vscode.title ();
-
-    return _.last ( title.split ( ' — ' ) );
-
-  }
-
-  return index ? `Space ${index + 1}` : 'Home';
 
 }

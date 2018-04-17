@@ -128,6 +128,19 @@ Don't forget to make a PR if you fixed something or implemented something cool :
 | <kbd>⇪ + T</kbd> | Focus to or open [Hyper](https://github.com/zeit/hyper)|
 | <kbd>⇪ + G</kbd> | Focus to or open [GitTower](https://www.git-tower.com/)|
 
+### Spaces
+
+<p align="center">
+	<img src="resources/spaces.gif" alt="Spaces" style="width:690px">
+</p>
+
+In order to make this work you have to open `System Preferences -> Keyboard -> Shortcuts -> Mission Control` and bind all `Switch to Desktop [NUMBER]` actions to <kbd>ctrl + alt + cmd + shift + [NUMBER]</kbd>. There are actions up to the 9th desktop, but they may not be shown to you if you have less then 9 desktops currently open.
+
+| Shortcut | Description |
+| -------- | ----------- |
+| <kbd>⇪ + tab</kbd> | Switch to the next space |
+| <kbd>⇪ + shift + tab </kbd> | Switch to the previous space |
+
 ### Applications Icons
 
 <p align="center">

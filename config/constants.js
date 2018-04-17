@@ -34,6 +34,7 @@ const LEFT_WIDTH_PERCENTAGE = 40; // Set it to 50 if you want symmetric left and
 
 const QUIT_BLACKLIST = ['Finder'];
 
+const SPACES_SWITCH_WRAP = true;
 const SPACES_OVERLAY_DURATION = ALERT_DURATION / 2;
 const SPACES_UPDATE_CYCLES = 5;
 const SPACES_UPDATE_INTERVAL = 500;
