@@ -2,6 +2,7 @@
 /* OVERLAY */
 
 //TODO: Document this
+//TODO: Add an icon showing `currentIndex/totalLength`
 
 setEventHandler ( 'spaceDidChange', () => {
 
