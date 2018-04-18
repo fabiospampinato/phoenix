@@ -1,15 +1,13 @@
 
 /* INIT */
 
-//TODO: Handle space addition/removal
-
 let spacesList;
 
 readList ( () => {
 
-  updateSpaces ();
+  updateSpacesList ();
 
-  setEventHandler ( 'spaceDidChange', () => updateSpace () );
+  setEventHandler ( 'spaceDidChange', updateSpacesList );
   setEventsHandler ( ['windowDidOpen', 'windowDidClose'], updateWindow );
 
 });
@@ -22,7 +20,7 @@ function readList ( callback = _.noop ) {
 
     const parsed = _.attempt ( JSON.parse, content );
 
-    spacesList = _.isError ( parsed ) ? {} : parsed;
+    spacesList = _.isError ( parsed ) ? { items: [] } : parsed;
 
     callback ();
 
@@ -31,8 +29,6 @@ function readList ( callback = _.noop ) {
 }
 
 function writeList ( callback = _.noop ) {
-
-  if ( !spacesList ) return;
 
   const str = JSON.stringify ( spacesList, undefined, JSON_INDENTATION ) || '{}',
         content = str.replace ( "'", "\\'" );
@@ -75,38 +71,50 @@ function updateSpaceCycle ( iteration = cycleIteration, interval = SPACES_UPDATE
 
 }
 
-function updateSpaces () {
+function updateSpacesList () {
 
-  const spaces = Space.all ();
-
-  if ( spacesList.items && spacesList.items.length === spaces.length ) return;
-
-  spacesList.items = [];
-
-  spaces.forEach ( ( space, index ) => updateSpace ( space, index, true, false ) );
-
-  writeList ( spacesList );
+  updateSpaces ();
+  updateSpace ();
 
 }
 
-function updateSpace ( space, index, force = false, write = true ) {
+function updateSpaces () {
+
+  const spaces = Space.all (),
+        list = {};
+
+  list.items = spaces.map ( ( space, index ) => {
+
+    const hash = space.hash (),
+          prevItem = spacesList.items.find ( item => item.hash === hash );
+
+    return prevItem || getSpaceItem ( space, index );
+
+  });
+
+  if ( _.isEqual ( list, spacesList ) ) return;
+
+  spacesList = list;
+
+  writeList ();
+
+}
+
+function updateSpace ( space, index ) {
 
   if ( !space ) space = Space.active ();
 
-  if ( !force && !Space.active ().isEqual ( space ) ) return false; // We can't get windows from inactive spaces
+  if ( !Space.active ().isEqual ( space ) ) return false; // We can't get windows from inactive spaces
 
   if ( _.isUndefined ( index ) ) index = Space.all ().findIndex ( s => s.isEqual ( space ) );
 
-  const item = {
-    title: getSpaceName ( space, index ),
-    arg: index2keycode ( index )
-  };
+  const item = getSpaceItem ( space, index );
 
   if ( _.isEqual ( spacesList.items[index], item ) ) return false;
 
   spacesList.items[index] = item;
 
-  if ( write ) writeList ();
+  writeList ();
 
   return true;
 
@@ -114,6 +122,20 @@ function updateSpace ( space, index, force = false, write = true ) {
 
 function updateWindow ( window ) {
 
+  if ( !window.isNormal () ) return;
+
   updateSpaceCycle ( 0 ); // It may take a bit for the window's title to get updated
+
+}
+
+/* GET */
+
+function getSpaceItem ( space, index ) {
+
+  return {
+    title: getSpaceName ( space, index ),
+    arg: index2keycode ( index ),
+    hash: space.hash ()
+  };
 
 }

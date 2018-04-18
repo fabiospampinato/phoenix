@@ -3,16 +3,26 @@
 
 function getSpaceName ( space, index ) {
 
-  const vscode = space.windows ().find ( window => /Code/.test ( window.app ().name () ) );
+  if ( space ) {
 
-  if ( vscode ) {
+    const vscode = space.windows ().find ( window => /Code/.test ( window.app ().name () ) );
 
-    const title = vscode.title ();
+    if ( vscode ) {
 
-    return _.last ( title.split ( ' — ' ) );
+      const title = vscode.title ();
+
+      return _.last ( title.split ( ' — ' ) );
+
+    }
 
   }
 
-  return index ? `Space ${index + 1}` : 'Home';
+  if ( _.isNumber ( index ) ) {
+
+    return index ? `Space ${index + 1}` : 'Home';
+
+  }
+
+  return 'Unnamed Space';
 
 }

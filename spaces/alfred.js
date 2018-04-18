@@ -11,7 +11,7 @@ setHandler ( 'f18', [], () => {
 
     lastWorkspaceTimestamp = 0;
 
-    updateSpace ();
+    updateSpacesList ();
 
     osascript ( `tell application "Alfred 3" to search "spaces "` );
 
