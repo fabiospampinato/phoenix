@@ -136,6 +136,8 @@ Don't forget to make a PR if you fixed something or implemented something cool :
 
 In order to make this work you have to open `System Preferences -> Keyboard -> Shortcuts -> Mission Control` and bind all `Switch to Desktop [NUMBER]` actions to <kbd>ctrl + alt + cmd + shift + [NUMBER]</kbd>. There are actions up to the 9th desktop, but they may not be shown to you if you have less then 9 desktops currently open.
 
+**Note**: If you don't need wrapping support, you should just remap the `Move left/right a space` actions under `System Preferences -> Keyboard -> Shortcuts -> Mission Control`.
+
 | Shortcut | Description |
 | -------- | ----------- |
 | <kbd>⇪ + tab</kbd> | Switch to the next space |
