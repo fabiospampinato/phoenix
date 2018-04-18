@@ -7,7 +7,7 @@ function setHandler ( key, modifier, handler, handlerArgs = [], skipRepetitions 
 
     if ( repeated && skipRepetitions ) return;
 
-    handler ( ...handlerArgs )
+    handler ( ...handlerArgs );
 
   }));
 
