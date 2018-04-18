@@ -8,7 +8,6 @@ function switchSpace ( modifier, wrap = SPACES_SWITCH_WRAP ) {
   if ( spaces.length < 2 ) return; // Nothing to switch to
 
   const activeSpace = Space.active (),
-        activeWindows = activeSpace.windows (),
         activeIndex = getSpaceIndex ( activeSpace );
 
   let nextIndex = activeIndex + modifier;
