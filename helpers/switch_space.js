@@ -22,6 +22,6 @@ function switchSpace ( modifier, wrap = SPACES_SWITCH_WRAP ) {
 
   const script = `tell application "System Events" to key code {${index2keycode ( nextIndex )}} using {control down, option down, command down, shift down}`;
 
-  osascript ( script );
+  setTimeout ( () => osascript ( script ), 250 ); //FIXME: https://github.com/kasper/phoenix/issues/206
 
 }
