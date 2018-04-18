@@ -36,6 +36,7 @@ require ( './shortcuts/sides.js' );
 require ( './shortcuts/spaces.js' );
 require ( './shortcuts/quit.js' );
 require ( './shortcuts/reload.js' );
+require ( './shortcuts/sixths.js' );
 require ( './shortcuts/split_view.js' );
 require ( './shortcuts/thirds.js' );
 

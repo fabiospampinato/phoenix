@@ -77,6 +77,21 @@ Don't forget to make a PR if you fixed something or implemented something cool :
 | <kbd>⇪ + 2</kbd> | Move window to the 2nd column |
 | <kbd>⇪ + 3</kbd> | Move window to the 3rd column |
 
+### Sixths
+
+<p align="center">
+	<img src="resources/sixths.gif" alt="Sixths" style="width:690px">
+</p>
+
+| Shortcut | Description |
+| -------- | ----------- |
+| <kbd>⇪ + shift + Q</kbd> | Move window to the 1st sixth |
+| <kbd>⇪ + shift + W</kbd> | Move window to the 2nd sixth |
+| <kbd>⇪ + shift + E</kbd> | Move window to the 3rd sixth |
+| <kbd>⇪ + shift + A</kbd> | Move window to the 4th sixth |
+| <kbd>⇪ + shift + S</kbd> | Move window to the 5th sixth |
+| <kbd>⇪ + shift + D</kbd> | Move window to the 6th sixth |
+
 ### Center
 
 <p align="center">
