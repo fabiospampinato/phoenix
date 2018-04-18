@@ -9,7 +9,7 @@ setEventHandler ( 'spaceDidChange', () => {
   if ( !spacesList || !spacesList.items ) return;
 
   const space = Space.active (),
-        index = Space.all ().findIndex ( s => s.isEqual ( space ) );
+        index = getSpaceIndex ( space );
 
   if ( index === -1 ) return;
 

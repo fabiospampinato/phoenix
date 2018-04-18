@@ -106,7 +106,7 @@ function updateSpace ( space, index ) {
 
   if ( !Space.active ().isEqual ( space ) ) return false; // We can't get windows from inactive spaces
 
-  if ( _.isUndefined ( index ) ) index = Space.all ().findIndex ( s => s.isEqual ( space ) );
+  if ( _.isUndefined ( index ) ) index = getSpaceIndex ( space );
 
   const item = getSpaceItem ( space, index );
 

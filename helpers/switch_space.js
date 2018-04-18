@@ -9,7 +9,7 @@ function switchSpace ( modifier, wrap = SPACES_SWITCH_WRAP ) {
 
   const activeSpace = Space.active (),
         activeWindows = activeSpace.windows (),
-        activeIndex = _.findIndex ( spaces, otherSpace => activeSpace.isEqual ( otherSpace ) );
+        activeIndex = getSpaceIndex ( activeSpace );
 
   let nextIndex = activeIndex + modifier;
 
