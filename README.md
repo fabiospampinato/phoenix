@@ -121,9 +121,9 @@ Don't forget to make a PR if you fixed something or implemented something cool :
 | Shortcut | Description |
 | -------- | ----------- |
 | <kbd>⇪ + `</kbd> | Focus to or open [Noty](https://github.com/fabiospampinato/noty)|
-| <kbd>⇪ + C</kbd> | Focus to or open Chrome|
-| <kbd>⇪ + D</kbd> | Focus to or open Chrome Developer Tools|
-| <kbd>⇪ + V</kbd> | Focus to or open Visual Studio Code|
+| <kbd>⇪ + C</kbd> | Focus to or open [Chrome](https://www.google.com/chrome)|
+| <kbd>⇪ + D</kbd> | Focus to or open [Chrome Developer Tools](https://developer.chrome.com/devtools)|
+| <kbd>⇪ + V</kbd> | Focus to or open [Visual Studio Code](https://code.visualstudio.com)|
 | <kbd>⇪ + F</kbd> | Focus to or open Finder|
 | <kbd>⇪ + T</kbd> | Focus to or open [Hyper](https://github.com/zeit/hyper)|
 | <kbd>⇪ + G</kbd> | Focus to or open [GitTower](https://www.git-tower.com/)|
