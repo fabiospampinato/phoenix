@@ -11,7 +11,7 @@ function getSpaceName ( space, index ) {
 
       const title = vscode.title ();
 
-      return _.last ( title.split ( ' — ' ) );
+      return _.trim ( _.last ( title.split ( ' — ' ) ).replace ( '(Workspace)', '' ).replace ( '[Unsupported]', '' ) );
 
     }
 
