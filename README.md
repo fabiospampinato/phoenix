@@ -142,6 +142,7 @@ Don't forget to make a PR if you fixed something or implemented something cool :
 | <kbd>⇪ + F</kbd> | Focus to or open Finder|
 | <kbd>⇪ + T</kbd> | Focus to or open [Hyper](https://github.com/zeit/hyper)|
 | <kbd>⇪ + G</kbd> | Focus to or open [GitTower](https://www.git-tower.com/)|
+| <kbd>⇪ + Z</kbd> | Focus to or open [Franz](https://meetfranz.com)|
 
 ### Spaces
 
