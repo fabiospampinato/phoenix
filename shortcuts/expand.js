@@ -16,8 +16,8 @@ setHandler ( 'space', HYPER, () => {
         prevFrame = expansionCache[hash],
         expanding = !prevFrame || currFrame.width < sFrame.width || ( currFrame.height + 6 ) < sFrame.height, //FIXME: The setted height might be lower than the actual available height
         nextFrame = expanding ? {
-          x: 0,
-          y: 0,
+          x: sFrame.x,
+          y: sFrame.y,
           width: 1000000,
           height: 1000000
         } : prevFrame;
