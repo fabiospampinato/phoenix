@@ -1,26 +1,26 @@
 
 /* INIT */
 
-let spacesList;
+let spacesListRaw,
+    spacesList,
+    spacesListScreenHash;
 
-readList ( () => {
+readListRaw ( () => {
 
-  updateSpacesList ();
+  updateSpacesLists ();
 
-  setEventHandler ( 'spaceDidChange', updateSpacesList );
+  setEventHandler ( 'spaceDidChange', updateSpacesLists );
   setEventsHandler ( ['windowDidOpen', 'windowDidClose'], updateWindow );
 
 });
 
 /* LIST */
 
-function readList ( callback = _.noop ) {
+function readListRaw ( callback = _.noop ) {
 
-  readFile ( SPACES_LIST_PATH, content => {
+  readJSON ( SPACES_LIST_RAW_PATH, { items: [] }, obj => {
 
-    const parsed = _.attempt ( JSON.parse, content );
-
-    spacesList = _.isError ( parsed ) ? { items: [] } : parsed;
+    spacesListRaw = obj;
 
     callback ();
 
@@ -28,12 +28,21 @@ function readList ( callback = _.noop ) {
 
 }
 
+function writeListRaw ( callback = _.noop ) {
+
+  writeJSON ( SPACES_LIST_RAW_PATH, spacesListRaw, callback );
+
+}
+
 function writeList ( callback = _.noop ) {
 
-  const str = JSON.stringify ( spacesList, undefined, JSON_INDENTATION ) || '{}',
-        content = str.replace ( "'", "\\'" );
+  const screen_hash = Screen.main ().hash ();
 
-  writeFile ( SPACES_LIST_PATH, content, callback );
+  spacesList = _.cloneDeep ( spacesListRaw );
+
+  spacesList.items = spacesList.items.filter ( item => item.screens_hashes.includes ( screen_hash ) );
+
+  writeJSON ( SPACES_LIST_PATH, spacesList, callback );
 
 }
 
@@ -71,10 +80,23 @@ function updateSpaceCycle ( iteration = cycleIteration, interval = SPACES_UPDATE
 
 }
 
-function updateSpacesList () {
+function updateSpacesListRaw () {
 
   updateSpaces ();
   updateSpace ();
+
+}
+
+function updateSpacesList () {
+
+  writeList ();
+
+}
+
+function updateSpacesLists () {
+
+  updateSpacesListRaw ();
+  updateSpacesList ();
 
 }
 
@@ -85,36 +107,39 @@ function updateSpaces () {
 
   list.items = spaces.map ( ( space, index ) => {
 
-    const hash = space.hash (),
-          prevItem = spacesList.items.find ( item => item.hash === hash );
+    const space_hash = space.hash (),
+          screens = space.screens (),
+          prevItem = spacesListRaw.items.find ( item => item.space_hash === space_hash );
 
-    return prevItem || getSpaceItem ( space, index );
+    return prevItem || getSpaceItem ( space, index, screens );
 
   });
 
-  if ( _.isEqual ( list, spacesList ) ) return;
+  if ( _.isEqual ( list, spacesListRaw ) ) return;
 
-  spacesList = list;
+  spacesListRaw = list;
 
-  writeList ();
+  writeListRaw ();
 
 }
 
-function updateSpace ( space, index ) {
+function updateSpace ( space, index, screens ) {
 
   if ( !space ) space = Space.active ();
+
+  if ( !screens ) screens = space.screens ();
 
   if ( !Space.active ().isEqual ( space ) ) return false; // We can't get windows from inactive spaces
 
   if ( _.isUndefined ( index ) ) index = getSpaceIndex ( space );
 
-  const item = getSpaceItem ( space, index );
+  const item = getSpaceItem ( space, index, screens );
 
-  if ( _.isEqual ( spacesList.items[index], item ) ) return false;
+  if ( _.isEqual ( spacesListRaw.items[index], item ) ) return false;
 
-  spacesList.items[index] = item;
+  spacesListRaw.items[index] = item;
 
-  writeList ();
+  writeListRaw ();
 
   return true;
 
@@ -130,12 +155,13 @@ function updateWindow ( window ) {
 
 /* GET */
 
-function getSpaceItem ( space, index ) {
+function getSpaceItem ( space, index, screens ) {
 
   return {
     title: getSpaceName ( space, index ),
     arg: index2keycode ( index ),
-    hash: space.hash ()
+    space_hash: space.hash (),
+    screens_hashes: screens.map ( screen => screen.hash () )
   };
 
 }

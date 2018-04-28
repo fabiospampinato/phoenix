@@ -11,13 +11,16 @@ setHandler ( 'f18', [], () => {
 
     lastWorkspaceTimestamp = 0;
 
-    updateSpacesList ();
+    updateSpacesLists ();
 
     osascript ( `tell application "Alfred 3" to search "spaces "` );
 
-    const index = getSpaceIndex ();
+    if ( !SPACES_ALFRED_PRESELECT ) return;
 
-    if ( !SPACES_ALFRED_PRESELECT || !index ) return;
+    const space_hash = Space.active ().hash (),
+          index = spacesList.items.findIndex ( item => item.space_hash === space_hash );
+
+    if ( index < 0 ) return;
 
     osascript ( `
       delay ${SPACES_ALFRED_PRESELECT_DELAY}

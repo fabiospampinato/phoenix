@@ -36,4 +36,5 @@ bower_components
 node_modules
 
 # Project specific paths ignore
+/spaces/list_raw.json
 /spaces/list.json

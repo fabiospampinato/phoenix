@@ -16,6 +16,7 @@ require ( './helpers/index2keycode.js' );
 require ( './helpers/log.js' );
 require ( './helpers/osascript.js' );
 require ( './helpers/read_file.js' );
+require ( './helpers/read_json.js' );
 require ( './helpers/set_event_handler.js' );
 require ( './helpers/set_events_handler.js' );
 require ( './helpers/set_frame.js' );
@@ -23,6 +24,7 @@ require ( './helpers/set_handler.js' );
 require ( './helpers/set_handlers.js' );
 require ( './helpers/switch_space.js' );
 require ( './helpers/write_file.js' );
+require ( './helpers/write_json.js' );
 
 require ( './shortcuts/center.js' );
 require ( './shortcuts/corners.js' );
