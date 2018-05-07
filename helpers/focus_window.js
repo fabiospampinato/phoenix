@@ -1,10 +1,10 @@
 
 /* FOCUS WINDOW */
 
-function focusWindow ( name = false, title = false, launch = true, callback = _.noop ) {
+function focusWindow ( name = false, isNameOptional = false, title = false, launch = true, callback = _.noop ) {
 
   const space = Space.active (),
-        window = findWindow ( space.windows (), name, title );
+        window = findWindow ( space.windows (), name, isNameOptional, title );
 
   if ( window ) {
 
@@ -21,7 +21,7 @@ function focusWindow ( name = false, title = false, launch = true, callback = _.
 
       osascript ( launch );
 
-    } else {
+    } else if ( name ) {
 
       const app = App.launch ( name );
 
@@ -34,7 +34,7 @@ function focusWindow ( name = false, title = false, launch = true, callback = _.
 
       const intervalId = setInterval ( () => {
 
-        const newWindow = findWindow ( space.windows (), name, title );
+        const newWindow = findWindow ( space.windows (), name, isNameOptional, title );
 
         if ( newWindow ) {
 

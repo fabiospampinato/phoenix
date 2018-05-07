@@ -1,16 +1,26 @@
 
 /* FIND WINDOW */
 
-function findWindow ( windows = Window.all (), name = false, title = false ) {
+function findWindow ( windows = Window.all (), name = false, isNameOptional = false, title = false ) {
 
-  return windows.find ( window => {
+  let fallback;
 
-    const app = window.app ();
+  for ( let i = 0, l = windows.length; i < l; i++ ) {
 
-    if ( name && app.name () !== name ) return;
+    const window = windows[i];
 
-    return !title || ( window.title () && title.test ( window.title () ) );
+    const titleOK = !title || ( title.test ( window.title () || '' ) );
 
-  });
+    if ( !titleOK ) continue;
+
+    const nameOK = !name || ( window.app ().name () === name );
+
+    if ( nameOK ) return window;
+
+    if ( isNameOptional ) fallback = window;
+
+  }
+
+  return fallback;
 
 }

@@ -79,12 +79,12 @@ function callbackHyper () {
 
 const focus = [
   ['`', HYPER, ['Noty']],
-  ['c', HYPER, ['Google Chrome', /^(?!Developer Tools)/, launchChrome]],
-  ['d', HYPER, ['Google Chrome', /(Developer Tools)|(chrome-devtools)/, launchDevTools]],
-  ['v', HYPER, ['Code', false, launchVSC]],
-  // ['t', HYPER, ['Terminal', false, launchTerminal, callbackTerminal]], //FIXME: Ugly, but since `windowDidOpen` won't trigger, at least now it will behave as expected
-  ['t', HYPER, ['Hyper', false, launchHyper, callbackHyper]], //FIXME: Ugly, but since `windowDidOpen` won't trigger, at least now it will behave as expected
-  ['f', HYPER, ['Finder', false, launchFinder]],
+  ['c', HYPER, ['Google Chrome', false, /^(?!Developer Tools)/, launchChrome]],
+  ['d', HYPER, ['Google Chrome', true, /(Developer Tools)|(chrome-devtools)/, launchDevTools]],
+  ['v', HYPER, ['Code', false, false, launchVSC]],
+  // ['t', HYPER, ['Terminal', false, false, launchTerminal, callbackTerminal]], //FIXME: Ugly, but since `windowDidOpen` won't trigger, at least now it will behave as expected
+  ['t', HYPER, ['Hyper', false, false, launchHyper, callbackHyper]], //FIXME: Ugly, but since `windowDidOpen` won't trigger, at least now it will behave as expected
+  ['f', HYPER, ['Finder', false, false, launchFinder]],
   ['g', HYPER, ['Tower']],
   ['z', HYPER, ['Franz']]
 ];
