@@ -1,10 +1,14 @@
 
 /* LOG */
 
-function log ( obj ) {
+function log ( ...args ) {
 
-  const str = obj ? JSON.stringify ( obj, undefined, JSON_INDENTATION ) || obj.toString () : obj;
+  args.forEach ( arg => {
 
-  Phoenix.log ( str );
+    const str = arg ? JSON.stringify ( arg, undefined, JSON_INDENTATION ) || arg.toString () : arg;
+
+    Phoenix.log ( str );
+
+  });
 
 }
