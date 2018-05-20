@@ -18,8 +18,8 @@ setHandler ( 'space', HYPER, () => {
         nextFrame = expanding ? {
           x: sFrame.x,
           y: sFrame.y,
-          width: 1000000,
-          height: 1000000
+          width: sFrame.width,
+          height: sFrame.height
         } : prevFrame;
 
   if ( expanding ) {
