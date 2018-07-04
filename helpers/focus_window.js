@@ -23,7 +23,7 @@ function focusWindow ( name = false, isNameOptional = false, title = false, laun
 
     } else if ( name ) {
 
-      const app = App.launch ( name );
+      const app = App.launch ( name, { focus: true } );
 
       if ( !app ) return;
 
@@ -37,8 +37,6 @@ function focusWindow ( name = false, isNameOptional = false, title = false, laun
         const newWindow = findWindow ( space.windows (), name, isNameOptional, title );
 
         if ( newWindow ) {
-
-          newWindow.focus ();
 
           clearInterval ( intervalId );
 
