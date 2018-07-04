@@ -22,6 +22,7 @@ setHandler ( 'i', HYPER, () => {
       },
       weight: ALERT_WEIGHT,
       duration: ALERT_DURATION,
+      animationDuration: ALERT_ANIMATION_DURATION,
       appearance: ALERT_APPEARANCE,
       icon: app.icon ()
     }).show ();

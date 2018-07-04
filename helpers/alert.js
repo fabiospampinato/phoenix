@@ -14,6 +14,7 @@ function alert ( text, icon, duration = ALERT_DURATION ) {
     },
     weight: ALERT_WEIGHT,
     duration,
+    animationDuration: ALERT_ANIMATION_DURATION,
     appearance: ALERT_APPEARANCE,
     text,
     icon
