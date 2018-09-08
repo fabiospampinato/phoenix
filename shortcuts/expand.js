@@ -14,24 +14,44 @@ setHandler ( 'space', HYPER, () => {
         hash = window.hash (),
         currFrame = window.frame (),
         prevFrame = expansionCache[hash],
-        expanding = !prevFrame || currFrame.width < sFrame.width || ( currFrame.height + 6 ) < sFrame.height, //FIXME: The setted height might be lower than the actual available height
-        nextFrame = expanding ? {
-          x: sFrame.x,
-          y: sFrame.y,
-          width: sFrame.width,
-          height: sFrame.height
-        } : prevFrame;
+        expanding = currFrame.width < sFrame.width || ( currFrame.height + 6 ) < sFrame.height; //FIXME: The setted height might be lower than the actual available height
 
   if ( expanding ) {
 
     expansionCache[hash] = currFrame;
 
+    const nextFrame = {
+      x: sFrame.x,
+      y: sFrame.y,
+      width: sFrame.width,
+      height: sFrame.height
+    };
+
+    window.setFrame ( nextFrame );
+
   } else {
 
     delete expansionCache[hash];
 
-  }
+    if ( prevFrame ) {
 
-  window.setFrame ( nextFrame );
+      window.setFrame ( prevFrame );
+
+    } else {
+
+      const nextFrame = {
+        x: sFrame.x,
+        y: sFrame.y,
+        width: CENTER_WIDTH,
+        height: CENTER_HEIGHT
+      };
+
+      window.setFrame ( nextFrame );
+
+      center_window ( window );
+
+    }
+
+  }
 
 });
