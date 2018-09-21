@@ -1,8 +1,8 @@
 
 /* OSASCRIPT */
 
-function osascript ( script ) {
+function osascript ( script, callback = _.noop ) {
 
-  Task.run ( OSASCRIPT_PATH, [ '-e', script ] );
+  Task.run ( OSASCRIPT_PATH, [ '-e', script ], callback );
 
 }
