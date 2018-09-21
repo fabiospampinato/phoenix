@@ -179,7 +179,15 @@ In order to make this work you have to open `System Preferences -> Keyboard -> S
 | -------- | ----------- |
 | <kbd>⇪ + shift + P</kbd> | Reload Phoenix |
 
-### Quit
+### Pause/Resume Application
+
+This can be used for saving battery, pausing single-player games etc.
+
+| Shortcut | Description |
+| -------- | ----------- |
+| <kbd>⇪ + F8</kbd> | Pause or resume the current application |
+
+### Quit Application
 
 Did you ever close 3+ Chrome windows instead of a single tab by mistake? Fear no more! Now in order to quit an app you have to trigger <kbd>⌘Q</kbd> twice in a short timeframe. Stop [wasting 10$](https://clickontyler.com/commandq) for something so basic.
 
