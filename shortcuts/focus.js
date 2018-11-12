@@ -47,7 +47,9 @@ const launchFinder = `
 
 /* CALLBACKS */
 
-function callbackTerminal () {
+function callbackTerminal ( isNewWindow ) {
+
+  if ( !isNewWindow ) return;
 
   setTimeout ( () => {
 
@@ -61,7 +63,9 @@ function callbackTerminal () {
 
 }
 
-function callbackHyper () {
+function callbackHyper ( isNewWindow ) {
+
+  if ( !isNewWindow ) return;
 
   setTimeout ( () => {
 

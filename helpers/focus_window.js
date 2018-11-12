@@ -11,15 +11,21 @@ function focusWindow ( name = false, isNameOptional = false, title = false, laun
     window.unminimise ()
     window.focus ();
 
+    callback ( false );
+
   } else if ( launch ) {
 
     if ( _.isFunction ( launch ) ) {
 
       launch ();
 
+      callback ( true );
+
     } else if ( _.isString ( launch ) ) {
 
       osascript ( launch );
+
+      callback ( true );
 
     } else if ( name ) {
 
@@ -40,11 +46,15 @@ function focusWindow ( name = false, isNameOptional = false, title = false, laun
 
           clearInterval ( intervalId );
 
+          callback ( true );
+
         } else if ( checksNr >= maxChecksNr ) {
 
           alert ( `Can't open new "${name}" window, provide some custom logic` );
 
           clearInterval ( intervalId );
+
+          callback ( true );
 
         }
 
@@ -55,7 +65,5 @@ function focusWindow ( name = false, isNameOptional = false, title = false, laun
     }
 
   }
-
-  callback ();
 
 }
