@@ -4,6 +4,7 @@
 require ( './config/phoenix.js' );
 require ( './config/constants.js' );
 
+require ( './helpers/move.js' );
 require ( './helpers/alert.js' );
 require ( './helpers/center_window.js' );
 require ( './helpers/find_window.js' );
