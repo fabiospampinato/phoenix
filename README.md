@@ -203,16 +203,16 @@ Did you ever close 3+ Chrome windows instead of a single tab by mistake? Fear no
 | -------- | ----------- |
 | <kbd>⇪ + §</kbd> | If there are only 2 windows in the current space put them in split view |
 
-### move 
+### Move and Tab
 
 | Shortcut | Description |
 | -------- | ----------- |
-| <kbd>⇪ + h</kbd> | 上一个切换屏幕|
-| <kbd>⇪ + l</kbd> | 下一个切换屏幕|
-| <kbd>⇪ + k</kbd> | 当前屏幕的上一个窗口|
-| <kbd>⇪ + j</kbd> | |当前屏幕的下一个窗口|
-| <kbd>⇪ + shift + j</kbd> | 把窗口移到下一个屏幕|
-| <kbd>⇪ + shift + k</kbd> | 把窗口移上到一个屏幕|
+| <kbd>⇪ + h</kbd> | previous screen|
+| <kbd>⇪ + l</kbd> | next screen |
+| <kbd>⇪ + k</kbd> | previous window in current screen|
+| <kbd>⇪ + j</kbd> | next windown in current screen|
+| <kbd>⇪ + shift + j</kbd> | move focus window to next screen|
+| <kbd>⇪ + shift + k</kbd> | move focus window to previous screen|
 ## Magic
 
 ### Chrome

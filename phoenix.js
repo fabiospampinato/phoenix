@@ -4,7 +4,6 @@
 require ( './config/phoenix.js' );
 require ( './config/constants.js' );
 
-require ( './helpers/move.js' );
 require ( './helpers/alert.js' );
 require ( './helpers/center_window.js' );
 require ( './helpers/find_window.js' );
@@ -44,6 +43,7 @@ require ( './shortcuts/spaces.js' );
 require ( './shortcuts/sixths.js' );
 require ( './shortcuts/split_view.js' );
 require ( './shortcuts/thirds.js' );
+require ( './shortcuts/move.js' );
 
 require ( './magic/chrome.js' );
 require ( './magic/developer_tools.js' );
