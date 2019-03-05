@@ -30,7 +30,6 @@ require ( './helpers/write_json.js' );
 require ( './shortcuts/center.js' );
 require ( './shortcuts/corners.js' );
 require ( './shortcuts/expand.js' );
-require ( './shortcuts/focus.js' );
 require ( './shortcuts/fullscreen.js' );
 require ( './shortcuts/info.js' );
 require ( './shortcuts/grow.js' );
@@ -44,13 +43,7 @@ require ( './shortcuts/sixths.js' );
 require ( './shortcuts/split_view.js' );
 require ( './shortcuts/thirds.js' );
 require ( './shortcuts/move.js' );
-
-require ( './magic/chrome.js' );
-require ( './magic/developer_tools.js' );
-require ( './magic/finder.js' );
-require ( './magic/hyper.js' );
-require ( './magic/terminal.js' );
-require ( './magic/vscode.js' );
+require ( './shortcuts/app.js' );
 
 require ( './spaces/alfred.js' );
 require ( './spaces/list.js' );
