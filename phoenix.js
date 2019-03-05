@@ -41,7 +41,6 @@ require ( './shortcuts/sides.js' );
 require ( './shortcuts/spaces.js' );
 require ( './shortcuts/sixths.js' );
 require ( './shortcuts/split_view.js' );
-require ( './shortcuts/thirds.js' );
 require ( './shortcuts/move.js' );
 require ( './shortcuts/app.js' );
 

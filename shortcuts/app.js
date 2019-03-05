@@ -19,8 +19,8 @@ function callApp(appName) {
  */
 
 // Launch App
-keys.push(new Key('1', HYPER_SHIFT, function() { callApp('Google Chrome'); }));
-keys.push(new Key('2', HYPER_SHIFT, function() { callApp('Hyper'); }));
-keys.push(new Key('3', HYPER_SHIFT, function() { callApp('Dash'); }));
-keys.push(new Key('4', HYPER_SHIFT, function() { callApp('DingTalk'); }));
-keys.push(new Key('5', HYPER_SHIFT, function() { callApp('Finder'); }));
+keys.push(new Key('1', HYPER, function() { callApp('Google Chrome'); }));
+keys.push(new Key('2', HYPER, function() { callApp('Hyper'); }));
+keys.push(new Key('3', HYPER, function() { callApp('Dash'); }));
+keys.push(new Key('4', HYPER, function() { callApp('DingTalk'); }));
+keys.push(new Key('5', HYPER, function() { callApp('Finder'); }));
