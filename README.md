@@ -140,7 +140,7 @@ Don't forget to make a PR if you fixed something or implemented something cool :
 | <kbd>⇪ + D</kbd> | Focus to or open [Chrome Developer Tools](https://developer.chrome.com/devtools)|
 | <kbd>⇪ + V</kbd> | Focus to or open [Visual Studio Code](https://code.visualstudio.com)|
 | <kbd>⇪ + F</kbd> | Focus to or open Finder|
-| <kbd>⇪ + T</kbd> | Focus to or open [Hyper](https://github.com/zeit/hyper)|
+| <kbd>⇪ + T</kbd> | Focus to or open [iTerm](http://iterm2.com)|
 | <kbd>⇪ + G</kbd> | Focus to or open [GitTower](https://www.git-tower.com/)|
 | <kbd>⇪ + Z</kbd> | Focus to or open [Franz](https://meetfranz.com)|
 
@@ -215,7 +215,7 @@ If it gets opened, positionate it to the bottom-right corner, and shrink Visual 
 
 If it gets closed, restore Visual Studio Code's height.
 
-### Terminal/Hyper/Finder
+### Terminal/iTerm2/Finder
 
 If one of these apps' windows gets opened, positionate it to bottom-left corner.
 
