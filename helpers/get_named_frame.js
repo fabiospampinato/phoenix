@@ -18,17 +18,17 @@ function getNamedFrame ( name ) {
     case 'bottom-right': return [.5 + dLeft, .5 + dTop, .5 - dLeft, .5 - dTop];
     case 'bottom-left': return [0, .5 + dTop, .5 + dLeft, .5 - dTop];
     /* HALVES */
-    case 'half-1': return [0, 0, 1/2, 1];
+    case 'half-1': return [0/2, 0, 1/2, 1];
     case 'half-2': return [1/2, 0, 1/2, 1];
     /* THIRDS */
-    case 'third-1': return [0, 0, 1/3, 1];
+    case 'third-1': return [0/3, 0, 1/3, 1];
     case 'third-2': return [1/3, 0, 1/3, 1];
     case 'third-3': return [2/3, 0, 1/3, 1];
     /* SIXTHS */
-    case 'sixths-1': return [0, 0, 1/3, 1/2];
+    case 'sixths-1': return [0/3, 0, 1/3, 1/2];
     case 'sixths-2': return [1/3, 0, 1/3, 1/2];
     case 'sixths-3': return [2/3, 0, 1/3, 1/2];
-    case 'sixths-4': return [0, 1/2, 1/3, 1/2];
+    case 'sixths-4': return [0/3, 1/2, 1/3, 1/2];
     case 'sixths-5': return [1/3, 1/2, 1/3, 1/2];
     case 'sixths-6': return [2/3, 1/2, 1/3, 1/2];
     /* DEFAULT */
