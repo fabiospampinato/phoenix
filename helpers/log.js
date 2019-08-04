@@ -12,3 +12,5 @@ function log ( ...args ) {
   });
 
 }
+
+console.log = log;
