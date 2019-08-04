@@ -3,18 +3,25 @@
 
 function setFrame ( x, y, width, height, window = Window.focused () ) {
 
-  if ( _.isString ( x ) ) return setFrame ( ...getNamedFrame ( x ), y || window );
+  if ( _.isString ( x ) ) {
 
-  if ( !window ) return;
+    setFrame ( ...getNamedFrame ( x ), y || window );
+    setAnchor ( ...getNamedAnchor ( x ), y || window );
 
-  const screen = window.screen (),
-        frame = screen.flippedVisibleFrame ();
+  } else {
 
-  window.setFrame ({
-    x: frame.x + ( frame.width * x ),
-    y: frame.y + ( frame.height * y ),
-    width: frame.width * width,
-    height: frame.height * height
-  });
+    if ( !window ) return;
+
+    const screen = window.screen (),
+          frame = screen.flippedVisibleFrame ();
+
+    window.setFrame ({
+      x: frame.x + ( frame.width * x ),
+      y: frame.y + ( frame.height * y ),
+      width: frame.width * width,
+      height: frame.height * height
+    });
+
+  }
 
 }
