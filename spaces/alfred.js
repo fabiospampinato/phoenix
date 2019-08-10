@@ -14,6 +14,7 @@ setHandler ( 'f18', [], () => {
     updateSpacesLists ();
 
     osascript ( `tell application "Alfred 3" to search "spaces "` );
+    osascript ( `tell application "Alfred 4" to search "spaces "` );
 
     if ( !SPACES_ALFRED_PRESELECT ) return;
 
