@@ -1,16 +1,25 @@
-function findApp(appName) {
-  const app = App.get(appName);
-  if (!app) {
-    return false;
-  }
+function findApp(appNames) {
+  debugger;
+
+  let app = false;
+
+  appNames.forEach((appName) => {
+    app = App.get(appName);
+    if (app) {
+      return app;
+    }
+  });
+
   return app;
 }
 
-function switchToApp(appName, launch = true) {
-  const app = findApp(appName);
+function switchToApp(appNames, launch = true) {
+  debugger;
+
+  const app = findApp(appNames);
 
   if (!app && launch) {
-    return Boolean(App.launch(appName, {focus: true}))
+    return Boolean(App.launch(appNames, {focus: true}))
   }
 
   if (app.isHidden()) {
@@ -22,11 +31,13 @@ function switchToApp(appName, launch = true) {
 
 
 const switchers = [
-  ['`', HYPER, ['Asana']],
-  ['d', HYPER, ['Dash 2']],
-  ['m', HYPER, ['WhatsApp']],
-  ['c', HYPER, ['Google Chrome']],
-  ['t', HYPER, ['iTerm']],
+  ['`', HYPER, [['Asana']]],
+  ['D', HYPER, [['Dash 2']]],
+  ['M', HYPER, [['WhatsApp', 'Telegram'], false]],
+  ['C', HYPER, [['Google Chrome']]],
+  ['T', HYPER, [['iTerm']]],
+  ['P', HYPER, [['PhpStorm', 'GoLand'], false]],
+  ['V', HYPER, [['Code']]],
 ];
 
 
