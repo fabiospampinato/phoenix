@@ -9,8 +9,7 @@ function magicHyperOpen ( window ) {
 
   if ( !window.isNormal () || !window.isMain () ) return;
 
-  const name = window.app ().name (),
-        title = window.title ();
+  const name = window.app ().name ();
 
   if ( !/Hyper/.test ( name ) || false ) return;
 

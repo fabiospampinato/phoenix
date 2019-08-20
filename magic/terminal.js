@@ -9,8 +9,7 @@ function magicTerminalOpen ( window ) {
 
   if ( !window.isNormal () || !window.isMain () ) return;
 
-  const name = window.app ().name (),
-        title = window.title ();
+  const name = window.app ().name ();
 
   if ( !/Terminal/.test ( name ) || false ) return;
 

@@ -9,7 +9,9 @@ function magicVSCodeOpen ( window ) {
 
   if ( !window.isNormal () || !window.isMain () ) return;
 
-  if ( !/Code/.test ( window.app ().name () ) ) return;
+  const name = window.app ().name ();
+
+  if ( !/Code/.test ( name ) ) return;
 
   setFrame ( 'right', window );
 

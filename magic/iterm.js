@@ -9,8 +9,7 @@ function magiciTermOpen ( window ) {
 
   if ( !window.isNormal () || !window.isMain () ) return;
 
-  const name = window.app ().name (),
-        title = window.title ();
+  const name = window.app ().name ();
 
   if ( !/iTerm/.test ( name ) || false ) return;
 
