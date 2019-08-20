@@ -6,6 +6,7 @@ require ( './config/constants.js' );
 
 require ( './helpers/alert.js' );
 require ( './helpers/center_window.js' );
+require ( './helpers/detect_named_anchor.js' );
 require ( './helpers/find_window.js' );
 require ( './helpers/focus_window.js' );
 require ( './helpers/get_named_anchor.js' );
