@@ -51,6 +51,8 @@ require ( './shortcuts/sixths.js' );
 require ( './shortcuts/split_view.js' );
 require ( './shortcuts/thirds.js' );
 
+require ( './mouse/snapping.js' );
+
 require ( './magic/chrome.js' );
 require ( './magic/developer_tools.js' );
 require ( './magic/finder.js' );

@@ -210,6 +210,16 @@ Did you ever close 3+ Chrome windows instead of a single tab by mistake? Fear no
 | -------- | ----------- |
 | <kbd>⇪ + §</kbd> | If there are only 2 windows in the current space put them in split view |
 
+## Mouse
+
+### Snapping
+
+<p align="center">
+	<img src="resources/snapping.gif" alt="Snapping" style="width:690px">
+</p>
+
+Drag a window to an edge or corner to snap it into place.
+
 ## Magic
 
 ### Chrome
