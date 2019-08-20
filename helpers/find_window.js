@@ -1,7 +1,7 @@
 
 /* FIND WINDOW */
 
-function findWindow ( windows = Window.all (), name = false, isNameOptional = false, title = false ) {
+function findWindow ( windows = Window.all (), name = false, isNameOptional = false, title = false, titleBlacklist = false ) {
 
   let fallback;
 
@@ -12,7 +12,7 @@ function findWindow ( windows = Window.all (), name = false, isNameOptional = fa
 
     if ( !windowTitle ) continue; // Not a normal window
 
-    const titleOK = !title || ( title.test ( windowTitle ) );
+    const titleOK = !title || ( title.test ( windowTitle ) && ( !titleBlacklist || !titleBlacklist.test ( windowTitle ) ) );
 
     if ( !titleOK ) continue;
 
