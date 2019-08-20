@@ -55,7 +55,7 @@ const launchTerminal = `
 
 const launchFinder = `
   tell application "Finder"
-    make new Finder window to (path to downloads folder)
+    make new Finder window to (get new window target of Finder preferences)
     activate
   end tell
 `;
