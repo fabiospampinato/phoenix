@@ -15,6 +15,9 @@ require ( './helpers/get_space_name.js' );
 require ( './helpers/grow_frame.js' );
 require ( './helpers/index2keycode.js' );
 require ( './helpers/log.js' );
+require ( './helpers/modal.js' );
+require ( './helpers/modal_screen.js' );
+require ( './helpers/modal_window.js' );
 require ( './helpers/osascript.js' );
 require ( './helpers/read_file.js' );
 require ( './helpers/read_json.js' );
@@ -60,4 +63,4 @@ require ( './spaces/list.js' );
 
 /* LOADED */
 
-alert ( '', App.get ( 'Phoenix' ).icon () );
+modalScreen ({ icon: App.get ( 'Phoenix' ).icon () });

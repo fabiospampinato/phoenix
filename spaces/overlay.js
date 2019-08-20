@@ -13,6 +13,9 @@ setEventHandler ( 'spaceDidChange', () => {
 
   if ( index === -1 ) return;
 
-  alert ( _.get ( spacesListRaw, ['items', index, 'title'], 'Full Screen' ), undefined, SPACES_OVERLAY_DURATION );
+  modalScreen ({
+    text: _.get ( spacesListRaw, ['items', index, 'title'], 'Full Screen' ),
+    duration: SPACES_OVERLAY_DURATION
+  });
 
 });
