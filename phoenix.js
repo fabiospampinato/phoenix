@@ -14,6 +14,7 @@ require ( './helpers/get_space_index.js' );
 require ( './helpers/get_space_name.js' );
 require ( './helpers/grow_frame.js' );
 require ( './helpers/index2keycode.js' );
+require ( './helpers/is_anchored.js' );
 require ( './helpers/log.js' );
 require ( './helpers/modal.js' );
 require ( './helpers/modal_screen.js' );
