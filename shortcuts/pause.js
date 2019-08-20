@@ -10,6 +10,8 @@ setHandler ( 'f8', HYPER, () => {
 
     shell ( `killall -${isStopped ? 'CONT' : 'STOP'} -c '${app}'` );
 
+    modalWindow ({ text: isStopped ? 'Resumed' : 'Paused' });
+
   });
 
 });
