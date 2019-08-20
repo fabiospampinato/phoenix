@@ -1,7 +1,7 @@
 
 /* CENTER */
 
-setHandler ( 'x', HYPER, () => {
+setKeyHandler ( 'x', HYPER, () => {
 
   const window = Window.focused ();
 
@@ -11,7 +11,7 @@ setHandler ( 'x', HYPER, () => {
 
 });
 
-setHandler ( 'x', HYPER_SHIFT, () => {
+setKeyHandler ( 'x', HYPER_SHIFT, () => {
 
   const window = Window.focused ();
 

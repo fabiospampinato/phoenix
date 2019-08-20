@@ -3,7 +3,7 @@
 
 let lastQuitTimestamp = 0;
 
-setHandler ( 'q', ['cmd'], () => {
+setKeyHandler ( 'q', ['cmd'], () => {
 
   const timestamp = Date.now ();
 

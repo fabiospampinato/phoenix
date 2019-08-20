@@ -3,7 +3,7 @@
 
 let lastWorkspaceTimestamp = 0;
 
-setHandler ( 'f18', [], () => {
+setKeyHandler ( 'f18', [], () => {
 
   const timestamp = Date.now ();
 

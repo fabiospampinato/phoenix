@@ -8,4 +8,4 @@ const grow = [
   ['left', HYPER_SHIFT, [- GROW_AMOUNT, 0, GROW_AMOUNT, 0]]
 ];
 
-setHandlers ( growFrame, grow, false );
+setKeysHandler ( growFrame, grow, false );

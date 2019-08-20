@@ -124,4 +124,4 @@ const focus = [
   ['g', HYPER, ['Tower']]
 ];
 
-setHandlers ( focusWindow, focus );
+setKeysHandler ( focusWindow, focus );

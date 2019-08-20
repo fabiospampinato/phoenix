@@ -1,8 +1,8 @@
 
 /* SET EVENT HANDLER */
 
-function setEventHandler ( event, handler ) {
+function setEventHandler ( event, handler, one = false ) {
 
-  HANDLERS.push ( Event.on ( event, handler ) );
+  Event[one ? 'once' : 'on']( event, handler );
 
 }

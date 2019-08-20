@@ -1,8 +1,4 @@
 
-/* PHOENIX */
-
-const HANDLERS = [];
-
 /* KEYS */
 
 const HYPER = ['ctrl', 'alt', 'cmd'];

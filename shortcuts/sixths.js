@@ -10,4 +10,4 @@ const sixths = [
   ['d', HYPER_SHIFT, ['sixths-6']]
 ];
 
-setHandlers ( setFrame, sixths );
+setKeysHandler ( setFrame, sixths );
