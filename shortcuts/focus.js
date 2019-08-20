@@ -121,8 +121,7 @@ const focus = [
   // ['t', HYPER, ['Hyper', false, false, launchHyper, callbackHyper]], //FIXME: Ugly, but since `windowDidOpen` won't trigger, at least now it will behave as expected
   ['t', HYPER, ['iTerm', false, false, launchiTerm, callbackiTerm]], //FIXME: Ugly, but since `windowDidOpen` won't trigger, at least now it will behave as expected
   ['f', HYPER, ['Finder', false, false, launchFinder]],
-  ['g', HYPER, ['Tower']],
-  ['z', HYPER, ['Franz']]
+  ['g', HYPER, ['Tower']]
 ];
 
 setHandlers ( focusWindow, focus );
