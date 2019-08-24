@@ -1,6 +1,4 @@
 function findApp(appNames) {
-  debugger;
-
   let app = false;
 
   appNames.forEach((appName) => {
@@ -14,8 +12,6 @@ function findApp(appNames) {
 }
 
 function switchToApp(appNames, launch = true) {
-  debugger;
-
   const app = findApp(appNames);
 
   if (!app && launch) {
@@ -33,10 +29,12 @@ function switchToApp(appNames, launch = true) {
 const switchers = [
   ['`', HYPER, [['Asana']]],
   ['D', HYPER, [['Dash 2']]],
-  ['M', HYPER, [['WhatsApp', 'Telegram'], false]],
+  ['M', HYPER, [['WhatsApp']]],
+  ['M', HYPER_SHIFT, [['Telegram']]],
   ['C', HYPER, [['Google Chrome']]],
   ['T', HYPER, [['iTerm']]],
-  ['P', HYPER, [['PhpStorm', 'GoLand'], false]],
+  ['P', HYPER, [['PhpStorm']]],
+  ['P', HYPER_SHIFT, [['GoLand']]],
   ['V', HYPER, [['Code']]],
 ];
 

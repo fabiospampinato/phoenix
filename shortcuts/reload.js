@@ -1,4 +1,4 @@
 
 /* RELOAD */
 
-setHandler ( 'p', HYPER_SHIFT, () => Phoenix.reload () );
+setHandler ( 'r', HYPER_SHIFT, () => Phoenix.reload () );
