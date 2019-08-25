@@ -28,7 +28,7 @@ function switchToApp(appNames, launch = true) {
 
 const switchers = [
   ['`', HYPER, [['Asana']]],
-  ['D', HYPER, [['Dash 2']]],
+  ['D', HYPER, [['Dash']]],
   ['M', HYPER, [['WhatsApp']]],
   ['M', HYPER_SHIFT, [['Telegram']]],
   ['C', HYPER, [['Google Chrome']]],
