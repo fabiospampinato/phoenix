@@ -32,6 +32,7 @@ const switchers = [
   ['M', HYPER, [['WhatsApp']]],
   ['M', HYPER_SHIFT, [['Telegram']]],
   ['C', HYPER, [['Google Chrome']]],
+  ['C', HYPER_SHIFT, [['Google Chrome Canary']]],
   ['T', HYPER, [['iTerm']]],
   ['P', HYPER, [['PhpStorm']]],
   ['P', HYPER_SHIFT, [['GoLand']]],
