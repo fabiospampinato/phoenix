@@ -1,42 +1,46 @@
-function findApp(appNames) {
+function findApp(appName, bundleIdentifier = "") {
   let app = false;
 
-  appNames.forEach((appName) => {
-    app = App.get(appName);
-    if (app) {
-      return app;
-    }
-  });
+  if (bundleIdentifier !== "") {
+    App.all().filter((a) => {
+      if (a.bundleIdentifier() === bundleIdentifier) {
+        app = a;
+        return app;
+      }
+    });
+    return app
+  }
 
+  app = App.get(appName)
   return app;
 }
 
-function switchToApp(appNames, launch = true) {
-  const app = findApp(appNames);
+function switchToApp(appName, launch = true, bundleIdentifier = "") {
+  const app = findApp(appName, bundleIdentifier);
 
   if (!app && launch) {
-    return Boolean(App.launch(appNames, {focus: true}))
+    return Boolean(App.launch(appName, { focus: true }))
   }
 
   if (app.isHidden()) {
     app.show();
   }
-  
+
   return app.focus();
 }
 
 
 const switchers = [
-  ['`', HYPER, [['Asana']]],
-  ['D', HYPER, [['Dash']]],
-  ['M', HYPER, [['WhatsApp']]],
-  ['M', HYPER_SHIFT, [['Telegram']]],
-  ['C', HYPER, [['Google Chrome']]],
-  ['C', HYPER_SHIFT, [['Google Chrome Canary']]],
-  ['T', HYPER, [['iTerm']]],
-  ['P', HYPER, [['PhpStorm']]],
-  ['P', HYPER_SHIFT, [['GoLand']]],
-  ['V', HYPER, [['Code']]],
+  ['`', HYPER, ['Asana']],
+  ['D', HYPER, ['Dash']],
+  ['M', HYPER, ['WhatsApp']],
+  ['M', HYPER_SHIFT, ['Telegram']],
+  ['C', HYPER, ['Google Chrome', true, 'com.google.Chrome']],
+  ['C', HYPER_SHIFT, ['Google Chrome Canary', true, 'com.google.Chrome.canary']],
+  ['T', HYPER, ['iTerm']],
+  ['P', HYPER, ['PhpStorm']],
+  ['P', HYPER_SHIFT, ['GoLand']],
+  ['V', HYPER, ['Visual Studio Code']],
 ];
 
 
