@@ -41,6 +41,7 @@ const switchers = [
   ['P', HYPER, ['PhpStorm']],
   ['P', HYPER_SHIFT, ['GoLand']],
   ['V', HYPER, ['Visual Studio Code']],
+  ['R', HYPER_SHIFT, ['Microsoft Remote Desktop']],
 ];
 
 
