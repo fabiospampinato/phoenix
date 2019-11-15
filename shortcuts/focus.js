@@ -113,7 +113,7 @@ function callbackiTerm ( isNewWindow ) {
 /* FOCUS */
 
 const focus = [
-  ['`', HYPER, ['Noty']],
+  ['`', HYPER, ['Notable']],
   ['c', HYPER, ['Google Chrome', false, /^(?!Developer Tools)/, /Picture in Picture/, launchChrome]],
   ['d', HYPER, ['Google Chrome', true, /(Developer Tools)|(chrome-devtools)/, /Picture in Picture/, launchDevTools]],
   ['v', HYPER, ['Code', false, false, false, launchVSC]],
