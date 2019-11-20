@@ -31,7 +31,7 @@ function switchToApp(appName, launch = true, bundleIdentifier = "") {
 
 
 const switchers = [
-  ['`', HYPER, ['Asana']],
+  ['`', HYPER, ['Trello']],
   ['D', HYPER, ['Dash']],
   ['M', HYPER, ['WhatsApp']],
   ['M', HYPER_SHIFT, ['Telegram']],
