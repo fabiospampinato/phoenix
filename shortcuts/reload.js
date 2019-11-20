@@ -1,4 +1,6 @@
 
 /* RELOAD */
-
-setHandler ( 'r', HYPER_SHIFT, () => Phoenix.reload () );
+setHandler('R', HYPER, () => {
+  Phoenix.reload();
+  alert('', App.get('Phoenix').icon());
+});
