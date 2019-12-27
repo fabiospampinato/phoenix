@@ -10,8 +10,8 @@ function magicChromeOpen ( window ) {
   if ( !window.isNormal () || !window.isMain () ) return;
 
   const name = window.app ().name (),
-        title = window.title ();
-
+  title = window.title ();
+  
   if ( !/Google Chrome/.test ( name ) ) return;
 
   if ( /(chrome-devtools)|(Developer Tools - )/.test ( title ) ) return;

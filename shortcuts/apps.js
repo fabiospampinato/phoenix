@@ -31,13 +31,13 @@ function switchToApp(appName, launch = true, bundleIdentifier = "") {
 
 
 const switchers = [
-  ['`', HYPER, ['Trello']],
+  ['T', HYPER, ['Trello']],
   ['D', HYPER, ['Dash']],
   ['M', HYPER, ['WhatsApp']],
   ['M', HYPER_SHIFT, ['Telegram']],
   ['C', HYPER, ['Google Chrome', true, 'com.google.Chrome']],
   ['C', HYPER_SHIFT, ['Google Chrome Canary', true, 'com.google.Chrome.canary']],
-  ['T', HYPER, ['iTerm']],
+  ['.', HYPER, ['iTerm']],
   ['P', HYPER, ['PhpStorm']],
   ['P', HYPER_SHIFT, ['GoLand']],
   ['V', HYPER, ['Visual Studio Code']],
