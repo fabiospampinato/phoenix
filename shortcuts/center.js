@@ -1,31 +1,31 @@
 
 /* CENTER */
 
-setHandler ( 'x', HYPER, () => {
+setHandler('x', HYPER, () => {
 
-  const window = Window.focused ();
+  const window = Window.focused();
 
-  if ( !window ) return;
+  if (!window) return;
 
-  center_window ( window );
+  center_window(window);
 
 });
 
-setHandler ( 'x', HYPER_SHIFT, () => {
+setHandler('x', HYPER_SHIFT, () => {
 
-  const window = Window.focused ();
+  const window = Window.focused();
 
-  if ( !window ) return;
+  if (!window) return;
 
-  const frame = window.frame ();
+  const frame = window.frame();
 
-  window.setFrame ({
+  window.setFrame({
     x: frame.x,
     y: frame.y,
     width: CENTER_WIDTH,
     height: CENTER_HEIGHT
   });
 
-  center_window ( window );
+  center_window(window);
 
 });

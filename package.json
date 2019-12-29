@@ -1,0 +1,17 @@
+{
+  "name": "phoenix-config",
+  "version": "0.0.1",
+  "author": {
+    "name": "Vardan Pogosian",
+    "email": "me@vardan.pro"
+  },
+  "license": "MIT",
+  "main": "phoenix.js",
+  "devDependencies": {
+    "@types/phoenix": "github:mafredri/phoenix-typings#master",
+    "jshint": "^2.11.0-rc1",
+    "node": "^11.5.0",
+    "typescript": "^3.7.4"
+  },
+  "dependencies": {}
+}

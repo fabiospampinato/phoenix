@@ -1,7 +1,7 @@
 
 /* IMPORT */
 
-require ( './magic/terminal.js' );
+require('./magic/terminal.js');
 
 /* LAUNCHERS */
 
@@ -12,13 +12,13 @@ const launchChrome = `
   end tell
 `;
 
-function launchDevTools () {
+function launchDevTools() {
 
-  const chrome = Space.active ().windows ().find ( window => /Google Chrome/.test ( window.app ().name () ) );
+  const chrome = Space.active().windows().find(window => /Google Chrome/.test(window.app().name()));
 
-  if ( !chrome ) return alert ( 'Chrome is not opened' );
+  if (!chrome) return alert('Chrome is not opened');
 
-  osascript (`
+  osascript(`
     tell application "Google Chrome" to activate
     tell application "System Events" to tell process "Google Chrome"
       click menu item "Developer Tools" of menu 1 of menu item "Developer" of menu 1 of menu bar item "View" of menu bar 1
@@ -27,9 +27,9 @@ function launchDevTools () {
 
 }
 
-const launchVSC = () => Task.run ( '/usr/local/bin/code', ['-n'] );
+const launchVSC = () => Task.run('/usr/local/bin/code', ['-n']);
 
-const launchHyper = () => Task.run ( '/usr/local/bin/hyper' );
+const launchHyper = () => Task.run('/usr/local/bin/hyper');
 
 const launchTerminal = `
   tell application "Terminal"
@@ -47,35 +47,35 @@ const launchFinder = `
 
 /* CALLBACKS */
 
-function callbackTerminal ( isNewWindow ) {
+function callbackTerminal(isNewWindow) {
 
-  if ( !isNewWindow ) return;
+  if (!isNewWindow) return;
 
-  setTimeout ( () => {
+  setTimeout(() => {
 
-    const focused = Window.focused ();
+    const focused = Window.focused();
 
-    if ( !focused ) return;
+    if (!focused) return;
 
-    magicTerminalOpen ( focused );
+    magicTerminalOpen(focused);
 
-  }, 600 );
+  }, 600);
 
 }
 
-function callbackHyper ( isNewWindow ) {
+function callbackHyper(isNewWindow) {
 
-  if ( !isNewWindow ) return;
+  if (!isNewWindow) return;
 
-  setTimeout ( () => {
+  setTimeout(() => {
 
-    const focused = Window.focused ();
+    const focused = Window.focused();
 
-    if ( !focused ) return;
+    if (!focused) return;
 
-    magicHyperOpen ( focused );
+    magicHyperOpen(focused);
 
-  }, 1200 );
+  }, 1200);
 
 }
 
@@ -93,4 +93,4 @@ const focus = [
   ['m', HYPER, ['WhatsApp']]
 ];
 
-setHandlers ( focusWindow, focus );
+setHandlers(focusWindow, focus);

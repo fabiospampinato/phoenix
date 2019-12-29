@@ -1,8 +1,8 @@
 
 /* WRITE FILE */
 
-function writeFile ( path, content, callback = _.noop ) {
+function writeFile(path, content, callback = _.noop) {
 
-  shell ( `echo '${content}' > ${path}`, callback );
+  shell(`echo '${content}' > ${path}`, callback);
 
 }

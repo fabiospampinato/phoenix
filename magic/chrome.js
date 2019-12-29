@@ -1,21 +1,21 @@
 
 /* CHROME */
 
-setEventHandler ( 'windowDidOpen', magicChromeOpen );
+setEventHandler('windowDidOpen', magicChromeOpen);
 
 /* HELPERS */
 
-function magicChromeOpen ( window ) {
+function magicChromeOpen(window) {
 
-  if ( !window.isNormal () || !window.isMain () ) return;
+  if (!window.isNormal() || !window.isMain()) return;
 
-  const name = window.app ().name (),
-  title = window.title ();
-  
-  if ( !/Google Chrome/.test ( name ) ) return;
+  const name = window.app().name(),
+    title = window.title();
 
-  if ( /(chrome-devtools)|(Developer Tools - )/.test ( title ) ) return;
+  if (!/Google Chrome/.test(name)) return;
 
-  setFrame ( 'left', window );
+  if (/(chrome-devtools)|(Developer Tools - )/.test(title)) return;
+
+  setFrame('left', window);
 
 }

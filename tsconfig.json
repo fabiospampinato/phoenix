@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "module": "commonjs",
+    "outDir": ".vscode/ts",
+    "target": "es2015",
+    "strict": true,
+    "moduleResolution": "node",
+    "typeRoots": [
+      "node_modules/@types",
+    ],
+    "lib": [
+      "ES2018"
+    ]
+  },
+  "include": [
+    "./config/*.js",
+    "./helpers/*.js",
+    "./magic/*.js",
+    "./shortcuts/*.js",
+    "./spaces/*.js"
+  ],
+  "files": [
+    "./phoenix.js"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
