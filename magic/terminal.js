@@ -1,19 +1,19 @@
 
 /* TERMINAL */
 
-setEventHandler ( 'windowDidOpen', magicTerminalOpen ); //FIXME: Doesn't seem to be working
+setEventHandler('windowDidOpen', magicTerminalOpen); //FIXME: Doesn't seem to be working
 
 /* HANDLER */
 
-function magicTerminalOpen ( window ) {
+function magicTerminalOpen(window) {
 
-  if ( !window.isNormal () || !window.isMain () ) return;
+  if (!window.isNormal() || !window.isMain()) return;
 
-  const name = window.app ().name (),
-        title = window.title ();
+  const name = window.app().name(),
+    title = window.title();
 
-  if ( !/Terminal/.test ( name ) || false ) return;
+  if (!/Terminal/.test(name) || false) return;
 
-  setFrame ( 'bottom-left', window );
+  setFrame('bottom-left', window);
 
 }

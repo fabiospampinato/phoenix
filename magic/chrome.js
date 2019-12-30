@@ -1,10 +1,10 @@
 
 /* CHROME */
 
-setEventHandler('windowDidOpen', magicChromeOpen);
+setEventHandler('windowDidResize', magicChromeOpen);
 
 /* HELPERS */
-
+/** @param {Window} window  */
 function magicChromeOpen(window) {
 
   if (!window.isNormal() || !window.isMain()) return;
@@ -14,8 +14,6 @@ function magicChromeOpen(window) {
 
   if (!/Google Chrome/.test(name)) return;
 
-  if (/(chrome-devtools)|(Developer Tools - )/.test(title)) return;
-
-  setFrame('left', window);
+  setFrame('extend', window);
 
 }

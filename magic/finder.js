@@ -1,21 +1,24 @@
 
 /* FINDER */
 
-setEventHandler ( 'windowDidOpen', magicFinderOpen );
+setEventHandler('windowDidOpen', magicFinderOpen);
 
 /* HELPERS */
+/** @param {Window} window  */
+function magicFinderOpen(window) {
 
-function magicFinderOpen ( window ) {
 
-  if ( !window.isNormal () || !window.isMain () ) return;
+  Logger.log(window.app().name(), window);
 
-  const name = window.app ().name (),
-        title = window.title ();
+  if (!window.isNormal() || !window.isMain()) return;
 
-  if ( !/Finder/.test ( name ) ) return;
+  const name = window.app().name(),
+    title = window.title();
 
-  if ( !title || /(Quick Look)|(About Finder)|(Finder Preferences)|( Info$)/.test ( title ) ) return;
+  if (!/Finder/.test(name)) return;
 
-  setFrame ( 'bottom-left', window );
+  if (!title || /(Quick Look)|(About Finder)|(Finder Preferences)|(Info$)/.test(title)) return;
+
+  setFrame('extend', window);
 
 }
