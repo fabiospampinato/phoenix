@@ -8,4 +8,4 @@ const sides = [
   ['left', HYPER, ['left']]
 ];
 
-setHandlers ( setFrame, sides );
+setHandlers(setFrame, sides);

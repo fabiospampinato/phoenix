@@ -73,7 +73,7 @@ function callbackHyper(isNewWindow) {
 
     if (!focused) return;
 
-    magicHyperOpen(focused);
+    magicITermOpen(focused);
 
   }, 1200);
 

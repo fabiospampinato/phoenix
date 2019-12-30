@@ -1,4 +1,5 @@
 
+
 /* IMPORT */
 
 require('./config/phoenix.js');
@@ -27,6 +28,7 @@ require('./helpers/switch_space.js');
 require('./helpers/write_file.js');
 require('./helpers/write_json.js');
 
+
 require('./shortcuts/center.js');
 require('./shortcuts/corners.js');
 require('./shortcuts/expand.js');
@@ -46,6 +48,7 @@ require('./shortcuts/thirds.js');
 require('./shortcuts/apps.js');
 
 require('./magic/chrome.js');
+require('./magic/finder.js');
 require('./magic/terminal.js');
 require('./magic/vscode.js');
 

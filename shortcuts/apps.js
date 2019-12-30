@@ -1,3 +1,10 @@
+/**
+ * Search application with exact matching `appName` with fallback to searching 
+ * by `bundleIdentifier` is it was passed
+ * 
+ * @param {string} appName application name
+ * @param {string} bundleIdentifier application bundle identifier
+ */
 function findApp(appName, bundleIdentifier = "") {
   let app = false;
 
@@ -29,6 +36,9 @@ function switchToApp(appName, launch = true, bundleIdentifier = "") {
   return app.focus();
 }
 
+
+
+
 const switchers = [
   ['`', HYPER, ['Trello']],
   ['D', HYPER, ['Dash']],
@@ -39,7 +49,7 @@ const switchers = [
   ['T', HYPER, ['iTerm']],
   ['P', HYPER, ['PhpStorm']],
   ['P', HYPER_SHIFT, ['GoLand']],
-  ['V', HYPER, ['Visual Studio Code']],
+  ['V', HYPER, ['Code']],
   ['R', HYPER, ['Microsoft Remote Desktop']],
 ];
 

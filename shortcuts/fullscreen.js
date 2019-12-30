@@ -1,12 +1,12 @@
 
 /* FULLSCREEN */
 
-setHandler ( 'space', HYPER_SHIFT, () => {
+setHandler('space', HYPER_SHIFT, () => {
 
-  const window = Window.focused ();
+  const window = Window.focused();
 
-  if ( !window ) return;
+  if (!window) return;
 
-  window.setFullScreen ( !window.isFullScreen () );
+  window.setFullScreen(!window.isFullScreen());
 
 });

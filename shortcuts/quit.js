@@ -3,19 +3,19 @@
 
 let lastQuitTimestamp = 0;
 
-setHandler ( 'q', ['cmd'], () => {
+setHandler('q', ['cmd'], () => {
 
-  const timestamp = Date.now ();
+  const timestamp = Date.now();
 
-  if ( timestamp - lastQuitTimestamp <= DOUBLE_KEY_INTERVAL ) {
+  if (timestamp - lastQuitTimestamp <= DOUBLE_KEY_INTERVAL) {
 
     lastQuitTimestamp = 0;
 
-    const app = App.focused ();
+    const app = App.focused();
 
-    if ( !app || _.includes ( QUIT_BLACKLIST, app.name () ) ) return;
+    if (!app || _.includes(QUIT_BLACKLIST, app.name())) return;
 
-    app.terminate ();
+    app.terminate();
 
   } else {
 
