@@ -1,7 +1,7 @@
 
 /* FINDER */
 
-setEventHandler('windowDidOpen', magicFinderOpen);
+(new EventDispatcher()).setEventHandler('windowDidOpen', magicFinderOpen);
 
 /* HELPERS */
 /** @param {Window} window  */

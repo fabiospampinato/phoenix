@@ -8,4 +8,4 @@ const corners = [
   ['a', HYPER, ['bottom-left']]
 ];
 
-setHandlers(setFrame, corners);
+(new EventDispatcher()).setHandlers(new WindowManager().setFrame, corners);

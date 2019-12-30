@@ -3,7 +3,7 @@
 
 const expansionCache = {};
 
-setHandler('space', HYPER, () => {
+(new EventDispatcher()).setHandler('space', HYPER, () => {
 
   const window = Window.focused();
 
@@ -48,7 +48,8 @@ setHandler('space', HYPER, () => {
 
       window.setFrame(nextFrame);
 
-      center_window(window);
+      let w = new WindowManager();
+      w.center_window(window);
 
     }
 

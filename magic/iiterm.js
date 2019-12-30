@@ -1,7 +1,7 @@
 
 /* HYPER */
 
-setEventHandler('windowDidOpen', magicITermOpen); //FIXME: Doesn't seem to be working
+(new EventDispatcher()).setEventHandler('windowDidOpen', magicITermOpen); //FIXME: Doesn't seem to be working
 
 /* HANDLER */
 /** @param {Window} window */

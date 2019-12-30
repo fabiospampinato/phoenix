@@ -1,6 +1,6 @@
 
 /* VSCODE */
-setEventHandler('windowDidOpen', magicVSCodeOpen);
+(new EventDispatcher()).setEventHandler('windowDidOpen', magicVSCodeOpen);
 
 /* HELPERS */
 /** @param {Window} window */
@@ -16,6 +16,7 @@ function magicVSCodeOpen(window) {
 
   Logger.log('magic-vscode:extending', window);
 
-  setFrame('extend', window);
+  // setFrame('extend', window);
+  window.maximize();
 
 }

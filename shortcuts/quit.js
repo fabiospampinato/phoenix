@@ -3,7 +3,7 @@
 
 let lastQuitTimestamp = 0;
 
-setHandler('q', ['cmd'], () => {
+(new EventDispatcher()).setHandler('q', ['cmd'], () => {
 
   const timestamp = Date.now();
 

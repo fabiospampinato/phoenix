@@ -93,4 +93,4 @@ const focus = [
   ['m', HYPER, ['WhatsApp']]
 ];
 
-setHandlers(focusWindow, focus);
+(new EventDispatcher()).setHandlers(new WindowManager().focusWindow, focus);

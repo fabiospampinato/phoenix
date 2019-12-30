@@ -15,16 +15,7 @@ class Logger {
       return;
     }
 
-
-    data.forEach(arg => {
-
-      // TOOD: importance of convertins to JSON?
-      const str = arg ? JSON.stringify(arg, undefined, JSON_INDENTATION) || arg.toString() : arg;
-
-      Phoenix.log(str);
-
-    });
-
+    Phoenix.log(...data);
   }
 }
 

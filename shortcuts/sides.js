@@ -8,4 +8,4 @@ const sides = [
   ['left', HYPER, ['left']]
 ];
 
-setHandlers(setFrame, sides);
+(new EventDispatcher()).setHandlers(new WindowManager().setFrame, sides);

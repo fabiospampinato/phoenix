@@ -6,4 +6,4 @@ const halves = [
   [']', HYPER, ['half-2']]
 ];
 
-setHandlers(setFrame, halves);
+(new EventDispatcher()).setHandlers(new WindowManager().setFrame, halves);

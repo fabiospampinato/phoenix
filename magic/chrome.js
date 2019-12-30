@@ -1,7 +1,7 @@
 
 /* CHROME */
 
-setEventHandler('windowDidResize', magicChromeOpen);
+(new EventDispatcher()).setEventHandler('windowDidResize', magicChromeOpen);
 
 /* HELPERS */
 /** @param {Window} window  */

@@ -5,29 +5,13 @@
 require('./config/phoenix.js');
 require('./config/constants.js');
 
+require('./helpers/logger.js');
 require('./helpers/alert.js');
-require('./helpers/center_window.js');
-require('./helpers/find_window.js');
-require('./helpers/focus_window.js');
-require('./helpers/get_named_frame.js');
-require('./helpers/get_space_index.js');
-require('./helpers/get_space_name.js');
-require('./helpers/grow_frame.js');
-require('./helpers/index2keycode.js');
-require('./helpers/log.js');
-require('./helpers/osascript.js');
-require('./helpers/read_file.js');
-require('./helpers/read_json.js');
-require('./helpers/set_event_handler.js');
-require('./helpers/set_events_handler.js');
-require('./helpers/set_frame.js');
-require('./helpers/set_handler.js');
-require('./helpers/set_handlers.js');
-require('./helpers/shell.js');
-require('./helpers/switch_space.js');
-require('./helpers/write_file.js');
-require('./helpers/write_json.js');
-
+require('./helpers/windowManager.js');
+require('./helpers/eventDispatcher.js');
+require('./helpers/spaceManager.js');
+require('./helpers/appManager.js');
+require('./helpers/cmd.js');
 
 require('./shortcuts/center.js');
 require('./shortcuts/corners.js');
@@ -55,5 +39,5 @@ require('./magic/vscode.js');
 /* LOADED */
 
 /** @global App */
-alert('', App.get('Phoenix').icon());
+new Alert().show('', App.get('Phoenix').icon());
 

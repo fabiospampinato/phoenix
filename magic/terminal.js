@@ -1,7 +1,7 @@
 
 /* TERMINAL */
 
-setEventHandler('windowDidOpen', magicTerminalOpen); //FIXME: Doesn't seem to be working
+(new EventDispatcher()).setEventHandler('windowDidOpen', magicTerminalOpen); //FIXME: Doesn't seem to be working
 
 /* HANDLER */
 

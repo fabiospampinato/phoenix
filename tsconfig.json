@@ -21,7 +21,7 @@
     "./spaces/*.js"
   ],
   "files": [
-    "./phoenix.js"
+    "./phoenix.js",
   ],
   "exclude": [
     "node_modules"

@@ -1,17 +1,17 @@
 
 /* CENTER */
 
-setHandler('x', HYPER, () => {
+(new EventDispatcher()).setHandler('x', HYPER, () => {
 
   const window = Window.focused();
 
   if (!window) return;
 
-  center_window(window);
+  new WindowManager().center_window(window);
 
 });
 
-setHandler('x', HYPER_SHIFT, () => {
+(new EventDispatcher()).setHandler('x', HYPER_SHIFT, () => {
 
   const window = Window.focused();
 
@@ -26,6 +26,6 @@ setHandler('x', HYPER_SHIFT, () => {
     height: CENTER_HEIGHT
   });
 
-  center_window(window);
+  new WindowManager().center_window(window);
 
 });

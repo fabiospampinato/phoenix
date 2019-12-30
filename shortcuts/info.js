@@ -1,7 +1,7 @@
 
 /* INFO */
 
-setHandler('i', HYPER, () => {
+(new EventDispatcher()).setHandler('i', HYPER, () => {
 
   const windows = Space.active().windows(),
     sFrame = Screen.main().flippedFrame();

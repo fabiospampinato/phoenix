@@ -1,9 +1,9 @@
 
 /* SPLIT VIEW */
 
-setHandler('§', HYPER, () => {
+(new EventDispatcher()).setHandler('§', HYPER, () => {
 
-  return alert('Split View - Unimplemented'); //FIXME
+  return new Alert().show('Split View - Unimplemented'); //FIXME
 
   const space = Space.active(),
     windows = space.windows().filter(window => window.isVisible() && window.title()),

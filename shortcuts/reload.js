@@ -10,5 +10,5 @@
  */
 setHandler('R', HYPER_SHIFT, () => {
   Phoenix.reload();
-  alert('', App.get('Phoenix').icon());
+  new Alert().show('', App.get('Phoenix').icon());
 });

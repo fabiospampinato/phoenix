@@ -9,10 +9,10 @@ setEventHandler('spaceDidChange', () => {
   if (!spacesListRaw || !spacesListRaw.items) return;
 
   const space = Space.active(),
-    index = getSpaceIndex(space);
+    index = new SpaceManager().getSpaceIndex(space);
 
   if (index === -1) return;
 
-  alert(_.get(spacesListRaw, ['items', index, 'title'], 'Full Screen'), undefined, SPACES_OVERLAY_DURATION);
+  new Alert().show(_.get(spacesListRaw, ['items', index, 'title'], 'Full Screen'), undefined, SPACES_OVERLAY_DURATION);
 
 });
