@@ -1,66 +1,66 @@
 
 /* FOCUS WINDOW */
 
-function focusWindow ( name = false, isNameOptional = false, title = false, launch = true, callback = _.noop ) {
+function focusWindow(name = false, isNameOptional = false, title = false, launch = true, callback = _.noop) {
 
-  const space = Space.active (),
-        window = findWindow ( space.windows (), name, isNameOptional, title );
+  const space = Space.active(),
+    window = findWindow(space.windows(), name, isNameOptional, title);
 
-  if ( window ) {
+  if (window) {
 
-    window.unminimise ()
-    window.focus ();
+    window.unminimise();
+    window.focus();
 
-    callback ( false );
+    callback(false);
 
-  } else if ( launch ) {
+  } else if (launch) {
 
-    if ( _.isFunction ( launch ) ) {
+    if (_.isFunction(launch)) {
 
-      launch ();
+      launch();
 
-      callback ( true );
+      callback(true);
 
-    } else if ( _.isString ( launch ) ) {
+    } else if (_.isString(launch)) {
 
-      osascript ( launch );
+      osascript(launch);
 
-      callback ( true );
+      callback(true);
 
-    } else if ( name ) {
+    } else if (name) {
 
-      const app = App.launch ( name, { focus: true } );
+      const app = App.launch(name, { focus: true });
 
-      if ( !app ) return;
+      if (!app) return;
 
       /* CHECKING */
 
       let checksNr = 0,
-          maxChecksNr = FOCUS_WINDOW_CHECK_CYCLES;
+        maxChecksNr = FOCUS_WINDOW_CHECK_CYCLES;
 
-      const intervalId = setInterval ( () => {
+      const intervalId = setInterval(() => {
 
-        const newWindow = findWindow ( space.windows (), name, isNameOptional, title );
+        const newWindow = findWindow(space.windows(), name, isNameOptional, title);
 
-        if ( newWindow ) {
+        if (newWindow) {
 
-          clearInterval ( intervalId );
+          clearInterval(intervalId);
 
-          callback ( true );
+          callback(true);
 
-        } else if ( checksNr >= maxChecksNr ) {
+        } else if (checksNr >= maxChecksNr) {
 
-          alert ( `Can't open new "${name}" window, provide some custom logic` );
+          alert(`Can't open new "${name}" window, provide some custom logic`);
 
-          clearInterval ( intervalId );
+          clearInterval(intervalId);
 
-          callback ( true );
+          callback(true);
 
         }
 
         checksNr++;
 
-      }, FOCUS_WINDOW_CHECK_INTERVAL );
+      }, FOCUS_WINDOW_CHECK_INTERVAL);
 
     }
 

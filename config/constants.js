@@ -1,4 +1,10 @@
 
+const VERSION = 'phoenix-config v0.0.1';
+
+
+const DEBUG_MODE_KEY = 'PHOENIX_DEBUG_CONFIG';
+
+
 /* PHOENIX */
 
 const HANDLERS = [];
@@ -16,7 +22,7 @@ const OSASCRIPT_PATH = '/usr/bin/osascript';
 
 const ALERT_APPEARANCE = 'dark';
 const ALERT_DURATION = 1;
-const ALERT_ANIMATION_DURATION = .2;
+const ALERT_ANIMATION_DURATION = 0.2;
 const ALERT_WEIGHT = 24;
 
 const CENTER_WIDTH = 900;
