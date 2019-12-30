@@ -4,7 +4,7 @@
 setEventHandler('windowDidOpen', magicITermOpen); //FIXME: Doesn't seem to be working
 
 /* HANDLER */
-
+/** @param {Window} window */
 function magicITermOpen(window) {
 
   if (!window.isNormal() || !window.isMain()) return;
@@ -14,6 +14,7 @@ function magicITermOpen(window) {
 
   if (!/iTerm/.test(name) || false) return;
 
-  setFrame('extend', window);
+  // setFrame('extend', window);
+  window.maximize();
 
 }

@@ -14,6 +14,7 @@ function magicChromeOpen(window) {
 
   if (!/Google Chrome/.test(name)) return;
 
-  setFrame('extend', window);
+  // setFrame('extend', window);
+  window.maximize();
 
 }

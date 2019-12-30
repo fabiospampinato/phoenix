@@ -14,6 +14,8 @@ function magicVSCodeOpen(window) {
 
   if (!/Code/.test(window.app().name())) return;
 
+  Logger.log('magic-vscode:extending', window);
+
   setFrame('extend', window);
 
 }

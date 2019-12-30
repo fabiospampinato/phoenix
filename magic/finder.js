@@ -19,6 +19,7 @@ function magicFinderOpen(window) {
 
   if (!title || /(Quick Look)|(About Finder)|(Finder Preferences)|(Info$)/.test(title)) return;
 
-  setFrame('extend', window);
+  // setFrame('extend', window);
+  window.maximize();
 
 }
