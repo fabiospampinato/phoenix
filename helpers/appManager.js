@@ -11,8 +11,6 @@ class AppManager {
     findApp(appName, bundleIdentifier = "") {
         let app = false;
 
-        debugger;
-
         if (bundleIdentifier !== "") {
             App.all().filter(a => {
                 if (a.bundleIdentifier() === bundleIdentifier) {
@@ -30,8 +28,6 @@ class AppManager {
     switchToApp(appName, launch = true, bundleIdentifier = "") {
 
         let app = this.findApp(appName, bundleIdentifier);
-
-        debugger;
 
 
         let started;
