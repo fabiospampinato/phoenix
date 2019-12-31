@@ -5,9 +5,13 @@ class AppManager {
      *
      * @param {string} appName application name
      * @param {string} bundleIdentifier application bundle identifier
+     * 
+     * @returns {App}
      */
     findApp(appName, bundleIdentifier = "") {
         let app = false;
+
+        debugger;
 
         if (bundleIdentifier !== "") {
             App.all().filter(a => {
@@ -24,17 +28,48 @@ class AppManager {
     }
 
     switchToApp(appName, launch = true, bundleIdentifier = "") {
-        const app = findApp(appName, bundleIdentifier);
 
+        let app = this.findApp(appName, bundleIdentifier);
+
+        debugger;
+
+
+        let started;
         if (!app && launch) {
-            return Boolean(App.launch(appName, { focus: true }));
+            started = App.launch(appName);
         }
 
-        if (app.isHidden()) {
-            app.show();
+        Logger.log('switchToApp', 'app', {
+            isActive: started.isActive(),
+            isHidden: started.isHidden(),
+        });
+
+        Logger.log('switchToApp', 'window', {
+            isMain: started.mainWindow().isMain(),
+            isNormal: started.mainWindow().isNormal(),
+            isFullScreen: started.mainWindow().isFullScreen(),
+            isMinimised: started.mainWindow().isMinimised(),
+            isVisible: started.mainWindow().isVisible(),
+        });
+
+        let window = started.mainWindow() || started.windows()[0];
+        let cmd = new Cmd();
+        return window && window.isMain() ? started.focus() : cmd.osascript(`
+        tell application "${started.name}"
+            make new Finder window to (path to downloads folder)
+            activate
+        end tell
+        `);
+
+
+        if (!started.isHidden() || started.isMinimised()) {
+            started.unmininmize();
+            started.show();
         }
 
-        return app.focus();
+        return true;
+
+
     }
 
 }
