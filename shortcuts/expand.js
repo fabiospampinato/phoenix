@@ -49,7 +49,7 @@ const expansionCache = {};
       window.setFrame(nextFrame);
 
       let w = new WindowManager();
-      w.center_window(window);
+      w.centerWindow(window);
 
     }
 

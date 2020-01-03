@@ -9,7 +9,7 @@ const switchers = [
   ['C', HYPER_SHIFT, ['Google Chrome Canary', true, 'com.google.Chrome.canary']],
   ['T', HYPER, ['iTerm']],
   ['P', HYPER, ['PhpStorm']],
-  ['F', HYPER, ['Finder']],
+  ['F', HYPER, ['Finder', true, 'com.apple.finder']],
   ['P', HYPER_SHIFT, ['GoLand']],
   ['V', HYPER, ['Code']],
   ['R', HYPER, ['Microsoft Remote Desktop']],

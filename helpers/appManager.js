@@ -30,40 +30,53 @@ class AppManager {
         let app = this.findApp(appName, bundleIdentifier);
 
 
-        let started;
+
         if (!app && launch) {
-            started = App.launch(appName);
+            app = App.launch(appName, { focus: true });
         }
 
-        Logger.log('switchToApp', 'app', {
-            isActive: started.isActive(),
-            isHidden: started.isHidden(),
-        });
-
-        Logger.log('switchToApp', 'window', {
-            isMain: started.mainWindow().isMain(),
-            isNormal: started.mainWindow().isNormal(),
-            isFullScreen: started.mainWindow().isFullScreen(),
-            isMinimised: started.mainWindow().isMinimised(),
-            isVisible: started.mainWindow().isVisible(),
-        });
-
-        let window = started.mainWindow() || started.windows()[0];
-        let cmd = new Cmd();
-        return window && window.isMain() ? started.focus() : cmd.osascript(`
-        tell application "${started.name}"
-            make new Finder window to (path to downloads folder)
-            activate
-        end tell
-        `);
-
-
-        if (!started.isHidden() || started.isMinimised()) {
-            started.unmininmize();
-            started.show();
+        if (app.isHidden()) {
+            app.show();
         }
 
-        return true;
+
+
+        Logger.log('switchToApp', 'app', app.name(), {
+            isActive: app.isActive(),
+            isHidden: app.isHidden(),
+        });
+
+
+        // if (app.bundleIdentifier() == 'com.apple.finder') {
+        //     let window;
+
+
+        //     if (app.windows().length > 1) {
+        //         window = app.windows()[0];
+        //         Logger.log('switchToApp', 'app', app.name(), 'window', {
+        //             isVisible: window.isVisible(),
+        //             isMain: window.isMain(),
+        //             isNormal: window.isNormal()
+        //         });
+        //     }
+
+
+
+        //     let cmd = new Cmd();
+        //     if (window && window.title() !== '') {
+        //         app.focus();
+        //         window.raise();
+        //     } else {
+        //         cmd.osascript(`
+        //             tell application "Finder"
+        //                 make new Finder window to (path to home folder)
+        //                 activate
+        //             end tell
+        //         `);
+        //     }
+        // }
+
+        return app.focus();
 
 
     }

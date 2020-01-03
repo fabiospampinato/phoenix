@@ -19,7 +19,6 @@ function magicFinderOpen(window) {
 
   if (!title || /(Quick Look)|(About Finder)|(Finder Preferences)|(Info$)/.test(title)) return;
 
-
   window.focus();
   window.maximize();
 

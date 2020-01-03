@@ -88,7 +88,7 @@ const focus = [
   ['v', HYPER, ['Code', false, false, launchVSC]],
   // ['t', HYPER, ['Terminal', false, false, launchTerminal, callbackTerminal]], //FIXME: Ugly, but since `windowDidOpen` won't trigger, at least now it will behave as expected
   ['t', HYPER, ['Hyper', false, false, launchHyper, callbackHyper]], //FIXME: Ugly, but since `windowDidOpen` won't trigger, at least now it will behave as expected
-  ['f', HYPER, ['Finder', false, false, launchFinder]],
+  // ['f', HYPER, ['Finder', false, false, launchFinder]],
   ['g', HYPER, ['Tower']],
   ['m', HYPER, ['WhatsApp']]
 ];

@@ -7,7 +7,7 @@
 
   if (!window) return;
 
-  new WindowManager().center_window(window);
+  (new WindowManager()).centerWindow(window);
 
 });
 
@@ -26,6 +26,6 @@
     height: CENTER_HEIGHT
   });
 
-  new WindowManager().center_window(window);
+  (new WindowManager()).centerWindow(window);
 
 });

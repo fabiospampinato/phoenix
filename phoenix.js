@@ -39,5 +39,5 @@ require('./magic/vscode.js');
 /* LOADED */
 
 /** @global App */
-new Alert().show('', App.get('Phoenix').icon());
+(new Alert()).show('', App.get('Phoenix').icon());
 

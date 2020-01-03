@@ -2,7 +2,7 @@ class WindowManager {
 
 
     /** @param {Window} window */
-    center_window(window) {
+    centerWindow(window) {
         const screen = window.screen(), sFrame = screen.frame(), wFrame = window.frame();
         window.setFrame({
             x: sFrame.x + (sFrame.width / 2) - (wFrame.width / 2),
