@@ -8,4 +8,6 @@
 ☐ Convert magic/*.js to configurable by a some sort of declaration ( JSON/YML )
 ☐ Restore (run apps if need , arrange windows etc.) work spaces layout from declaration
 ☐ Show Activity Monitor on  HYPER + SHIFT + ESC
+☐ Refactor helper classes's methods to be a `static`
+☐ Add cyclic window switcher for app in current Space
 

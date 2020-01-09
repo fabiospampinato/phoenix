@@ -29,10 +29,13 @@ class AppManager {
 
         let app = this.findApp(appName, bundleIdentifier);
 
-
-
         if (!app && launch) {
             app = App.launch(appName, { focus: true });
+        }
+
+        if (typeof app === 'undefined') {
+            (new Alert()).show(`Can not launch the '${appName}' application.`, App.get('Phoenix').icon())
+            return;
         }
 
         if (app.isHidden()) {
