@@ -10,4 +10,6 @@ const sixths = [
   ['d', HYPER_SHIFT, ['sixths-6']]
 ];
 
-(new EventDispatcher()).setHandlers(new WindowManager().setFrame, sixths);
+let wmSixths = new WindowManager();
+
+(new EventDispatcher()).setHandlers(wmSixths.setFrame.bind(wmSixths), sixths);

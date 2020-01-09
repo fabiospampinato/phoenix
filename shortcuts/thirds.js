@@ -7,4 +7,6 @@ const thirds = [
   [3, HYPER, ['third-3']]
 ];
 
-(new EventDispatcher()).setHandlers(new WindowManager().setFrame, thirds);
+let wm = new WindowManager();
+
+(new EventDispatcher()).setHandlers(wm.setFrame.bind(wm), thirds);

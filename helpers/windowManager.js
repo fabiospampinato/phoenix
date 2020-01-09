@@ -96,7 +96,7 @@ class WindowManager {
 
     setFrame(x, y, width, height, window = Window.focused()) {
         if (_.isString(x))
-            return setFrame(...getNamedFrame(x), y || window);
+            return this.setFrame(...this.getNamedFrame(x), y || window);
         if (!window)
             return;
         const screen = window.screen(), frame = screen.flippedVisibleFrame();
