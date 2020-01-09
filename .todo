@@ -1,8 +1,11 @@
-☐ can we switch app to another Space?
+☐ can we switch/move app to another Space?
 ☐ resize windows in the current space on Dock revealing/hidding
 ☐ Open the first window of Chrome (maximaized); rest of all screen stacked by halves
-☐ App.windows() returns empty array if APP is not in visible space ( is this desired behavior fot Phoenix? )
+✔ App.windows() returns empty array if APP is not in visible space ( is this desired behavior for Phoenix? ) Yes, it is =( @done(20-01-09 11:41)
 ☐ Open two stacked Finder windows (half on the left, half on the right side)
+☐ Close finder windows before Space is changed
+☐ Open or focus (if any exists) Finder windows, open two panels mode or One big window with two tabs or one window 
 ☐ Convert magic/*.js to configurable by a some sort of declaration ( JSON/YML )
 ☐ Restore (run apps if need , arrange windows etc.) work spaces layout from declaration
+☐ Show Activity Monitor on  HYPER + SHIFT + ESC
 
