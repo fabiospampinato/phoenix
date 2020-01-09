@@ -13,6 +13,7 @@ const switchers = [
   ['P', HYPER_SHIFT, ['GoLand']],
   ['V', HYPER, ['Code']],
   ['R', HYPER, ['Microsoft Remote Desktop']],
+  ['f12', HYPER, ['Activity Monitor']]
 ];
 const handler = (appName, launch, bid) => {
   return (new AppManager()).switchToApp(appName, launch, bid);
