@@ -14,8 +14,8 @@ function setAnchor ( x, y, window = Window.focused () ) {
         wFrame = window.frame ();
 
   const nextFrame = {
-    x: x === 0 ? 0 : ( x === 1 ? frame.width - wFrame.width : wFrame.x ),
-    y: y === 0 ? 0 : ( y === 1 ? frame.height - wFrame.height : wFrame.y ),
+    x: x === 0 ? frame.x : ( x === 1 ? (frame.x + frame.width - wFrame.width) : wFrame.x ),
+    y: y === 0 ? frame.y : ( y === 1 ? (frame.y + frame.height - wFrame.height) : wFrame.y ),
     width: wFrame.width,
     height: wFrame.height
   };
