@@ -4,7 +4,7 @@
 function center_window ( window ) {
 
   const screen = window.screen (),
-        sFrame = screen.frame (),
+        sFrame = screen.flippedFrame (),
         wFrame = window.frame ();
 
   window.setFrame ({
