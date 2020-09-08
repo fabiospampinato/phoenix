@@ -167,6 +167,7 @@ In order to make this work you have to open `System Preferences -> Keyboard -> S
 | Shortcut | Description |
 | -------- | ----------- |
 | <kbd>⇪ + I</kbd> | For each window in the current space show an icon indicating its position |
+| <kbd>⇪ + Shift + I</kbd> | Display the current date and time | <!-- //TODO: add to gif -->
 
 ### Reload Phoenix
 
