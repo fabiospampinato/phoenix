@@ -1,7 +1,7 @@
 
 /* MODAL WINDOW */
 
-function modalWindow ( options, window = Window.focused () ) {
+function modalWindow ( options, window = Window.focused () ) { //FIXME: Multi-monitor usage
 
   const screen = window.screen (),
         app = window.app (),

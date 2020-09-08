@@ -9,10 +9,10 @@ function isAnchored ( pointX, pointY, anchorX, anchorY ) {
 
   const frame = getFocusedScreen ().flippedFrame ();
 
-  if ( anchorX === false ) return Math.abs ( pointY - ( frame.height * anchorY ) ) < 2;
+  if ( anchorX === false ) return Math.abs ( pointY - ( frame.y + frame.height * anchorY ) ) < 2;
 
-  if ( anchorY === false ) return Math.abs ( pointX - ( frame.width * anchorX ) ) < 2;
+  if ( anchorY === false ) return Math.abs ( pointX - ( frame.x + frame.width * anchorX ) ) < 2;
 
-  return Math.hypot ( pointX - ( frame.width * anchorX ), pointY - ( frame.height * anchorY ) ) < 10;
+  return Math.hypot ( pointX - ( frame.x + frame.width * anchorX ), pointY - ( frame.y + frame.height * anchorY ) ) < 10;
 
 }
