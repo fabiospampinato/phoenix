@@ -7,7 +7,7 @@ const DOUBLE_KEY_INTERVAL = 250;
 
 /* OTHERS */
 
-const SHELL_PATH = '/bin/bash';
+const SHELL_PATH = '/bin/zsh';
 const OSASCRIPT_PATH = '/usr/bin/osascript';
 
 const CENTER_WIDTH = 900;
