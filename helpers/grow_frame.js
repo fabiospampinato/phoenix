@@ -5,7 +5,7 @@ function growFrame ( x, y, width, height, window = Window.focused () ) {
 
   if ( !window ) return;
 
-  const screen = Screen.main (),
+  const screen = getFocusedScreen ( window ),
         sFrame = screen.flippedFrame (),
         svFrame = screen.flippedVisibleFrame (),
         yUnusable = sFrame.height - svFrame.height,

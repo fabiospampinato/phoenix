@@ -1,7 +1,7 @@
 
 /* MODAL SCREEN */
 
-function modalScreen ( options, screen = Screen.main () ) {
+function modalScreen ( options, screen = getFocusedScreen () ) {
 
   const frame = screen.flippedFrame ();
 

@@ -9,6 +9,7 @@ require ( './helpers/center_window.js' );
 require ( './helpers/detect_named_anchor.js' );
 require ( './helpers/find_window.js' );
 require ( './helpers/focus_window.js' );
+require ( './helpers/get_focused_screen.js' );
 require ( './helpers/get_named_anchor.js' );
 require ( './helpers/get_named_frame.js' );
 require ( './helpers/get_space_index.js' );
