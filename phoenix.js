@@ -52,6 +52,7 @@ require ( './shortcuts/spaces.js' );
 require ( './shortcuts/sixths.js' );
 require ( './shortcuts/split_view.js' );
 require ( './shortcuts/thirds.js' );
+require ( './shortcuts/volume.js' );
 
 require ( './mouse/snapping.js' );
 
