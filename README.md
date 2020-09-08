@@ -203,9 +203,19 @@ Did you ever close 3+ Chrome windows instead of a single tab by mistake? Fear no
 | -------- | ----------- |
 | <kbd>⌘Q</kbd> <kbd>⌘Q</kbd> | Quit application |
 
+### Screens
+
+> For this to work you need to have the follwing shell functions available: `resolution-set`
+
+//TODO: Record gif
+
+| Shortcut | Description |
+| -------- | ----------- |
+| <kbd>⇪ + Enter</kbd> | Set the resolution of screens |
+
 ### Brightness
 
-> For this to work you need to have a shell function called `brightness-mod` available
+> For this to work you need to have the follwing shell functions available: `brightness-mod`
 
 //TODO: Record gif
 
@@ -218,7 +228,7 @@ Did you ever close 3+ Chrome windows instead of a single tab by mistake? Fear no
 
 ### Volume
 
-> For this to work you need to have a shell function called `volume-mod` available
+> For this to work you need to have the follwing shell functions available: `volume-mod`
 
 //TODO: Record gif
 
