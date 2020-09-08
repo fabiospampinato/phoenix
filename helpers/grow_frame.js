@@ -1,7 +1,7 @@
 
 /* GROW FRAME */
 
-function growFrame ( x, y, width, height, window = Window.focused () ) {
+function growFrame ( x, y, width, height, window = Window.focused () ) { //FIXME: Multi-monitor support
 
   if ( !window ) return;
 

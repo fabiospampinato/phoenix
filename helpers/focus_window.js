@@ -1,7 +1,7 @@
 
 /* FOCUS WINDOW */
 
-function focusWindow ( name = false, isNameOptional = false, title = false, titleBlacklist = false, launch = true, callback = _.noop ) {
+function focusWindow ( name = false, isNameOptional = false, title = false, titleBlacklist = false, launch = true, callback = _.noop ) { //TODO: Open windows in the right space
 
   const space = Space.active (),
         window = findWindow ( space.windows (), name, isNameOptional, title, titleBlacklist );

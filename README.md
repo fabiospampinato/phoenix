@@ -167,7 +167,7 @@ In order to make this work you have to open `System Preferences -> Keyboard -> S
 | Shortcut | Description |
 | -------- | ----------- |
 | <kbd>⇪ + I</kbd> | For each window in the current space show an icon indicating its position |
-| <kbd>⇪ + Shift + I</kbd> | Display the current date and time | <!-- //TODO: add to gif -->
+| <kbd>⇪ + shift + I</kbd> | Display the current date and time | <!-- //TODO: add to gif -->
 
 ### Reload Phoenix
 
@@ -223,8 +223,8 @@ Did you ever close 3+ Chrome windows instead of a single tab by mistake? Fear no
 | -------- | ----------- |
 | <kbd>⇪ + F1</kbd> | Increase brightness by 10% |
 | <kbd>⇪ + F2</kbd> | Decrease brightness by 10% |
-| <kbd>⇪ + Shift + F1</kbd> | Increase brightness by 2.5% |
-| <kbd>⇪ + Shift + F2</kbd> | Decrease brightness by 2.5% |
+| <kbd>⇪ + shift + F1</kbd> | Increase brightness by 2.5% |
+| <kbd>⇪ + shift + F2</kbd> | Decrease brightness by 2.5% |
 
 ### Volume
 
@@ -236,8 +236,8 @@ Did you ever close 3+ Chrome windows instead of a single tab by mistake? Fear no
 | -------- | ----------- |
 | <kbd>⇪ + F11</kbd> | Increase volume by 10% |
 | <kbd>⇪ + F12</kbd> | Decrease volume by 10% |
-| <kbd>⇪ + Shift + F11</kbd> | Increase volume by 2.5% |
-| <kbd>⇪ + Shift + F12</kbd> | Decrease volume by 2.5% |
+| <kbd>⇪ + shift + F11</kbd> | Increase volume by 2.5% |
+| <kbd>⇪ + shift + F12</kbd> | Decrease volume by 2.5% |
 
 ### Split View
 
