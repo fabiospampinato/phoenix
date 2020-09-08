@@ -203,6 +203,19 @@ Did you ever close 3+ Chrome windows instead of a single tab by mistake? Fear no
 | -------- | ----------- |
 | <kbd>⌘Q</kbd> <kbd>⌘Q</kbd> | Quit application |
 
+### Brightness
+
+> For this to work you need to have a shell function called `brightness-mod` available
+
+//TODO: Record gif
+
+| Shortcut | Description |
+| -------- | ----------- |
+| <kbd>⇪ + F1</kbd> | Increase brightness by 10% |
+| <kbd>⇪ + F2</kbd> | Decrease brightness by 10% |
+| <kbd>⇪ + Shift + F1</kbd> | Increase brightness by 2.5% |
+| <kbd>⇪ + Shift + F2</kbd> | Decrease brightness by 2.5% |
+
 ### Split View
 
 //TODO: Unfortunately there's no API available for doing this at the moment, that's a shame given that I would have finally found a use for the <kbd>§</kbd> key, it looks like 2 <kbd>S</kbd> => Side-by-Side :D
