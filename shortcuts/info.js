@@ -18,7 +18,7 @@ setKeyHandler ( 'i', HYPER, () => {
 setKeyHandler ( 'i', HYPER_SHIFT, () => {
 
   const monthsNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-        daysNames = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+        daysNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
         pad = x => `00${x}`.slice ( -2 );
 
   const date = new Date (),
