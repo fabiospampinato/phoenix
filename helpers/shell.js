@@ -3,6 +3,6 @@
 
 function shell ( command, callback = _.noop ) {
 
-  Task.run ( SHELL_PATH, ['-ic', command], callback );
+  return new Task ( SHELL_PATH, ['-ic', command], callback );
 
 }
