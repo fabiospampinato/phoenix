@@ -17,21 +17,27 @@ setKeyHandler ( 'i', HYPER, () => {
 
 setKeyHandler ( 'i', HYPER_SHIFT, () => {
 
-  const monthsNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-        daysNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-        pad = x => `00${x}`.slice ( -2 );
+  shell ( 'pmset -g batt | grep -Eo "\\d+%" | cut -d% -f1', ( id, output ) => {
 
-  const date = new Date (),
-        hours = pad ( date.getHours () ),
-        minutes = pad ( date.getMinutes () ),
-        seconds = pad ( date.getSeconds () ),
-        wday = daysNames[date.getDay ()],
-        day = date.getDate (),
-        month = monthsNames[date.getMonth ()],
-        year = date.getFullYear ();
+    const battery = output.trim ();
 
-  const info = `${hours}:${minutes}:${seconds} - ${wday} - ${day} ${month} ${year}`;
+    const monthsNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+          daysNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+          pad = x => `00${x}`.slice ( -2 );
 
-  alert ( info );
+    const date = new Date (),
+          hours = pad ( date.getHours () ),
+          minutes = pad ( date.getMinutes () ),
+          seconds = pad ( date.getSeconds () ),
+          wday = daysNames[date.getDay ()],
+          day = date.getDate (),
+          month = monthsNames[date.getMonth ()],
+          year = date.getFullYear ();
+
+    const info = `${hours}:${minutes}:${seconds} - ${wday} - ${day} ${month} ${year} - ${battery}%`;
+
+    alert ( info );
+
+  });
 
 });
