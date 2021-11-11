@@ -10,8 +10,8 @@ const DOUBLE_KEY_INTERVAL = 250;
 const SHELL_PATH = '/bin/zsh';
 const OSASCRIPT_PATH = '/usr/bin/osascript';
 
-const CENTER_WIDTH = 900;
-const CENTER_HEIGHT = 600;
+const CENTER_WIDTH = 1280;
+const CENTER_HEIGHT = 800;
 
 const DEVTOOLS_SHRINK_HEIGHT = 75;
 
