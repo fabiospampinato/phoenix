@@ -34,7 +34,7 @@ setKeyHandler ( 'i', HYPER_SHIFT, () => {
           month = monthsNames[date.getMonth ()],
           year = date.getFullYear ();
 
-    const info = `${hours}:${minutes}:${seconds} - ${wday} - ${day} ${month} ${year} - ${battery}%`;
+    const info = `${battery}% - ${wday} ${day} ${month} ${year} - ${hours}:${minutes}:${seconds}`;
 
     alert ( info );
 
