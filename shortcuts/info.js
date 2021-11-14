@@ -19,24 +19,34 @@ setKeyHandler ( 'i', HYPER_SHIFT, () => {
 
   shell ( 'pmset -g batt | grep -Eo "\\d+%" | cut -d% -f1', ( id, output ) => {
 
-    const battery = output.trim ();
+    shell ( 'music-current-name', ( id, songName ) => {
 
-    const monthsNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-          daysNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-          pad = x => `00${x}`.slice ( -2 );
+      shell ( 'music-current-status', ( id, songLiked, songDisliked ) => {
 
-    const date = new Date (),
-          hours = pad ( date.getHours () ),
-          minutes = pad ( date.getMinutes () ),
-          seconds = pad ( date.getSeconds () ),
-          wday = daysNames[date.getDay ()],
-          day = date.getDate (),
-          month = monthsNames[date.getMonth ()],
-          year = date.getFullYear ();
+        const battery = output.trim ();
 
-    const info = `${battery}% - ${wday} ${day} ${month} ${year} - ${hours}:${minutes}:${seconds}`;
+        const monthsNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+              daysNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+              pad = x => `00${x}`.slice ( -2 );
 
-    alert ( info );
+        const date = new Date (),
+              hours = pad ( date.getHours () ),
+              minutes = pad ( date.getMinutes () ),
+              seconds = pad ( date.getSeconds () ),
+              wday = daysNames[date.getDay ()],
+              day = date.getDate (),
+              month = monthsNames[date.getMonth ()],
+              year = date.getFullYear ();
+
+        const infoStatus = `${battery}% - ${wday} ${day} ${month} ${year} - ${hours}:${minutes}:${seconds}`,
+              infoMusic = songName ? `\n•\n${songDisliked ? '♡' : '♥'} - ${_.truncate ( songName.trim (), { length: 40 } )}` : '',
+              info = `${infoStatus}${infoMusic}`;
+
+        alert ( info );
+
+      });
+
+    });
 
   });
 
