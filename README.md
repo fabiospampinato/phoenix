@@ -213,6 +213,16 @@ Did you ever close 3+ Chrome windows instead of a single tab by mistake? Fear no
 | -------- | ----------- |
 | <kbd>⇪ + Enter</kbd> | Set the resolution of screens |
 
+### Music
+
+> For this to work you need to have the follwing shell functions available: `music-current-like`
+
+//TODO: Record gif
+
+| Shortcut | Description |
+| -------- | ----------- |
+| <kbd>⇪ + F6</kbd> | Add the current song to the library Apple Music |
+
 ### Brightness
 
 > For this to work you need to have the follwing shell functions available: `brightness-mod`
