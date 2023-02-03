@@ -5,7 +5,7 @@ My [Phoenix](https://github.com/kasper/phoenix) setup. Powerful, easy to customi
 
 ## Installation
 
-This configuration uses a remap of the Caps Lock key to something more useful: the Hyper key <kbd>⇪</kbd> (basically just <kbd>ctrl + alt + cmd</kbd> combined into one key) if used in combination with other keys, otherwise it gets mapped to <kbd>F18</kbd>, which is used to trigger the space switcher. If you prefer you may skip these remap steps while you try the configuration, but if you usually have many spaces opened I highly recommend you not to miss out the awesome space switcher, for which this hack is a requirement.
+This configuration uses a remap of the Caps Lock key to something more useful: the Hyper key <kbd>⇪</kbd> (basically just <kbd>Ctrl + Alt + Cmd</kbd> combined into one key) if used in combination with other keys, otherwise it gets mapped to <kbd>F18</kbd>, which is used to trigger the space switcher. If you prefer you may skip these remap steps while you try the configuration, but if you usually have many spaces opened I highly recommend you not to miss out the awesome space switcher, for which this hack is a requirement.
 
 1. Install [Phoenix](https://github.com/kasper/phoenix#install)
 2. Install [Karabiner Elements](https://github.com/tekezo/Karabiner-Elements) via its [dmg](https://pqrs.org/latest/karabiner-elements-latest.dmg)
@@ -31,7 +31,7 @@ Don't forget to make a PR if you fixed something or implemented something cool :
 ### Sides
 
 <p align="center">
-	<img src="resources/sides.gif" alt="Sides" style="width:690px">
+  <img src="resources/sides.gif" alt="Sides" style="width:690px">
 </p>
 
 | Shortcut | Description |
@@ -44,7 +44,7 @@ Don't forget to make a PR if you fixed something or implemented something cool :
 ### Corners
 
 <p align="center">
-	<img src="resources/corners.gif" alt="Corners" style="width:690px">
+  <img src="resources/corners.gif" alt="Corners" style="width:690px">
 </p>
 
 | Shortcut | Description |
@@ -57,7 +57,7 @@ Don't forget to make a PR if you fixed something or implemented something cool :
 ### Halves
 
 <p align="center">
-	<img src="resources/halves.gif" alt="Halves" style="width:690px">
+  <img src="resources/halves.gif" alt="Halves" style="width:690px">
 </p>
 
 | Shortcut | Description |
@@ -68,7 +68,7 @@ Don't forget to make a PR if you fixed something or implemented something cool :
 ### Thirds
 
 <p align="center">
-	<img src="resources/thirds.gif" alt="Thirds" style="width:690px">
+  <img src="resources/thirds.gif" alt="Thirds" style="width:690px">
 </p>
 
 | Shortcut | Description |
@@ -80,109 +80,109 @@ Don't forget to make a PR if you fixed something or implemented something cool :
 ### Sixths
 
 <p align="center">
-	<img src="resources/sixths.gif" alt="Sixths" style="width:690px">
+  <img src="resources/sixths.gif" alt="Sixths" style="width:690px">
 </p>
 
 | Shortcut | Description |
 | -------- | ----------- |
-| <kbd>⇪ + shift + Q</kbd> | Move window to the 1st sixth |
-| <kbd>⇪ + shift + W</kbd> | Move window to the 2nd sixth |
-| <kbd>⇪ + shift + E</kbd> | Move window to the 3rd sixth |
-| <kbd>⇪ + shift + A</kbd> | Move window to the 4th sixth |
-| <kbd>⇪ + shift + S</kbd> | Move window to the 5th sixth |
-| <kbd>⇪ + shift + D</kbd> | Move window to the 6th sixth |
+| <kbd>⇪ + Shift + Q</kbd> | Move window to the 1st sixth |
+| <kbd>⇪ + Shift + W</kbd> | Move window to the 2nd sixth |
+| <kbd>⇪ + Shift + E</kbd> | Move window to the 3rd sixth |
+| <kbd>⇪ + Shift + A</kbd> | Move window to the 4th sixth |
+| <kbd>⇪ + Shift + S</kbd> | Move window to the 5th sixth |
+| <kbd>⇪ + Shift + D</kbd> | Move window to the 6th sixth |
 
 ### Center
 
 <p align="center">
-	<img src="resources/center.gif" alt="Center" style="width:690px">
+  <img src="resources/center.gif" alt="Center" style="width:690px">
 </p>
 
 | Shortcut | Description |
 | -------- | ----------- |
 | <kbd>⇪ + X</kbd> | Center the window |
-| <kbd>⇪ + shift + X</kbd> | Center the window and set its dimensions to 900x600 |
+| <kbd>⇪ + Shift + X</kbd> | Center the window and set its dimensions to 1280x800 |
 
 ### Grow
 
 <p align="center">
-	<img src="resources/grow.gif" alt="Grow" style="width:690px">
+  <img src="resources/grow.gif" alt="Grow" style="width:690px">
 </p>
 
 | Shortcut | Description |
 | -------- | ----------- |
-| <kbd>⇪ + shift + ↑</kbd> | Grow window from the top |
-| <kbd>⇪ + shift + →</kbd> | Grow window from the right |
-| <kbd>⇪ + shift + ↓</kbd> | Grow window from the bottom |
-| <kbd>⇪ + shift + ←</kbd> | Grow window from the left |
+| <kbd>⇪ + Shift + ↑</kbd> | Grow window from the top |
+| <kbd>⇪ + Shift + →</kbd> | Grow window from the right |
+| <kbd>⇪ + Shift + ↓</kbd> | Grow window from the bottom |
+| <kbd>⇪ + Shift + ←</kbd> | Grow window from the left |
 
 ### Expand
 
 <p align="center">
-	<img src="resources/expand.gif" alt="Expand" style="width:690px">
+  <img src="resources/expand.gif" alt="Expand" style="width:690px">
 </p>
 
 | Shortcut | Description |
 | -------- | ----------- |
-| <kbd>⇪ + space</kbd> | Toggle window expansion to fill the space |
-| <kbd>⇪ + shift + space</kbd> | Toggle window expansion to fullscreen |
+| <kbd>⇪ + Space</kbd> | Toggle window expansion to fill the space |
+| <kbd>⇪ + Shift + Space</kbd> | Toggle window expansion to fullscreen |
 
 ### Focus or Open
 
 <p align="center">
-	<img src="resources/focus.gif" alt="Focus or Open" style="width:690px">
+  <img src="resources/focus.gif" alt="Focus or Open" style="width:690px">
 </p>
 
 | Shortcut | Description |
 | -------- | ----------- |
-| <kbd>⇪ + `</kbd> | Focus to or open [Notable](https://notable.md)|
-| <kbd>⇪ + C</kbd> | Focus to or open [Chrome](https://www.google.com/chrome)|
-| <kbd>⇪ + D</kbd> | Focus to or open [Chrome Developer Tools](https://developer.chrome.com/devtools)|
-| <kbd>⇪ + V</kbd> | Focus to or open [Visual Studio Code](https://code.visualstudio.com)|
-| <kbd>⇪ + F</kbd> | Focus to or open Finder|
-| <kbd>⇪ + G</kbd> | Focus to or open [GitTower](https://www.git-tower.com/)|
+| <kbd>⇪ + `</kbd> | Focus to or open [Notable](https://notable.md) |
+| <kbd>⇪ + C</kbd> | Focus to or open [Chrome](https://www.google.com/chrome) |
+| <kbd>⇪ + D</kbd> | Focus to or open [Chrome Developer Tools](https://developer.chrome.com/devtools) |
+| <kbd>⇪ + V</kbd> | Focus to or open [Visual Studio Code](https://code.visualstudio.com) |
+| <kbd>⇪ + F</kbd> | Focus to or open Finder |
 | <kbd>⇪ + T</kbd> | Focus to or open Terminal |
+| <kbd>⇪ + G</kbd> | Focus to or open [GitTower](https://www.git-tower.com/) |
 
 ### Spaces
 
 <p align="center">
-	<img src="resources/spaces.gif" alt="Spaces" style="width:690px">
+  <img src="resources/spaces.gif" alt="Spaces" style="width:690px">
 </p>
 
-In order to make this work you have to open `System Preferences -> Keyboard -> Shortcuts -> Mission Control` and bind all `Switch to Desktop [NUMBER]` actions to <kbd>ctrl + alt + cmd + shift + [NUMBER]</kbd>. There are actions up to the 9th desktop, but they may not be shown to you if you have less then 9 desktops currently open.
+In order to make this work you have to open `System Preferences -> Keyboard -> Shortcuts -> Mission Control` and bind all `Switch to Desktop [NUMBER]` actions to <kbd>Ctrl + Alt + Cmd + Shift + [NUMBER]</kbd>. There are actions up to the 9th desktop, but they may not be shown to you if you have less then 9 desktops currently open.
 
 **Note**: If you don't need wrapping support, you should just remap the `Move left/right a space` actions under `System Preferences -> Keyboard -> Shortcuts -> Mission Control`.
 
 | Shortcut | Description |
 | -------- | ----------- |
-| <kbd>⇪ + tab</kbd> | Switch to the next space |
-| <kbd>⇪ + shift + tab </kbd> | Switch to the previous space |
+| <kbd>⇪ + Tab</kbd> | Switch to the next space |
+| <kbd>⇪ + Shift + Tab </kbd> | Switch to the previous space |
 
 ### Applications Icons
 
 <p align="center">
-	<img src="resources/applications_icons.gif" alt="Applications Icons" style="width:690px">
+  <img src="resources/applications_icons.gif" alt="Applications Icons" style="width:690px">
 </p>
 
 | Shortcut | Description |
 | -------- | ----------- |
 | <kbd>⇪ + I</kbd> | For each window in the current space show an icon indicating its position |
-| <kbd>⇪ + shift + I</kbd> | Display the current date and time | <!-- //TODO: add to gif -->
+| <kbd>⇪ + Shift + I</kbd> | Display the current date and time | <!-- //TODO: add to gif -->
 
 ### Reload Phoenix
 
 <p align="center">
-	<img src="resources/reload_phoenix.gif" alt="Reload Phoenix" style="width:690px">
+  <img src="resources/reload_phoenix.gif" alt="Reload Phoenix" style="width:690px">
 </p>
 
 | Shortcut | Description |
 | -------- | ----------- |
-| <kbd>⇪ + shift + P</kbd> | Reload Phoenix |
+| <kbd>⇪ + Shift + P</kbd> | Reload Phoenix |
 
 ### Pause/Resume Application
 
 <p align="center">
-	<img src="resources/pause_resume.gif" alt="Pause/Resume Application" style="width:690px">
+  <img src="resources/pause_resume.gif" alt="Pause/Resume Application" style="width:690px">
 </p>
 
 This can be used for saving battery, pausing single-player games etc.
@@ -194,7 +194,7 @@ This can be used for saving battery, pausing single-player games etc.
 ### Quit Application
 
 <p align="center">
-	<img src="resources/quit.gif" alt="Quit Application" style="width:690px">
+  <img src="resources/quit.gif" alt="Quit Application" style="width:690px">
 </p>
 
 Did you ever close 3+ Chrome windows instead of a single tab by mistake? Fear no more! Now in order to quit an app you have to trigger <kbd>⌘Q</kbd> twice in a short timeframe. Stop [wasting 10$](https://clickontyler.com/commandq) for something so basic.
@@ -216,7 +216,7 @@ Did you ever close 3+ Chrome windows instead of a single tab by mistake? Fear no
 ### Snapping
 
 <p align="center">
-	<img src="resources/snapping.gif" alt="Snapping" style="width:690px">
+  <img src="resources/snapping.gif" alt="Snapping" style="width:690px">
 </p>
 
 Drag a window to an edge or corner to snap it into place.
@@ -244,7 +244,7 @@ If it gets opened, positionate it to the right side.
 ## Space Switcher
 
 <p align="center">
-	<img src="resources/spaces_switcher.gif" alt="Space Switcher" style="width:690px">
+  <img src="resources/spaces_switcher.gif" alt="Space Switcher" style="width:690px">
 </p>
 
 This is the truly great addition to what was already available on the internet.
@@ -260,7 +260,7 @@ This is how it works:
 - Which reads the list of spaces compiled with Phoenix and displays it to you
 - Now just select a space to switch to
 
-In order to make this work you have to open `System Preferences -> Keyboard -> Shortcuts -> Mission Control` and bind all `Switch to Desktop [NUMBER]` actions to <kbd>ctrl + alt + cmd + shift + [NUMBER]</kbd>. There are actions up to the 9th desktop, but they may not be shown to you if you have less then 9 desktops currently open.
+In order to make this work you have to open `System Preferences -> Keyboard -> Shortcuts -> Mission Control` and bind all `Switch to Desktop [NUMBER]` actions to <kbd>Ctrl + Alt + Cmd + Shift + [NUMBER]</kbd>. There are actions up to the 9th desktop, but they may not be shown to you if you have less then 9 desktops currently open.
 
 **Note**: There's no API available for retrieving windows from other spaces, therefor other spaces' guessed names won't be refreshed until you visit them. The very first time you load Phoenix you might want to switch the focus to all of them, one by one, to have their names updated.
 
