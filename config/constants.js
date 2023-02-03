@@ -32,6 +32,8 @@ const TOP_HEIGHT_PERCENTAGE = 50; // Set it to 50 if you want symmetric top and 
 
 const QUIT_BLACKLIST = ['Finder'];
 
+const SNAPPING_THRESHOLD = 20;
+
 const SPACES_SWITCH_WRAP = true;
 const SPACES_OVERLAY_DURATION = MODAL_DURATION / 2;
 const SPACES_LIST_RAW_PATH = '~/.config/phoenix/spaces/list_raw.json';

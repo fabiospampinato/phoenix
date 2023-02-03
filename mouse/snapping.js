@@ -29,7 +29,7 @@ setEventHandler ( 'mouseDidLeftDrag', () => {
 
     if ( frame.width !== snappingFrame.width || frame.height !== snappingFrame.height ) return;
 
-    const name = detectNamedAnchor ( x, y );
+    const name = detectNamedAnchor ( x, y, SNAPPING_THRESHOLD );
 
     if ( !name ) return;
 
