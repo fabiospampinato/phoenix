@@ -35,26 +35,22 @@ require ( './helpers/switch_space.js' );
 require ( './helpers/write_file.js' );
 require ( './helpers/write_json.js' );
 
-require ( './shortcuts/brightness.js' );
 require ( './shortcuts/center.js' );
 require ( './shortcuts/corners.js' );
 require ( './shortcuts/expand.js' );
 require ( './shortcuts/focus.js' );
 require ( './shortcuts/fullscreen.js' );
 require ( './shortcuts/info.js' );
-require ( './shortcuts/music.js' );
 require ( './shortcuts/grow.js' );
 require ( './shortcuts/halves.js' );
 require ( './shortcuts/pause.js' );
 require ( './shortcuts/quit.js' );
 require ( './shortcuts/reload.js' );
-require ( './shortcuts/screens.js' );
 require ( './shortcuts/sides.js' );
 require ( './shortcuts/spaces.js' );
 require ( './shortcuts/sixths.js' );
 require ( './shortcuts/split_view.js' );
 require ( './shortcuts/thirds.js' );
-require ( './shortcuts/volume.js' );
 
 require ( './mouse/snapping.js' );
 

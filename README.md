@@ -203,52 +203,6 @@ Did you ever close 3+ Chrome windows instead of a single tab by mistake? Fear no
 | -------- | ----------- |
 | <kbd>⌘Q</kbd> <kbd>⌘Q</kbd> | Quit application |
 
-### Screens
-
-> For this to work you need to have the follwing shell functions available: `resolution-set`
-
-//TODO: Record gif
-
-| Shortcut | Description |
-| -------- | ----------- |
-| <kbd>⇪ + Enter</kbd> | Set the resolution of screens |
-
-### Music
-
-> For this to work you need to have the follwing shell functions available: `music-current-like`
-
-//TODO: Record gif
-
-| Shortcut | Description |
-| -------- | ----------- |
-| <kbd>⇪ + F6</kbd> | Add the current song to the library Apple Music |
-
-### Brightness
-
-> For this to work you need to have the follwing shell functions available: `brightness-mod`
-
-//TODO: Record gif
-
-| Shortcut | Description |
-| -------- | ----------- |
-| <kbd>⇪ + F1</kbd> | Increase brightness by 10% |
-| <kbd>⇪ + F2</kbd> | Decrease brightness by 10% |
-| <kbd>⇪ + shift + F1</kbd> | Increase brightness by 2.5% |
-| <kbd>⇪ + shift + F2</kbd> | Decrease brightness by 2.5% |
-
-### Volume
-
-> For this to work you need to have the follwing shell functions available: `volume-mod`
-
-//TODO: Record gif
-
-| Shortcut | Description |
-| -------- | ----------- |
-| <kbd>⇪ + F11</kbd> | Increase volume by 10% |
-| <kbd>⇪ + F12</kbd> | Decrease volume by 10% |
-| <kbd>⇪ + shift + F11</kbd> | Increase volume by 2.5% |
-| <kbd>⇪ + shift + F12</kbd> | Decrease volume by 2.5% |
-
 ### Split View
 
 //TODO: Unfortunately there's no API available for doing this at the moment, that's a shame given that I would have finally found a use for the <kbd>§</kbd> key, it looks like 2 <kbd>S</kbd> => Side-by-Side :D
