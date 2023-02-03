@@ -11,6 +11,8 @@ require ( './helpers/alert.js' );
 require ( './helpers/append_file.js' );
 require ( './helpers/center_window.js' );
 require ( './helpers/detect_named_anchor.js' );
+require ( './helpers/exists_file.js' );
+require ( './helpers/exists_files.js' );
 require ( './helpers/find_window.js' );
 require ( './helpers/focus_window.js' );
 require ( './helpers/get_focused_screen.js' );
@@ -66,9 +68,15 @@ require ( './magic/iterm.js' );
 require ( './magic/terminal.js' );
 require ( './magic/vscode.js' );
 
-require ( './spaces/alfred.js' );
-require ( './spaces/list.js' );
-// require ( './spaces/overlay.js' );
+existsFiles ( SPACES_ALFRED_APPS, hasAlfred => {
+
+  if ( !hasAlfred ) return;
+
+  require ( './spaces/alfred.js' );
+  require ( './spaces/list.js' );
+  // require ( './spaces/overlay.js' );
+
+});
 
 /* LOADED */
 

@@ -38,6 +38,7 @@ const SPACES_SWITCH_WRAP = true;
 const SPACES_OVERLAY_DURATION = MODAL_DURATION / 2;
 const SPACES_LIST_RAW_PATH = '~/.config/phoenix/spaces/list_raw.json';
 const SPACES_LIST_PATH = '~/.config/phoenix/spaces/list.json';
+const SPACES_ALFRED_APPS = ['/Applications/Alfred 5.app', '/Applications/Alfred 4.app', '/Applications/Alfred 3.app', '/Applications/Alfred 2.app', '/Applications/Alfred.app'];
 const SPACES_ALFRED_PRESELECT = true;
 const SPACES_ALFRED_PRESELECT_DELAY = 0.1;
 const SPACES_UPDATE_CYCLES = 5;
