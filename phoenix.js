@@ -1,6 +1,5 @@
 
 //TODO: Toggle desktop icons
-//TODO: Spotlight via input modal
 
 /* IMPORT */
 
@@ -58,6 +57,7 @@ require ( './shortcuts/sides.js' );
 require ( './shortcuts/spaces.js' );
 require ( './shortcuts/sixths.js' );
 require ( './shortcuts/split_view.js' );
+require ( './shortcuts/spotlight.js' );
 require ( './shortcuts/thirds.js' );
 
 require ( './mouse/snapping.js' );
