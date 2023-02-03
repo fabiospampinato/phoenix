@@ -1,7 +1,7 @@
 
 /* HYPER */
 
-setEventHandler ( 'windowDidOpen', magicHyperOpen ); //FIXME: Doesn't seem to be working
+setEventHandler ( 'windowDidOpen', magicHyperOpen );
 
 /* HANDLER */
 

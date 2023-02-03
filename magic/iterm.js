@@ -1,7 +1,7 @@
 
 /* HYPER */
 
-setEventHandler ( 'windowDidOpen', magiciTermOpen ); //FIXME: Doesn't seem to be working
+setEventHandler ( 'windowDidOpen', magiciTermOpen );
 
 /* HANDLER */
 
