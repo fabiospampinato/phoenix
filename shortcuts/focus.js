@@ -117,9 +117,9 @@ const focus = [
   ['c', HYPER, ['Google Chrome', false, /^(?!Developer Tools)/, /Picture in Picture/, launchChrome]],
   ['d', HYPER, ['Google Chrome', true, /(Developer Tools)|(chrome-devtools)/, /Picture in Picture/, launchDevTools]],
   ['v', HYPER, ['Code', false, false, false, launchVSC]],
-  // ['t', HYPER, ['Terminal', false, false, false, launchTerminal, callbackTerminal]], //FIXME: Ugly, but since `windowDidOpen` won't trigger, at least now it will behave as expected
-  // ['t', HYPER, ['Hyper', false, false, false, launchHyper, callbackHyper]], //FIXME: Ugly, but since `windowDidOpen` won't trigger, at least now it will behave as expected
-  ['t', HYPER, ['iTerm', false, false, false, launchiTerm, callbackiTerm]], //FIXME: Ugly, but since `windowDidOpen` won't trigger, at least now it will behave as expected
+  ['t', HYPER, ['Terminal', false, false, false, launchTerminal, callbackTerminal]],
+  // ['t', HYPER, ['Hyper', false, false, false, launchHyper, callbackHyper]],
+  // ['t', HYPER, ['iTerm', false, false, false, launchiTerm, callbackiTerm]],
   ['f', HYPER, ['Finder', false, false, false, launchFinder]],
   ['g', HYPER, ['Tower']]
 ];
