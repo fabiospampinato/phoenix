@@ -62,7 +62,7 @@ function growVSCHeight ( growth ) {
 
   if ( !vscode ) return;
 
-  const screen = vscode.screen ();
+  const screen = getWindowScreen ( vscode );
   const screenFrame = screen.flippedVisibleFrame ();
   const maxHeight = screenFrame.height;
   const minHeight = maxHeight - Math.abs ( growth );

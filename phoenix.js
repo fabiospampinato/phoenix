@@ -20,6 +20,7 @@ require ( './helpers/get_named_anchor.js' );
 require ( './helpers/get_named_frame.js' );
 require ( './helpers/get_space_index.js' );
 require ( './helpers/get_space_name.js' );
+require ( './helpers/get_window_screen.js' );
 require ( './helpers/grow_frame.js' );
 require ( './helpers/index2keycode.js' );
 require ( './helpers/is_anchored.js' );

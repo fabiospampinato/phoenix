@@ -9,7 +9,7 @@ function setAnchor ( x, y, window = Window.focused () ) {
 
   if ( x === false && y === false ) return;
 
-  const screen = window.screen ();
+  const screen = getWindowScreen ( window );
   const frame = screen.flippedFrame ();
   const wFrame = window.frame ();
 
