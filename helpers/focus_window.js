@@ -3,8 +3,8 @@
 
 function focusWindow ( name = false, isNameOptional = false, title = false, titleBlacklist = false, launch = true, callback = _.noop ) { //TODO: Open windows in the right space
 
-  const space = Space.active (),
-        window = findWindow ( space.windows (), name, isNameOptional, title, titleBlacklist );
+  const space = Space.active ();
+  const window = findWindow ( space.windows (), name, isNameOptional, title, titleBlacklist );
 
   if ( window ) {
 
@@ -35,8 +35,8 @@ function focusWindow ( name = false, isNameOptional = false, title = false, titl
 
       /* CHECKING */
 
-      let checksNr = 0,
-          maxChecksNr = FOCUS_WINDOW_CHECK_CYCLES;
+      let checksNr = 0;
+      let maxChecksNr = FOCUS_WINDOW_CHECK_CYCLES;
 
       const intervalId = setInterval ( () => {
 

@@ -5,9 +5,9 @@ setKeyHandler ( '§', HYPER, () => {
 
   return alert ( 'Split View - Unimplemented' ); //FIXME
 
-  const space = Space.active (),
-        windows = space.windows ().filter ( window => window.isVisible () && window.title () ),
-        isActive = space.isNormal ();
+  const space = Space.active ();
+  const windows = space.windows ().filter ( window => window.isVisible () && window.title () );
+  const isActive = space.isNormal ();
 
   if ( isActive ) {
 

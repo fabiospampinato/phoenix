@@ -7,7 +7,7 @@ setKeyHandler ( 'x', HYPER, () => {
 
   if ( !window ) return;
 
-  center_window ( window );
+  centerWindow ( window );
 
 });
 
@@ -26,6 +26,6 @@ setKeyHandler ( 'x', HYPER_SHIFT, () => {
     height: CENTER_HEIGHT
   });
 
-  center_window ( window );
+  centerWindow ( window );
 
 });

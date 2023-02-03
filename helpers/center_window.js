@@ -1,11 +1,11 @@
 
 /* CENTER WINDOW */
 
-function center_window ( window ) {
+function centerWindow ( window ) {
 
-  const screen = window.screen (),
-        sFrame = screen.flippedFrame (),
-        wFrame = window.frame ();
+  const screen = window.screen ();
+  const sFrame = screen.flippedFrame ();
+  const wFrame = window.frame ();
 
   window.setFrame ({
     x: sFrame.x + ( sFrame.width / 2 ) - ( wFrame.width / 2 ),

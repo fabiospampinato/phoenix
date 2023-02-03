@@ -1,8 +1,8 @@
 
 /* SNAPPING */
 
-let isSnapping = false,
-    snappingFrame = {};
+let isSnapping = false;
+let snappingFrame = {};
 
 setEventHandler ( 'mouseDidLeftDrag', () => {
 
@@ -13,7 +13,6 @@ setEventHandler ( 'mouseDidLeftDrag', () => {
   if ( !window ) return;
 
   isSnapping = true;
-
   snappingFrame = window.frame ();
 
   setEventHandler ( 'mouseDidLeftClick', ({ x, y }) => {

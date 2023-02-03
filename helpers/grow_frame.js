@@ -5,12 +5,12 @@ function growFrame ( x, y, width, height, window = Window.focused () ) { //FIXME
 
   if ( !window ) return;
 
-  const screen = getFocusedScreen ( window ),
-        sFrame = screen.flippedFrame (),
-        svFrame = screen.flippedVisibleFrame (),
-        yUnusable = sFrame.height - svFrame.height,
-        frame = window.frame (),
-        newFrame = _.cloneDeep ( frame );
+  const screen = getFocusedScreen ( window );
+  const sFrame = screen.flippedFrame ();
+  const svFrame = screen.flippedVisibleFrame ();
+  const yUnusable = sFrame.height - svFrame.height;
+  const frame = window.frame ();
+  const newFrame = _.cloneDeep ( frame );
 
   //FIXME: We are leveraging the fact that in the current use case `x` and `y` are always negatives, while `width` and `height` are always positives
 

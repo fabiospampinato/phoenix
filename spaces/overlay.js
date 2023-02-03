@@ -8,8 +8,8 @@ setEventHandler ( 'spaceDidChange', () => {
 
   if ( !spacesListRaw || !spacesListRaw.items ) return;
 
-  const space = Space.active (),
-        index = getSpaceIndex ( space );
+  const space = Space.active ();
+  const index = getSpaceIndex ( space );
 
   if ( index === -1 ) return;
 

@@ -1,9 +1,9 @@
 
 /* INIT */
 
-let spacesListRaw,
-    spacesList,
-    spacesListScreenHash;
+let spacesListRaw;
+let spacesList;
+let spacesListScreenHash;
 
 readListRaw ( () => {
 
@@ -102,14 +102,14 @@ function updateSpacesLists () {
 
 function updateSpaces () {
 
-  const spaces = Space.all (),
-        list = {};
+  const spaces = Space.all ();
+  const list = {};
 
   list.items = spaces.map ( ( space, index ) => {
 
-    const space_hash = space.hash (),
-          screens = space.screens (),
-          prevItem = spacesListRaw.items.find ( item => item.space_hash === space_hash );
+    const space_hash = space.hash ();
+    const screens = space.screens ();
+    const prevItem = spacesListRaw.items.find ( item => item.space_hash === space_hash );
 
     return prevItem || getSpaceItem ( space, index, screens );
 

@@ -62,12 +62,12 @@ function growVSCHeight ( growth ) {
 
   if ( !vscode ) return;
 
-  const screen = vscode.screen (),
-        screenFrame = screen.flippedVisibleFrame (),
-        maxHeight = screenFrame.height,
-        minHeight = maxHeight - Math.abs ( growth ),
-        frame = vscode.frame (),
-        height = frame.height + growth;
+  const screen = vscode.screen ();
+  const screenFrame = screen.flippedVisibleFrame ();
+  const maxHeight = screenFrame.height;
+  const minHeight = maxHeight - Math.abs ( growth );
+  const frame = vscode.frame ();
+  const height = frame.height + growth;
 
   if ( height > maxHeight || height < minHeight ) return; // Avoiding unnecessary growth/shrink
 

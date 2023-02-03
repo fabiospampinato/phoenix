@@ -3,10 +3,10 @@
 
 function modalWindow ( options, window = Window.focused () ) { //FIXME: Multi-monitor usage
 
-  const screen = window.screen (),
-        app = window.app (),
-        sFrame = screen.flippedFrame (),
-        wFrame = window.frame ();
+  const screen = window.screen ();
+  const app = window.app ();
+  const sFrame = screen.flippedFrame ();
+  const wFrame = window.frame ();
 
   options.origin = function ( mFrame ) {
     return {

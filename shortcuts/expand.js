@@ -9,12 +9,12 @@ setKeyHandler ( 'space', HYPER, () => {
 
   if ( !window ) return;
 
-  const screen = getFocusedScreen ( window ),
-        sFrame = screen.flippedVisibleFrame (),
-        hash = window.hash (),
-        currFrame = window.frame (),
-        prevFrame = expansionCache[hash],
-        expanding = currFrame.width < sFrame.width || ( currFrame.height + 6 ) < sFrame.height; //FIXME: The setted height might be lower than the actual available height
+  const screen = getFocusedScreen ( window );
+  const sFrame = screen.flippedVisibleFrame ();
+  const hash = window.hash ();
+  const currFrame = window.frame ();
+  const prevFrame = expansionCache[hash];
+  const expanding = currFrame.width < sFrame.width || ( currFrame.height + 6 ) < sFrame.height; //FIXME: The setted height might be lower than the actual available height
 
   if ( expanding ) {
 
@@ -48,7 +48,7 @@ setKeyHandler ( 'space', HYPER, () => {
 
       window.setFrame ( nextFrame );
 
-      center_window ( window );
+      centerWindow ( window );
 
     }
 

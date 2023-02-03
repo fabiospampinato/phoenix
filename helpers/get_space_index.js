@@ -3,6 +3,6 @@
 
 function getSpaceIndex ( space = Space.active () ) {
 
-  return Space.all ().findIndex ( s => s.isEqual ( space ) );
+  return Space.all ().findIndex ( other => other.isEqual ( space ) );
 
 }
