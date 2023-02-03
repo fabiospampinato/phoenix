@@ -3,7 +3,7 @@
 
 function growFrame ( x, y, width, height, window = Window.focused () ) { //FIXME: Multi-monitor support
 
-  if ( !window ) return;
+  if ( !window ) return false;
 
   const screen = getFocusedScreen ( window );
   const sFrame = screen.flippedFrame ();
@@ -19,6 +19,30 @@ function growFrame ( x, y, width, height, window = Window.focused () ) { //FIXME
   if ( width ) newFrame.width = Math.min ( x ? frame.x + frame.width : sFrame.width - frame.x, frame.width + ( width - ( Math.abs ( x ) - Math.abs ( frame.x - newFrame.x ) ) ) );
   if ( height ) newFrame.height = Math.min ( y ? frame.y + frame.height : sFrame.height - frame.y, frame.height + ( height - ( Math.abs ( y ) - Math.abs ( frame.y - newFrame.y ) ) ) );
 
-  window.setFrame ( newFrame );
+  if ( _.isEqual ( frame, newFrame ) ) {
+
+    return false;
+
+  } else {
+
+    window.setFrame ( newFrame );
+
+    return true;
+
+  }
+
+}
+
+function growOrShrinkFrame ( deltasGrow, deltasShrink, window = Window.focused () ) {
+
+  const grown = growFrame ( ...deltasGrow, window );
+
+  if ( grown ) return 1;
+
+  const shrunk = growFrame ( ...deltasShrink, window );
+
+  if ( shrunk ) return -1;
+
+  return 0;
 
 }
