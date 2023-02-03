@@ -1,6 +1,6 @@
 
-//TODO: toggle icons
-//TODO: Turn off spaces if Alfred ain't installed
+//TODO: Toggle desktop icons
+//TODO: Spotlight via input modal
 
 /* IMPORT */
 
