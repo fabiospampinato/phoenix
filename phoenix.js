@@ -1,10 +1,14 @@
 
+//TODO: toggle icons
+//TODO: Turn off spaces if Alfred ain't installed
+
 /* IMPORT */
 
 require ( './config/phoenix.js' );
 require ( './config/constants.js' );
 
 require ( './helpers/alert.js' );
+require ( './helpers/append_file.js' );
 require ( './helpers/center_window.js' );
 require ( './helpers/detect_named_anchor.js' );
 require ( './helpers/find_window.js' );
