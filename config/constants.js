@@ -39,4 +39,4 @@ const SPACES_LIST_PATH = '~/.config/phoenix/spaces/list.json';
 const SPACES_ALFRED_PRESELECT = true;
 const SPACES_ALFRED_PRESELECT_DELAY = 0.1;
 const SPACES_UPDATE_CYCLES = 5;
-const SPACES_UPDATE_INTERVAL = 500;
+const SPACES_UPDATE_INTERVAL = 1000;
