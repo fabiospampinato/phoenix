@@ -26,20 +26,26 @@ const onToggle = () => {
 
 };
 
-const onOpen = () => {
+const onOpen = () => { //TODO: Maybe make an helper out of most of this
+
+  const screen = getFocusedScreen ();
+  const frame = screen.frame ();
+
+  STATE.time = Date.now ();
 
   STATE.modal = Modal.build ({
-    origin: {
-      x: 0,
-      y: 0
-    },
-    weight: 25,
-    // duration: MODAL_DURATION,
-    animationDuration: .2,
+    weight: MODAL_WEIGHT,
+    animationDuration: MODAL_INPUT_ANIMATION_DURATION,
     appearance: 'dark',
-    text: 'Search...',
+    inputPlaceholder: 'Search...',
     isInput: true,
     icon: ICON_GRAY,
+    origin ( mFrame ) {
+      return {
+        x: frame.x + ( frame.width / 2 ) - ( mFrame.width / 2 ),
+        y: frame.y + ( frame.height / 2 ) - ( mFrame.height / 2 )
+      };
+    },
     textDidChange: onSearch
   });
 
