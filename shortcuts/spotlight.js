@@ -82,13 +82,19 @@ const onSearch = query => {
 
   if ( !query ) {
 
+    STATE.query = '';
+
     STATE.apps = [];
 
     STATE.modal.icon = ICON_GRAY;
 
   } else {
 
-    STATE.apps = getApps ().filter ( app => isMatch ( app.name, query, true ) );
+    const apps = STATE.query && STATE.apps && query.startsWith ( STATE.query ) ? STATE.apps : getApps (); // Narrowing dows the search space with longer queries
+
+    STATE.query = query;
+
+    STATE.apps = apps.filter ( app => isMatch ( app.name, query, true ) );
 
     if ( STATE.apps.length === 0 ) {
 
