@@ -68,6 +68,16 @@ const onClose = () => {
 
 };
 
+const onBlur = () => { //FIXME: This event isn't fired after the first one, for some reason
+
+  if ( !STATE.modal ) return;
+
+  if ( STATE.time > ( Date.now () - 100 ) ) return;
+
+  onClose ();
+
+};
+
 const onSearch = query => {
 
   if ( !query ) {
@@ -122,3 +132,5 @@ const onEnter = () => {
 };
 
 Key.on ( 'space', ['ctrl'], onToggle );
+
+setEventHandler ( 'windowDidFocus', onBlur);
