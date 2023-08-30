@@ -38,7 +38,7 @@ const onOpen = () => { //TODO: Maybe make an helper out of most of this
     weight: MODAL_WEIGHT,
     animationDuration: MODAL_INPUT_ANIMATION_DURATION,
     appearance: 'dark',
-    inputPlaceholder: 'Search...',
+    // inputPlaceholder: 'Search...',
     isInput: true,
     icon: ICON_GRAY,
     origin ( mFrame ) {
