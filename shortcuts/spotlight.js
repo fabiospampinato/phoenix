@@ -32,6 +32,7 @@ const onOpen = () => { //TODO: Maybe make an helper out of most of this
   const frame = screen.frame ();
 
   STATE.time = Date.now ();
+  STATE.window = Window.focused ();
 
   STATE.modal = Modal.build ({
     weight: MODAL_WEIGHT,
@@ -62,6 +63,9 @@ const onClose = () => {
   STATE.modal = undefined;
 
   STATE.apps = [];
+
+  STATE.window?.focus ();
+  STATE.window = undefined;
 
   Key.off ( STATE.onExitId );
   Key.off ( STATE.onEnterId );

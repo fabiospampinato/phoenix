@@ -25,6 +25,8 @@ const JSON_INDENTATION = 2;
 const MODAL_APPEARANCE = 'dark';
 const MODAL_DURATION = 1;
 const MODAL_ANIMATION_DURATION = .2;
+const MODAL_INPUT_DURATION = Infinity;
+const MODAL_INPUT_ANIMATION_DURATION = MODAL_ANIMATION_DURATION / 3;
 const MODAL_WEIGHT = 24;
 
 const LEFT_WIDTH_PERCENTAGE = 40; // Set it to 50 if you want symmetric left and right sides' widths
