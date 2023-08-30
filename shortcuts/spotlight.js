@@ -11,6 +11,7 @@ const STATE = {};
 /* SPOTLIGHT */
 
 //TODO: Document this in the readme
+//TODO: Improve ranking, with better search
 
 const onToggle = () => {
 
@@ -94,7 +95,7 @@ const onSearch = query => {
 
   } else {
 
-    const apps = STATE.query && STATE.apps && query.startsWith ( STATE.query ) ? STATE.apps : getApps (); // Narrowing dows the search space with longer queries
+    const apps = STATE.query && STATE.apps && query.startsWith ( STATE.query ) ? STATE.apps : getApps (); // Narrowing down the search space with longer queries
 
     STATE.query = query;
 
