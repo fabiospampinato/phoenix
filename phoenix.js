@@ -54,6 +54,7 @@ require ( './shortcuts/halves.js' );
 require ( './shortcuts/pause.js' );
 require ( './shortcuts/quit.js' );
 require ( './shortcuts/reload.js' );
+require ( './shortcuts/remap.js' );
 require ( './shortcuts/sides.js' );
 require ( './shortcuts/spaces.js' );
 require ( './shortcuts/sixths.js' );
