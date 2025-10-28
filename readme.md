@@ -254,7 +254,7 @@ This is how it works:
 
 In order to make this work you have to open `System Preferences -> Keyboard -> Shortcuts -> Mission Control` and bind all `Switch to Desktop [NUMBER]` actions to <kbd>Ctrl + Alt + Cmd + Shift + [NUMBER]</kbd>. There are actions up to the 9th desktop, but they may not be shown to you if you have less then 9 desktops currently open.
 
-**Note**: There's no API available for retrieving windows from other spaces, therefor other spaces' guessed names won't be refreshed until you visit them. The very first time you load Phoenix you might want to switch the focus to all of them, one by one, to have their names updated.
+**Note**: There's no API available for retrieving windows from other spaces, therefore other spaces' guessed names won't be refreshed until you visit them. The very first time you load Phoenix you might want to switch the focus to all of them, one by one, to have their names updated.
 
 ## License
 
