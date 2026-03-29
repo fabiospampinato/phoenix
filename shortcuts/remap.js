@@ -1,6 +1,4 @@
 
-//TODO: Document this
-
 /* REMAP - § - NONE */
 
 setKeyHandler ( '§', [], () => {
