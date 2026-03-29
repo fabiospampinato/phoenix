@@ -203,6 +203,12 @@ Did you ever close 3+ Chrome windows instead of a single tab by mistake? Fear no
 | -------- | ----------- |
 | <kbd>⌘Q</kbd> <kbd>⌘Q</kbd> | Quit application |
 
+### Additional Shortcuts
+
+| Shortcut | Description |
+| -------- | ----------- |
+| <kbd>⇪ + F6</kbd> | Hide or show desktop icons |
+
 ## Mouse
 
 ### Snapping

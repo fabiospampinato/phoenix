@@ -1,9 +1,7 @@
 
 /* DESKTOP ICONS */
 
-//TODO: Document this
-
-setKeyHandler ( 'f6', ['shift'], () => {
+setKeyHandler ( 'f6', HYPER, () => {
 
   shell ( 'defaults read com.apple.finder CreateDesktop', ({ output }) => {
 
