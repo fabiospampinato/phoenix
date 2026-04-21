@@ -220,26 +220,6 @@ Did you ever close 3+ Chrome windows instead of a single tab by mistake? Fear no
 
 Drag a window to an edge or corner to snap it into place.
 
-## Magic
-
-### Chrome
-
-If it gets opened, positionate it to the left side.
-
-### Chrome Developer Tools
-
-If it gets opened, positionate it to the bottom-right corner, and shrink Visual Studio Code's height a bit, so that the console will be visible.
-
-If it gets closed, restore Visual Studio Code's height.
-
-### Terminal/iTerm2/Finder
-
-If one of these apps' windows gets opened, positionate it to bottom-left corner.
-
-### Visual Studio Code
-
-If it gets opened, positionate it to the right side.
-
 ## License
 
 MIT © Fabio Spampinato
