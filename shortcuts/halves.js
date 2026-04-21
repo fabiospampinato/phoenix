@@ -6,4 +6,4 @@ const halves = [
   [']', HYPER, ['half-2']]
 ];
 
-setKeysHandler ( setFrameByName, halves );
+setKeysHandler ( setPositionByName, halves );

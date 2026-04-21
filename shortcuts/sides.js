@@ -8,4 +8,4 @@ const sides = [
   ['left', HYPER, ['left']]
 ];
 
-setKeysHandler ( setFrameByName, sides );
+setKeysHandler ( setPositionByName, sides );

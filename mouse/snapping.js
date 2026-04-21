@@ -33,7 +33,7 @@ setEventHandler ( 'mouseDidLeftDrag', () => {
 
     if ( !name ) return;
 
-    setFrameByName ( name );
+    setPositionByName ( name );
 
   }, true );
 

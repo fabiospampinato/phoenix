@@ -35,6 +35,7 @@ require ( './helpers/set_event_handler.js' );
 require ( './helpers/set_events_handler.js' );
 require ( './helpers/set_frame.js' );
 require ( './helpers/set_frame_by_name.js' );
+require ( './helpers/set_position_by_name.js' );
 require ( './helpers/set_key_handler.js' );
 require ( './helpers/set_keys_handler.js' );
 require ( './helpers/shell.js' );

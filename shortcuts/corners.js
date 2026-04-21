@@ -8,4 +8,4 @@ const corners = [
   ['a', HYPER, ['bottom-left']]
 ];
 
-setKeysHandler ( setFrameByName, corners );
+setKeysHandler ( setPositionByName, corners );
