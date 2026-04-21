@@ -3,6 +3,6 @@
 
 function setAnchorByName ( name, window = Window.focused () ) {
 
-  return setAnchor ( ...getNamedAnchor ( name ), window );
+  return setAnchor ( ...getAnchorByName ( name ), window );
 
 }

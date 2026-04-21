@@ -3,7 +3,7 @@
 
 function setFrameByName ( name, window = Window.focused () ) {
 
-  setFrame ( ...getNamedFrame ( name ), window );
+  setFrame ( ...getFrameByName ( name ), window );
   setAnchorByName ( name, window );
 
 }

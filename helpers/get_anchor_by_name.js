@@ -1,7 +1,7 @@
 
-/* GET NAMED ANCHOR */
+/* GET ANCHOR BY NAME */
 
-function getNamedAnchor ( name ) {
+function getAnchorByName ( name ) {
 
   switch ( name ) {
     /* SIDES */

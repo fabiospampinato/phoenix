@@ -3,7 +3,7 @@
 
 function isAnchored ( pointX, pointY, anchorX, anchorY, threshold = 2 ) {
 
-  if ( _.isString ( anchorX ) ) return isAnchored ( pointX, pointY, ...getNamedAnchor ( anchorX ), threshold );
+  if ( _.isString ( anchorX ) ) return isAnchored ( pointX, pointY, ...getAnchorByName ( anchorX ), threshold );
 
   if ( anchorX === false && anchorY === false ) return false;
 

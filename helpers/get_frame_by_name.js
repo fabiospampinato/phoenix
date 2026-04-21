@@ -1,7 +1,7 @@
 
-/* GET NAMED FRAME */
+/* GET FRAME BY NAME */
 
-function getNamedFrame ( name ) {
+function getFrameByName ( name ) {
 
   const dTop = ( TOP_HEIGHT_PERCENTAGE - 50 ) / 100;
   const dLeft = ( LEFT_WIDTH_PERCENTAGE - 50 ) / 100;

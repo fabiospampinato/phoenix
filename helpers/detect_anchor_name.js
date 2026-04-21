@@ -1,7 +1,7 @@
 
-/* DETECT NAMED ANCHOR */
+/* DETECT ANCHOR NAME */
 
-function detectNamedAnchor ( x, y, threshold ) {
+function detectAnchorName ( x, y, threshold ) {
 
   const anchors = ['top-left', 'top-right', 'bottom-right', 'bottom-left', 'top', 'right', 'bottom', 'left'];
 
