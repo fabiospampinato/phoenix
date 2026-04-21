@@ -208,6 +208,7 @@ Did you ever close 3+ Chrome windows instead of a single tab by mistake? Fear no
 | Shortcut | Description |
 | -------- | ----------- |
 | <kbd>§</kbd> | Remapped to `` ` `` |
+| <kbd>⇪ + =</kbd> | Trigger the native color picker |
 | <kbd>⇪ + F6</kbd> | Hide or show desktop icons |
 
 ## Mouse

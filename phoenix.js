@@ -43,6 +43,7 @@ require ( './helpers/write_json.js' );
 
 require ( './shortcuts/blacklist.js' );
 require ( './shortcuts/center.js' );
+require ( './shortcuts/colorpicker.js' );
 require ( './shortcuts/corners.js' );
 require ( './shortcuts/desktop_icons.js' );
 require ( './shortcuts/expand.js' );
