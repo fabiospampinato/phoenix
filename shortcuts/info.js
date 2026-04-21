@@ -19,34 +19,24 @@ setKeyHandler ( 'i', HYPER_SHIFT, () => {
 
   shell ( 'pmset -g batt | grep -Eo "\\d+%" | cut -d% -f1', ( id, output ) => {
 
-    shell ( 'music-current-name', ( id, songName ) => {
+    const battery = output.trim ();
 
-      shell ( 'music-current-status', ( id, songLiked, songDisliked ) => {
+    const monthsNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    const daysNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const pad = x => `00${x}`.slice ( -2 );
 
-        const battery = output.trim ();
+    const date = new Date ();
+    const hours = pad ( date.getHours () );
+    const minutes = pad ( date.getMinutes () );
+    const seconds = pad ( date.getSeconds () );
+    const wday = daysNames[date.getDay ()];
+    const day = date.getDate ();
+    const month = monthsNames[date.getMonth ()];
+    const year = date.getFullYear ();
 
-        const monthsNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-        const daysNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-        const pad = x => `00${x}`.slice ( -2 );
+    const info = `${battery}% - ${wday} ${day} ${month} ${year} - ${hours}:${minutes}:${seconds}`;
 
-        const date = new Date ();
-        const hours = pad ( date.getHours () );
-        const minutes = pad ( date.getMinutes () );
-        const seconds = pad ( date.getSeconds () );
-        const wday = daysNames[date.getDay ()];
-        const day = date.getDate ();
-        const month = monthsNames[date.getMonth ()];
-        const year = date.getFullYear ();
-
-        const infoStatus = `${battery}% - ${wday} ${day} ${month} ${year} - ${hours}:${minutes}:${seconds}`;
-        const infoMusic = songName ? `\n•\n${songDisliked ? '♡' : '♥'} - ${_.truncate ( songName.trim (), { length: 40 } )}` : '';
-        const info = `${infoStatus}${infoMusic}`;
-
-        alert ( info );
-
-      });
-
-    });
+    alert ( info );
 
   });
 
