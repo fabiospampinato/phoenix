@@ -32,8 +32,6 @@ const MODAL_WEIGHT = 24;
 const LEFT_WIDTH_PERCENTAGE = 40; // Set it to 50 if you want symmetric left and right sides' widths
 const TOP_HEIGHT_PERCENTAGE = 50; // Set it to 50 if you want symmetric top and bottom sides' heights
 
-const QUIT_BLACKLIST = ['Finder'];
-
 const SNAPPING_THRESHOLD = 20;
 
 const SPACES_SWITCH_WRAP = true;

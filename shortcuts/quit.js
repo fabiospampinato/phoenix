@@ -13,9 +13,21 @@ setKeyHandler ( 'q', ['cmd'], () => {
 
     const app = App.focused ();
 
-    if ( !app || _.includes ( QUIT_BLACKLIST, app.name () ) ) return;
+    if ( !app ) return;
 
-    app.terminate ();
+    if ( app.name () === 'Finder' ) {
+
+      osascript ( 'tell application "Finder" to close every window', () => {
+
+        shell ( 'killall Finder' );
+
+      });
+
+    } else {
+
+      app.terminate ();
+
+    }
 
   } else {
 
