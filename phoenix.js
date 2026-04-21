@@ -72,16 +72,6 @@ require ( './magic/iterm.js' );
 require ( './magic/terminal.js' );
 require ( './magic/vscode.js' );
 
-existsFiles ( SPACES_ALFRED_APPS, hasAlfred => {
-
-  if ( !hasAlfred ) return;
-
-  require ( './spaces/alfred.js' );
-  require ( './spaces/list.js' );
-  // require ( './spaces/overlay.js' );
-
-});
-
 /* LOADED */
 
 modalScreen ({ icon: App.get ( 'Phoenix' ).icon () });
