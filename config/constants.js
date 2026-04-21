@@ -35,4 +35,3 @@ const TOP_HEIGHT_PERCENTAGE = 50; // Set it to 50 if you want symmetric top and 
 const SNAPPING_THRESHOLD = 20;
 
 const SPACES_SWITCH_WRAP = true;
-const SPACES_OVERLAY_DURATION = MODAL_DURATION / 2;
