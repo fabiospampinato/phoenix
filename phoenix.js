@@ -12,7 +12,6 @@ require ( './helpers/exists_file.js' );
 require ( './helpers/exists_files.js' );
 require ( './helpers/find_window.js' );
 require ( './helpers/focus_window.js' );
-require ( './helpers/get_apps.js' );
 require ( './helpers/get_focused_screen.js' );
 require ( './helpers/get_named_anchor.js' );
 require ( './helpers/get_named_frame.js' );
@@ -59,7 +58,6 @@ require ( './shortcuts/remap.js' );
 require ( './shortcuts/sides.js' );
 require ( './shortcuts/spaces.js' );
 require ( './shortcuts/sixths.js' );
-// require ( './shortcuts/spotlight.js' );
 require ( './shortcuts/thirds.js' );
 
 require ( './mouse/snapping.js' );
