@@ -7,4 +7,4 @@ const thirds = [
   [3, HYPER, ['third-3']]
 ];
 
-setKeysHandler ( setFrame, thirds );
+setKeysHandler ( setFrameByName, thirds );

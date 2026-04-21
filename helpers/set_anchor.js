@@ -3,8 +3,6 @@
 
 function setAnchor ( x, y, window = Window.focused () ) {
 
-  if ( _.isString ( x ) ) return setAnchor ( ...getNamedAnchor ( x ), y || window );
-
   if ( !window ) return;
 
   if ( x === false && y === false ) return;
