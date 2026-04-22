@@ -21,6 +21,11 @@ function getAnchorByName ( name ) {
     case 'third-1': return [0, false];
     case 'third-2': return [false, false];
     case 'third-3': return [1, false];
+    /* QUARTERS */
+    case 'quarter-1': return [0, 0];
+    case 'quarter-2': return [1, 0];
+    case 'quarter-3': return [0, 1];
+    case 'quarter-4': return [1, 1];
     /* SIXTHS */
     case 'sixths-1': return [0, 0];
     case 'sixths-2': return [false, 0];

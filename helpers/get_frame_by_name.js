@@ -24,6 +24,11 @@ function getFrameByName ( name ) {
     case 'third-1': return [0/3, 0, 1/3, 1];
     case 'third-2': return [1/3, 0, 1/3, 1];
     case 'third-3': return [2/3, 0, 1/3, 1];
+    /* QUARTERS */
+    case 'quarter-1': return [0, 0, 1/2, 1/2];
+    case 'quarter-2': return [1/2, 0, 1/2, 1/2];
+    case 'quarter-3': return [0, 1/2, 1/2, 1/2];
+    case 'quarter-4': return [1/2, 1/2, 1/2, 1/2];
     /* SIXTHS */
     case 'sixths-1': return [0/3, 0, 1/3, 1/2];
     case 'sixths-2': return [1/3, 0, 1/3, 1/2];

@@ -76,6 +76,19 @@ Don't forget to make a PR if you fixed something or implemented something cool :
 | <kbd>⇪ + 2</kbd> | Move window to the 2nd column |
 | <kbd>⇪ + 3</kbd> | Move window to the 3rd column |
 
+### Quarters
+
+<p align="center">
+  <img src="resources/quarters.gif" alt="Quarters" style="width:690px">
+</p>
+
+| Shortcut                  | Description                    |
+| ------------------------- | ------------------------------ |
+| <kbd>⇪ + Shift + [</kbd>  | Move window to the 1st quarter |
+| <kbd>⇪ + Shift + ]</kbd>  | Move window to the 2nd quarter |
+| <kbd>⇪ + Shift + '</kbd>  | Move window to the 3rd quarter |
+| <kbd>⇪ + Shift + \\</kbd> | Move window to the 4th quarter |
+
 ### Sixths
 
 <p align="center">

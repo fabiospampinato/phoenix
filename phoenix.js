@@ -56,6 +56,7 @@ require ( './shortcuts/info.js' );
 require ( './shortcuts/grow.js' );
 require ( './shortcuts/halves.js' );
 require ( './shortcuts/pause.js' );
+require ( './shortcuts/quarters.js' );
 require ( './shortcuts/quit.js' );
 require ( './shortcuts/reload.js' );
 require ( './shortcuts/remap.js' );

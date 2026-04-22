@@ -24,6 +24,11 @@ function getGapByName ( name ) {
     case 'third-1':      return [0,  h2, 0,  0 ];
     case 'third-2':      return [0,  h2, 0,  h1];
     case 'third-3':      return [0,  0,  0,  h1];
+    /* QUARTERS */
+    case 'quarter-1':    return [0,  h2, h2, 0 ];
+    case 'quarter-2':    return [0,  0,  h2, h1];
+    case 'quarter-3':    return [h1, h2, 0,  0 ];
+    case 'quarter-4':    return [h1, 0,  0,  h1];
     /* SIXTHS */
     case 'sixths-1':     return [0,  h2, h2, 0 ];
     case 'sixths-2':     return [0,  h2, h2, h1];
