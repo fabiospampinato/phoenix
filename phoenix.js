@@ -15,6 +15,7 @@ require ( './helpers/focus_window.js' );
 require ( './helpers/get_anchor_by_name.js' );
 require ( './helpers/get_focused_screen.js' );
 require ( './helpers/get_frame_by_name.js' );
+require ( './helpers/get_gap_by_name.js' );
 require ( './helpers/get_space_index.js' );
 require ( './helpers/get_space_name.js' );
 require ( './helpers/get_window_screen.js' );
