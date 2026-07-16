@@ -14,7 +14,7 @@ setKeyHandler ( 'space', HYPER, () => {
   const hash = window.hash ();
   const currFrame = window.frame ();
   const prevFrame = expansionCache[hash];
-  const expanding = currFrame.width < sFrame.width || ( currFrame.height + 6 ) < sFrame.height; //FIXME: The setted height might be lower than the actual available height
+  const expanding = currFrame.width < sFrame.width || ( currFrame.height + 6 ) < sFrame.height; //FIXME: The set height might be lower than the actual available height
 
   if ( expanding ) {
 

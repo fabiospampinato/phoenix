@@ -17,7 +17,7 @@ This configuration uses a remap of the Caps Lock key to something more useful, t
 
 ## Customization
 
-To disable specific features, just comment out their correspondent `require` call in [phoenix.js](https://github.com/fabiospampinato/phoenix/blob/master/phoenix.js).
+To disable specific features, just comment out their corresponding `require` call in [phoenix.js](https://github.com/fabiospampinato/phoenix/blob/master/phoenix.js).
 
 To tweak some numbers, simply edit [constants.js](https://github.com/fabiospampinato/phoenix/blob/master/config/constants.js).
 
