@@ -1,9 +1,9 @@
 
 /* SET KEYS HANDLER */
 
-function setKeysHandler ( handler, datas, skipRepetitions = true, one = false ) {
+function setKeysHandler ( handler, data, skipRepetitions = true, one = false ) {
 
-  datas.forEach ( data => {
+  data.forEach ( data => {
 
     const [key, modifier, handlerArgs] = data;
 
